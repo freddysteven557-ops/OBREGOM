@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Conoce los cortes de la Res - Formato Obregón</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* Infografía "Conoce los cortes de la res" en Formato Obregón:
+     res al centro con zonas por corte, tarjetas arriba y abajo unidas con líneas */
+  :root {
+    --red: #e30613;
+    --ink: #111111;
+    --line: #e2e2e4;
+    --muted: #55555a;
+    --pill: #ececee;
+    --font: "Montserrat", "Arial Black", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; }
+  body { width: 1176px; padding: 14px; font-family: var(--font); color: var(--ink); }
+
+  .sheet { border: 3px solid var(--line); border-radius: 34px; padding: 34px 30px 30px; background: #fff; }
+
+  .head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    background: var(--red);
+    border-radius: 26px;
+    padding: 20px 40px 22px;
+    color: #fff;
+  }
+  .head svg { width: 150px; height: 93px; flex: none; }
+  .head h1 { margin: 0; line-height: .95; text-align: left; }
+  .head h1 small { display: block; font-size: 46px; font-weight: 800; letter-spacing: -.01em; }
+  .head h1 span { display: block; font-size: 100px; font-weight: 900; letter-spacing: -.03em; }
+  .dash { position: absolute; top: 50%; width: 20px; height: 5px; border-radius: 3px; background: #fff; }
+  .dash--l { left: 14px; }
+  .dash--r { right: 14px; }
+
+  .format { display: flex; align-items: center; gap: 22px; margin: -6px 90px 0; }
+  .format::before, .format::after { content: ""; flex: 1; height: 4px; background: var(--red); border-radius: 2px; }
+  .format span { background: var(--pill); border-radius: 0 0 18px 18px; padding: 6px 30px 10px; font-size: 30px; font-weight: 800; color: #333; }
+  .lead { margin: 18px 0 0; text-align: center; font-size: 22px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #333; }
+
+  .stage { position: relative; width: 1080px; height: 1080px; margin: 26px auto 0; }
+  .stage > svg { position: absolute; inset: 0; width: 1080px; height: 1080px; }
+
+  .cut {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid var(--line);
+    border-radius: 20px;
+    padding: 8px 8px 10px;
+    background: #fff;
+  }
+  .cut--top { top: 0; }
+  .cut--bottom { bottom: 0; }
+  .cut img { width: 100%; height: 118px; object-fit: contain; }
+  .cut h2 { margin: 6px 0 2px; font-size: 25px; font-weight: 800; letter-spacing: -.02em; line-height: 1.05; }
+  .cut p { margin: 0 0 auto; font-size: 14.5px; font-weight: 600; color: var(--muted); }
+  .price { background: var(--red); color: #fff; font-size: 25px; font-weight: 900; padding: 2px 12px 4px; border-radius: 10px; }
+  .price small { font-size: 15px; font-weight: 800; }
+
+  .legend { margin: 14px 0 0; text-align: center; font-size: 17px; font-weight: 600; color: var(--muted); }
+  .legend i { display: inline-block; width: 16px; height: 16px; border-radius: 4px; background: #d6d6da; vertical-align: -2px; margin-right: 6px; }
+
+  .foot { display: flex; align-items: center; gap: 26px; margin-top: 24px; font-size: 24px; font-weight: 600; color: #222; }
+  .foot::before, .foot::after { content: ""; flex: 1; height: 4px; background: var(--red); border-radius: 2px; }
+  .foot b { color: var(--red); margin: 0 10px; }
+  .order {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 16px;
+    margin-top: 16px;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 18px;
+    padding: 14px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  .order strong { font-size: 34px; font-weight: 900; letter-spacing: .02em; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="head">
+    <span class="dash dash--l"></span>
+    <svg viewBox="0 0 1000 620" fill="#fff" aria-hidden="true">
+      <path d="M250 178C330 150 600 140 790 148C862 152 905 192 908 255L908 360C905 405 885 428 858 438C760 458 450 460 345 448C290 440 248 410 236 350C230 300 232 230 250 178Z"/>
+      <path d="M262 196C230 168 196 152 166 152L104 160C76 165 60 190 64 222L74 288C79 312 104 324 128 316L176 296C200 306 222 324 240 344Z"/>
+      <path d="M168 154C158 124 168 102 196 92C186 114 184 134 190 154Z"/>
+      <ellipse cx="214" cy="172" rx="34" ry="14" transform="rotate(-18 214 172)"/>
+      <path d="M292 420L352 430L346 588L300 588ZM802 430L862 420L866 588L818 588ZM372 440L414 444L410 580L376 580ZM752 444L794 440L796 580L760 580Z"/>
+      <path d="M905 205C948 240 950 330 936 420" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+      <ellipse cx="936" cy="440" rx="16" ry="28"/>
+      <circle cx="146" cy="206" r="9" fill="#e30613"/>
+    </svg>
+    <h1><small>Conoce los cortes</small><span>de la Res</span></h1>
+    <span class="dash dash--r"></span>
+  </header>
+  <div class="format"><span>Formato Obregón</span></div>
+  <p class="lead">Y elige el ideal para cada preparación</p>
+
+  <div class="stage">
+    <svg viewBox="0 0 1080 1080" aria-hidden="true">
+      <defs>
+        <clipPath id="body">
+          <path d="M250 178C330 150 600 140 790 148C862 152 905 192 908 255L908 360C905 405 885 428 858 438C760 458 450 460 345 448C290 440 248 410 236 350C230 300 232 230 250 178Z"/>
+        </clipPath>
+      </defs>
+
+      <!-- Res (mirando a la derecha) -->
+      <svg x="40" y="255" width="1000" height="581" viewBox="40 70 930 540">
+        <g transform="translate(1010 0) scale(-1 1)">
+          <path d="M905 205C948 240 950 330 936 420" fill="none" stroke="#2a2a2e" stroke-width="14" stroke-linecap="round"/>
+          <ellipse cx="936" cy="440" rx="16" ry="28" fill="#2a2a2e"/>
+          <path d="M372 440L414 444L410 580L376 580ZM752 444L794 440L796 580L760 580Z" fill="#55555b"/>
+          <path d="M292 420L352 430L346 588L300 588ZM802 430L862 420L866 588L818 588Z" fill="#2a2a2e"/>
+          <path d="M296 588L350 588L350 602L296 602ZM816 588L870 588L870 602L816 602Z" fill="#111"/>
+          <path d="M168 154C158 124 168 102 196 92C186 114 184 134 190 154Z" fill="#cfc8b8"/>
+          <ellipse cx="214" cy="172" rx="34" ry="14" transform="rotate(-18 214 172)" fill="#2a2a2e"/>
+          <path d="M262 196C230 168 196 152 166 152L104 160C76 165 60 190 64 222L74 288C79 312 104 324 128 316L176 296C200 306 222 324 240 344Z" fill="#2a2a2e"/>
+          <ellipse cx="92" cy="290" rx="30" ry="24" fill="#f0d4d0"/>
+          <circle cx="146" cy="206" r="8" fill="#fff"/>
+
+          <g clip-path="url(#body)">
+            <polygon points="220,140 420,140 420,330 220,330" fill="#e30613"/>
+            <polygon points="420,140 610,140 610,320 420,320" fill="#c4050f"/>
+            <polygon points="610,140 720,140 720,330 610,320" fill="#ef3a43"/>
+            <polygon points="720,140 920,140 920,250 720,250" fill="#9e0711"/>
+            <polygon points="720,250 920,250 920,352 720,330" fill="#e30613"/>
+            <polygon points="700,330 720,330 920,352 920,470 700,470" fill="#c4050f"/>
+            <polygon points="420,320 610,320 720,330 700,470 420,470" fill="#9e0711"/>
+            <polygon points="220,330 420,330 420,470 220,470" fill="#d6d6da"/>
+            <!-- divisiones punteadas entre cortes -->
+            <path d="M420 140V470M610 140V320M720 140V330M720 250H920M720 330L920 352M420 320L610 320L720 330L700 470M220 330H420"
+                  fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="12 8"/>
+          </g>
+          <path d="M250 178C330 150 600 140 790 148C862 152 905 192 908 255L908 360C905 405 885 428 858 438C760 458 450 460 345 448C290 440 248 410 236 350C230 300 232 230 250 178Z" fill="none" stroke="#5e040a" stroke-width="5"/>
+        </g>
+      </svg>
+
+      <!-- Líneas de cada tarjeta a su corte -->
+      <g stroke="#1c1c1e" stroke-width="2.5" fill="none">
+        <path d="M156 240L203 389M412 240L368 427M668 240L529 427M924 240L728 449"/>
+        <path d="M156 840L214 604M412 840L203 492M668 840L479 594"/>
+      </g>
+      <g fill="#fff" stroke="#111" stroke-width="4">
+        <circle cx="203" cy="389" r="9"/><circle cx="368" cy="427" r="9"/><circle cx="529" cy="427" r="9"/><circle cx="728" cy="449" r="9"/>
+        <circle cx="214" cy="604" r="9"/><circle cx="203" cy="492" r="9"/><circle cx="479" cy="594" r="9"/>
+      </g>
+    </svg>
+
+    <!-- Fila superior -->
+    <article class="cut cut--top" style="left:36px"><img src="../assets/img/cortes/res-punta-anca.jpg" alt=""><h2>Punta de anca</h2><p>Asar · Parrilla · Hornear</p><div class="price">$34.000 <small>/lb</small></div></article>
+    <article class="cut cut--top" style="left:292px"><img src="../assets/img/cortes/res-chata.jpg" alt=""><h2>Chata</h2><p>Asar · Plancha · Parrilla</p><div class="price">$28.000 <small>/lb</small></div></article>
+    <article class="cut cut--top" style="left:548px"><img src="../assets/img/cortes/res-lomo-fino.jpg" alt=""><h2>Lomo fino</h2><p>Asar · Plancha · Hornear</p><div class="price">$37.000 <small>/lb</small></div></article>
+    <article class="cut cut--top" style="left:804px"><img src="../assets/img/cortes/res-espaldilla.jpg" alt=""><h2>Espaldilla</h2><p>Guisar · Sudar · Estofar</p><div class="price">$21.000 <small>/lb</small></div></article>
+
+    <!-- Fila inferior -->
+    <article class="cut cut--bottom" style="left:36px"><img src="../assets/img/cortes/res-tetafulla.jpg" alt=""><h2>Tetafulla</h2><p>Asar · Freír · Apanar</p><div class="price">$24.000 <small>/lb</small></div></article>
+    <article class="cut cut--bottom" style="left:292px"><img src="../assets/img/cortes/res-muchacho.jpg" alt=""><h2>Muchacho</h2><p>Hornear · Rellenar · Sudar</p><div class="price">$28.000 <small>/lb</small></div></article>
+    <article class="cut cut--bottom" style="left:548px"><img src="../assets/img/cortes/res-desmechar.jpg" alt=""><h2>Para desmechar</h2><p>Desmechar · Sudar · Guisar</p><div class="price">$21.000 <small>/lb</small></div></article>
+    <article class="cut cut--bottom" style="left:804px"><img src="../assets/img/cortes/res-molida.jpg" alt=""><h2>Molida especial</h2><p>Hamburguesas · Albóndigas</p><div class="price">$14.000 <small>/lb</small></div></article>
+  </div>
+
+  <p class="legend"><i></i>Zona gris: corte no incluido en esta lista · La molida especial se prepara con cortes seleccionados</p>
+  <footer class="foot"><span>Productos frescos<b>•</b>Empacados al vacío<b>•</b>Calidad Obregón</span></footer>
+  <div class="order">Pedidos y domicilios <strong>316 432 0413</strong></div>
+</div>
+</body>
+</html>
