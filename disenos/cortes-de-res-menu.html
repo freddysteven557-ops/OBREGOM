@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cortes de Res - Formato Obregón</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* Pieza "Formato Obregón": misma línea que el menú de cortes de cerdo */
+  :root {
+    --red: #e30613;
+    --ink: #111111;
+    --line: #e2e2e4;
+    --muted: #4a4a4a;
+    --pill: #ececee;
+    --font: "Montserrat", "Arial Black", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; }
+  body { width: 1104px; padding: 14px; font-family: var(--font); color: var(--ink); }
+
+  .sheet {
+    border: 3px solid var(--line);
+    border-radius: 34px;
+    padding: 34px 32px 30px;
+    background: #fff;
+  }
+
+  .head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    background: var(--red);
+    border-radius: 26px;
+    padding: 18px 40px 20px;
+    color: #fff;
+  }
+  .head svg { width: 150px; height: 93px; flex: none; }
+  .head h1 { margin: 0; font-size: 104px; font-weight: 900; letter-spacing: -.02em; line-height: 1; }
+  .dash { position: absolute; top: 50%; width: 20px; height: 5px; border-radius: 3px; background: #fff; opacity: .9; }
+  .dash--l { left: 14px; }
+  .dash--r { right: 14px; }
+
+  .format {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: -6px 70px 0;
+  }
+  .format::before, .format::after { content: ""; flex: 1; height: 4px; background: var(--red); border-radius: 2px; }
+  .format span {
+    background: var(--pill);
+    border-radius: 0 0 18px 18px;
+    padding: 6px 30px 10px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #333;
+  }
+
+  .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px 24px; margin-top: 26px; }
+  .cut {
+    display: grid;
+    grid-template-columns: 236px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    border: 3px solid var(--line);
+    border-radius: 24px;
+    padding: 12px 14px 12px 12px;
+    min-height: 262px;
+  }
+  .cut img { width: 236px; height: 236px; object-fit: contain; border-radius: 14px; }
+  .info { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+  .info h2 { margin: 0; font-size: 34px; font-weight: 800; letter-spacing: -.02em; line-height: 1.04; }
+  .price {
+    background: var(--red);
+    color: #fff;
+    font-size: 37px;
+    font-weight: 900;
+    padding: 6px 14px 8px;
+    border-radius: 14px;
+    line-height: 1.1;
+  }
+  .unit { font-size: 25px; font-weight: 700; color: var(--muted); }
+
+  .foot {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-top: 32px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+  }
+  .foot::before, .foot::after { content: ""; flex: 1; height: 4px; background: var(--red); border-radius: 2px; }
+  .foot b { color: var(--red); margin: 0 10px; }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <header class="head">
+      <span class="dash dash--l"></span>
+      <svg viewBox="0 0 1000 620" fill="#fff" aria-hidden="true">
+        <path d="M250 178C330 150 600 140 790 148C862 152 905 192 908 255L908 360C905 405 885 428 858 438C760 458 450 460 345 448C290 440 248 410 236 350C230 300 232 230 250 178Z"/>
+        <path d="M262 196C230 168 196 152 166 152L104 160C76 165 60 190 64 222L74 288C79 312 104 324 128 316L176 296C200 306 222 324 240 344Z"/>
+        <path d="M168 154C158 124 168 102 196 92C186 114 184 134 190 154Z"/>
+        <ellipse cx="214" cy="172" rx="34" ry="14" transform="rotate(-18 214 172)"/>
+        <path d="M292 420L352 430L346 588L300 588ZM802 430L862 420L866 588L818 588ZM372 440L414 444L410 580L376 580ZM752 444L794 440L796 580L760 580Z"/>
+        <path d="M905 205C948 240 950 330 936 420" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+        <ellipse cx="936" cy="440" rx="16" ry="28"/>
+        <circle cx="146" cy="206" r="9" fill="#e30613"/>
+      </svg>
+      <h1>Cortes de Res</h1>
+      <span class="dash dash--r"></span>
+    </header>
+    <div class="format"><span>Formato Obregón</span></div>
+
+    <main class="grid">
+      <article class="cut"><img src="../assets/img/cortes/res-lomo-fino.jpg" alt=""><div class="info"><h2>Lomo fino</h2><div class="price">$37.000</div><div class="unit">la libra</div></div></article>
+      <article class="cut"><img src="../assets/img/cortes/res-punta-anca.jpg" alt=""><div class="info"><h2>Punta de anca</h2><div class="price">$34.000</div><div class="unit">la libra</div></div></article>
+      <article class="cut"><img src="../assets/img/cortes/res-chata.jpg" alt=""><div class="info"><h2>Chata</h2><div class="price">$28.000</div><div class="unit">la libra</div></div></article>
+      <article class="cut"><img src="../assets/img/cortes/res-muchacho.jpg" alt=""><div class="info"><h2>Muchacho</h2><div class="price">$28.000</div><div class="unit">la libra</div></div></article>
+      <article class="cut"><img src="../assets/img/cortes/res-tetafulla.jpg" alt=""><div class="info"><h2>Tetafulla</h2><div class="price">$24.000</div><div class="unit">la libra</div></div></article>
+      <article class="cut"><img src="../assets/img/cortes/res-espaldilla.jpg" alt=""><div class="info"><h2>Espaldilla</h2><div class="price">$21.000</div><div class="unit">la libra</div></div></article>
+      <article class="cut"><img src="../assets/img/cortes/res-desmechar.jpg" alt=""><div class="info"><h2>Carne para desmechar</h2><div class="price">$21.000</div><div class="unit">la libra</div></div></article>
+      <article class="cut"><img src="../assets/img/cortes/res-molida.jpg" alt=""><div class="info"><h2>Molida especial</h2><div class="price">$14.000</div><div class="unit">la libra</div></div></article>
+    </main>
+
+    <footer class="foot"><span>Productos frescos<b>•</b>Empacados al vacío<b>•</b>Calidad Obregón</span></footer>
+  </div>
+</body>
+</html>

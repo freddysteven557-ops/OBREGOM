@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cortes de Res - Guía visual</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Pieza "Guía visual": misma línea que las guías de cortes de pollo y cerdo */
+  :root {
+    --red: #e30613;
+    --red-2: #b5050f;
+    --red-3: #ff3340;
+    --red-4: #8c0a12;
+    --bg: #0c0c0d;
+    --panel: #151517;
+    --edge: #2c2c30;
+    --neutral: #3b3b40;
+    --display: "Archivo Black", "Arial Black", sans-serif;
+    --tag: "Oswald", "Arial Narrow", sans-serif;
+    --body: "Montserrat", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); }
+  body { width: 1080px; font-family: var(--body); color: #fff; }
+
+  .poster {
+    position: relative;
+    overflow: hidden;
+    padding: 46px 40px 0;
+    background:
+      radial-gradient(ellipse at 50% 45%, #232326 0, var(--bg) 65%);
+  }
+  /* franjas rojas diagonales en las esquinas */
+  .stripe { position: absolute; width: 260px; height: 26px; background: var(--red); transform: rotate(-45deg); }
+  .stripe--a { top: 40px; left: -70px; }
+  .stripe--b { top: 84px; left: -98px; background: var(--red-2); height: 12px; }
+  .stripe--c { top: 46px; right: -70px; transform: rotate(45deg); }
+  .stripe--d { top: 90px; right: -98px; transform: rotate(45deg); background: var(--red-2); height: 12px; }
+
+  .top { position: relative; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 26px; }
+  .title { font-family: var(--display); line-height: .9; text-transform: uppercase; }
+  .title span { display: block; font-size: 70px; white-space: nowrap; }
+  .title strong {
+    display: block;
+    font-size: 160px;
+    font-weight: 400;
+    color: var(--red);
+    background: linear-gradient(180deg, #ff2b37 0, #e30613 55%, #a8040e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sub { display: flex; align-items: center; gap: 14px; margin-top: 12px; font-size: 28px; font-weight: 700; }
+  .sub::before { content: ""; width: 70px; height: 4px; background: var(--red); }
+  .badge {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 7px solid var(--red);
+    background: #fff;
+    box-shadow: 0 0 0 4px var(--bg), 0 10px 30px rgba(0, 0, 0, .6);
+  }
+  .claim {
+    border-left: 4px solid var(--red);
+    padding-left: 20px;
+    font-family: var(--body);
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  .claim small { display: block; font-weight: 600; font-size: 22px; }
+  .claim em { display: block; font-style: normal; font-family: var(--display); color: var(--red); font-size: 40px; }
+
+  .diagram {
+    position: relative;
+    margin-top: 30px;
+    border: 2px solid var(--edge);
+    border-radius: 26px;
+    background: var(--panel);
+    padding: 34px 18px 10px;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-family: var(--tag);
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 8px 26px 9px 18px;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 100%, 0 100%);
+  }
+  .diagram > .tag {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: none;
+    border-radius: 10px;
+    padding: 9px 46px;
+    font-size: 34px;
+  }
+  .diagram svg { display: block; width: 100%; height: auto; }
+  .diagram svg text { font-family: var(--tag); text-transform: uppercase; }
+  .note { margin: 0 0 6px; text-align: center; font-size: 18px; color: #a9a9ae; font-weight: 600; }
+  .note i { display: inline-block; width: 16px; height: 16px; border-radius: 4px; background: var(--neutral); vertical-align: -2px; margin-right: 6px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 22px; }
+  .tile {
+    border: 2px solid var(--edge);
+    border-radius: 18px;
+    background: var(--panel);
+    overflow: hidden;
+  }
+  .tile .tag { white-space: nowrap; font-size: 21px; padding: 7px 22px 8px 12px; }
+  .tile .tag b { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 8px; border-radius: 50%; background: #fff; color: var(--red); font-size: 19px; vertical-align: 1px; }
+  .tile img { width: calc(100% - 20px); aspect-ratio: 1; object-fit: contain; margin: 10px; border-radius: 12px; background: #fff; display: block; }
+
+  .bar {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 30px -40px 0;
+    padding: 26px 40px 30px;
+    border-top: 4px solid var(--red);
+    background: #070708;
+  }
+  .perk { display: flex; align-items: center; gap: 14px; padding: 0 12px; }
+  .perk + .perk { border-left: 3px solid var(--red); }
+  .perk svg { width: 50px; height: 50px; flex: none; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .perk svg.solid { fill: #fff; stroke: none; }
+  .perk p { margin: 0; font-family: var(--tag); font-weight: 600; font-size: 22px; line-height: 1.05; text-transform: uppercase; }
+  .perk p small { display: block; font-family: var(--body); font-weight: 600; font-size: 14px; color: #cfcfd3; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <span class="stripe stripe--a"></span><span class="stripe stripe--b"></span>
+  <span class="stripe stripe--c"></span><span class="stripe stripe--d"></span>
+
+  <header class="top">
+    <div>
+      <div class="title"><span>Cortes de</span><strong>Res</strong></div>
+      <div class="sub">Guía visual de productos</div>
+    </div>
+    <img class="badge" src="../assets/img/drquesos.png" alt="DrQuesos">
+    <div class="claim"><small>Productos</small><em>Frescos</em>de excelente<br>calidad</div>
+  </header>
+
+  <section class="diagram">
+    <span class="tag">Res</span>
+    <svg viewBox="40 70 930 540" role="img" aria-label="Res dividida por cortes">
+      <defs>
+        <clipPath id="body">
+          <path d="M250 178C330 150 600 140 790 148C862 152 905 192 908 255L908 360C905 405 885 428 858 438C760 458 450 460 345 448C290 440 248 410 236 350C230 300 232 230 250 178Z"/>
+        </clipPath>
+      </defs>
+      <!-- cola, patas lejanas, patas, cabeza -->
+      <path d="M905 205C948 240 950 330 936 420" fill="none" stroke="#3b3b40" stroke-width="14" stroke-linecap="round"/>
+      <ellipse cx="936" cy="440" rx="16" ry="28" fill="#3b3b40"/>
+      <path d="M372 440L414 444L410 580L376 580ZM752 444L794 440L796 580L760 580Z" fill="#2c2c31"/>
+      <path d="M292 420L352 430L346 588L300 588ZM802 430L862 420L866 588L818 588Z" fill="#3b3b40" stroke="#fff" stroke-width="3"/>
+      <path d="M300 588L346 588L346 600L300 600ZM818 588L866 588L866 600L818 600Z" fill="#111"/>
+      <path d="M168 154C158 124 168 102 196 92C186 114 184 134 190 154Z" fill="#d9d4c8"/>
+      <ellipse cx="214" cy="172" rx="34" ry="14" transform="rotate(-18 214 172)" fill="#3b3b40" stroke="#fff" stroke-width="3"/>
+      <path d="M262 196C230 168 196 152 166 152L104 160C76 165 60 190 64 222L74 288C79 312 104 324 128 316L176 296C200 306 222 324 240 344Z" fill="#3b3b40" stroke="#fff" stroke-width="3"/>
+      <ellipse cx="92" cy="292" rx="28" ry="22" fill="#4b4b52"/>
+      <circle cx="146" cy="206" r="8" fill="#fff"/>
+
+      <!-- cortes, recortados con la silueta del cuerpo -->
+      <g clip-path="url(#body)" stroke="#fff" stroke-width="4" stroke-linejoin="round">
+        <polygon points="220,140 420,140 420,330 220,330" fill="#e30613"/>
+        <polygon points="420,140 610,140 610,320 420,320" fill="#b5050f"/>
+        <polygon points="610,140 720,140 720,330 610,320" fill="#ff3340"/>
+        <polygon points="720,140 920,140 920,250 720,250" fill="#8c0a12"/>
+        <polygon points="720,250 920,250 920,352 720,330" fill="#e30613"/>
+        <polygon points="700,330 720,330 920,352 920,470 700,470" fill="#b5050f"/>
+        <polygon points="420,320 610,320 720,330 700,470 420,470" fill="#8c0a12"/>
+        <polygon points="220,330 420,330 420,470 220,470" fill="#3b3b40"/>
+      </g>
+      <path d="M250 178C330 150 600 140 790 148C862 152 905 192 908 255L908 360C905 405 885 428 858 438C760 458 450 460 345 448C290 440 248 410 236 350C230 300 232 230 250 178Z" fill="none" stroke="#fff" stroke-width="5"/>
+
+      <!-- etiquetas -->
+      <g text-anchor="middle" fill="#fff" font-weight="600">
+        <g transform="translate(330 250)"><circle r="19" fill="#fff"/><text y="8" fill="#e30613" font-size="24">1</text><text y="50" font-size="26">Espaldilla</text></g>
+        <g transform="translate(515 225)"><circle r="19" fill="#fff"/><text y="8" fill="#e30613" font-size="24">2</text><text y="50" font-size="26">Lomo fino</text></g>
+        <g transform="translate(665 225)"><circle r="19" fill="#fff"/><text y="8" fill="#e30613" font-size="24">3</text><text y="50" font-size="26">Chata</text></g>
+        <g transform="translate(818 185)"><circle r="19" fill="#fff"/><text y="8" fill="#e30613" font-size="24">4</text><text y="47" font-size="23">Punta de anca</text></g>
+        <g transform="translate(818 282)"><circle r="19" fill="#fff"/><text y="8" fill="#e30613" font-size="24">5</text><text y="47" font-size="23">Muchacho</text></g>
+        <g transform="translate(808 382)"><circle r="19" fill="#fff"/><text y="8" fill="#e30613" font-size="24">6</text><text y="47" font-size="23">Tetafulla</text></g>
+        <g transform="translate(562 368)"><circle r="19" fill="#fff"/><text y="8" fill="#e30613" font-size="24">7</text><text y="47" font-size="24">Carne para desmechar</text></g>
+      </g>
+    </svg>
+    <p class="note"><i></i>Gris: cortes no incluidos en esta lista · Molida especial (8): de cortes seleccionados</p>
+  </section>
+
+  <section class="tiles">
+    <article class="tile"><span class="tag"><b>1</b>Espaldilla</span><img src="../assets/img/cortes/res-espaldilla.jpg" alt=""></article>
+    <article class="tile"><span class="tag"><b>2</b>Lomo fino</span><img src="../assets/img/cortes/res-lomo-fino.jpg" alt=""></article>
+    <article class="tile"><span class="tag"><b>3</b>Chata</span><img src="../assets/img/cortes/res-chata.jpg" alt=""></article>
+    <article class="tile"><span class="tag"><b>4</b>Punta de anca</span><img src="../assets/img/cortes/res-punta-anca.jpg" alt=""></article>
+    <article class="tile"><span class="tag"><b>5</b>Muchacho</span><img src="../assets/img/cortes/res-muchacho.jpg" alt=""></article>
+    <article class="tile"><span class="tag"><b>6</b>Tetafulla</span><img src="../assets/img/cortes/res-tetafulla.jpg" alt=""></article>
+    <article class="tile"><span class="tag"><b>7</b>Para desmechar</span><img src="../assets/img/cortes/res-desmechar.jpg" alt=""></article>
+    <article class="tile"><span class="tag"><b>8</b>Molida especial</span><img src="../assets/img/cortes/res-molida.jpg" alt=""></article>
+  </section>
+
+  <footer class="bar">
+    <div class="perk">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><circle cx="12" cy="9" r="3"/><path d="M8.5 14l-2 7 3.5-2 2 3 1-7M15.5 14l2 7-3.5-2-2 3"/></svg>
+      <p>Calidad<small>en cada producto</small></p>
+    </div>
+    <div class="perk">
+      <svg viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15M5 19l7-7"/></svg>
+      <p>Frescura<small>siempre</small></p>
+    </div>
+    <div class="perk">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#fff" stroke="none"/><path d="M8 12.5l2.7 2.7L16.5 9" stroke="#0c0c0d" stroke-width="2.4"/></svg>
+      <p>Amplia variedad<small>de cortes</small></p>
+    </div>
+    <div class="perk">
+      <svg class="solid" viewBox="0 0 1000 620"><path d="M250 178C330 150 600 140 790 148C862 152 905 192 908 255L908 360C905 405 885 428 858 438C760 458 450 460 345 448C290 440 248 410 236 350C230 300 232 230 250 178Z"/><path d="M262 196C230 168 196 152 166 152L104 160C76 165 60 190 64 222L74 288C79 312 104 324 128 316L176 296C200 306 222 324 240 344Z"/><path d="M168 154C158 124 168 102 196 92C186 114 184 134 190 154Z"/><path d="M292 420L352 430L346 588L300 588ZM802 430L862 420L866 588L818 588ZM372 440L414 444L410 580L376 580ZM752 444L794 440L796 580L760 580Z"/><path d="M905 205C948 240 950 330 936 420" fill="none" stroke="#fff" stroke-width="18"/></svg>
+      <p>Res<small>de excelente calidad</small></p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
