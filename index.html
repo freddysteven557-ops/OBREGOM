@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#111111">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,9 +21,10 @@
         <span class="logo__sub">Distribuidora</span>
       </a>
       <nav class="nav" aria-label="Principal">
-        <a href="#cortes">Cortes</a>
-        <a href="#productos">Productos</a>
-        <a href="#nosotros">Nosotros</a>
+        <a href="#cerdo">Cerdo</a>
+        <a href="#res">Res</a>
+        <a href="#pollo">Pollo</a>
+        <a href="#otros">Otros productos</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <a class="btn btn--red btn--sm js-wa" href="https://wa.me/573164320413">Pedir ahora</a>
@@ -40,7 +41,7 @@
           <p class="hero__lead">Productos de calidad para tu mesa, tu familia y tu negocio. Cerdo, pollo, res, lácteos, pasabocas y pescados empacados al vacío.</p>
           <div class="hero__actions">
             <a class="btn btn--red js-wa" href="https://wa.me/573164320413">Pedir por WhatsApp</a>
-            <a class="btn btn--ghost" href="#cortes">Ver catálogo</a>
+            <a class="btn btn--ghost" href="#cerdo">Ver catálogo</a>
           </div>
           <ul class="hero__tags">
             <li>Calidad</li><li>Frescura</li><li>Buen precio</li><li>Siempre</li>
@@ -72,152 +73,302 @@
     </section>
 
 
-    <!-- Guías de cortes y listas de precios -->
-    <section class="cuts" id="cortes">
-      <div class="container">
-        <header class="section-head section-head--dark">
-          <p class="eyebrow">Catálogo visual</p>
-          <h2>Cortes de cerdo, pollo y res</h2>
-          <p>Guías de cortes y listas de precios. Toca una imagen para verla en grande.</p>
+    <!-- Cerdo: guía de cortes -->
+    <section class="guide" id="cerdo">
+      <div class="container guide__inner">
+        <header class="guide__head">
+          <p class="eyebrow">Guía visual de cortes</p>
+          <h2>Cortes de Cerdo</h2>
+          <p>Costilla, chuleta, lomo, bondiola, tocino y más. Toca la imagen para verla en grande.</p>
         </header>
-        <div class="tabs" role="tablist" aria-label="Tipo de carne">
-          <button type="button" class="tab" role="tab" id="tab-cerdo" aria-controls="cortes-cerdo" aria-selected="true" data-tab="cerdo"><span class="tab__pre">Cortes de </span>Cerdo</button>
-          <button type="button" class="tab" role="tab" id="tab-pollo" aria-controls="cortes-pollo" aria-selected="false" data-tab="pollo"><span class="tab__pre">Cortes de </span>Pollo</button>
-          <button type="button" class="tab" role="tab" id="tab-res" aria-controls="cortes-res" aria-selected="false" data-tab="res"><span class="tab__pre">Cortes de </span>Res</button>
+        <button type="button" class="guide__zoom" data-zoom="assets/img/piezas/cerdo-guia.jpg" aria-label="Ver en grande: Guía visual de cortes de cerdo">
+          <img src="assets/img/piezas/cerdo-guia.jpg" alt="Guía visual de cortes de cerdo" loading="lazy" width="1060" height="1484">
+        </button>
+        <a class="guide__next" href="#cerdo-vacio">Ver precios al vacío <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- Cerdo: empacado al vacío -->
+    <section class="vacuum" id="cerdo-vacio">
+      <div class="container">
+        <header class="vhead">
+          <div class="vhead__title">
+            <span class="vhead__pill">Lista de precios</span>
+            <h3>Cerdo</h3>
+            <span class="vhead__pill">Empacado al vacío</span>
+          </div>
+          <p class="vhead__note">Todos los productos son empacados <b>al vacío</b> <span>Precio por libra (lb)</span></p>
+        </header>
+        <p class="vtag">Calidad en cada producto <b>•</b> Frescura siempre</p>
+        <div class="packs packs--3">
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/cerdo-chuletas.jpg" alt="Chuletas empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Chuletas</h4>
+              <p class="pack__price">$14.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Chuletas de cerdo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/cerdo-lomo-tajado.jpg" alt="Lomo de cerdo tajado empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Lomo de cerdo tajado</h4>
+              <p class="pack__price">$15.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Lomo de cerdo tajado" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/cerdo-lomo-relajado.jpg" alt="Lomo de cerdo relajado empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Lomo de cerdo relajado</h4>
+              <p class="pack__price">$15.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Lomo de cerdo relajado" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/cerdo-bondiola.jpg" alt="Bondiola de cerdo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Bondiola de cerdo</h4>
+              <p class="pack__price">$15.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Bondiola de cerdo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/cerdo-costilla.jpg" alt="Costilla de cerdo carnuda empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Costilla de cerdo carnuda</h4>
+              <p class="pack__price">$13.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Costilla de cerdo carnuda" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/cerdo-chicharron.jpg" alt="Chicharrón carnudo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Chicharrón carnudo</h4>
+              <p class="pack__price">$15.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Chicharrón carnudo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
         </div>
-          <div class="panel" id="cortes-cerdo" role="tabpanel" aria-labelledby="tab-cerdo">
-            <h3 class="panel__title">Cortes de Cerdo</h3>
-            <div class="pieces">
-              <figure class="piece">
-                <button type="button" class="piece__zoom" data-full="assets/img/piezas/cerdo-guia.jpg" aria-label="Ver en grande: Guía visual de cortes de cerdo">
-                  <img src="assets/img/piezas/cerdo-guia.jpg" alt="Guía visual de cortes de cerdo" loading="lazy" width="1060" height="1484">
-                </button>
-                <figcaption>Guía visual</figcaption>
-              </figure>
-              <figure class="piece">
-                <button type="button" class="piece__zoom" data-full="assets/img/piezas/cerdo-precios.jpg" aria-label="Ver en grande: Precios de cortes de cerdo">
-                  <img src="assets/img/piezas/cerdo-precios.jpg" alt="Precios de cortes de cerdo" loading="lazy" width="1103" height="1426">
-                </button>
-                <figcaption>Lista de precios</figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="panel" id="cortes-pollo" role="tabpanel" aria-labelledby="tab-pollo">
-            <h3 class="panel__title">Cortes de Pollo</h3>
-            <div class="pieces">
-              <figure class="piece">
-                <button type="button" class="piece__zoom" data-full="assets/img/piezas/pollo-guia.jpg" aria-label="Ver en grande: Guía visual de cortes de pollo">
-                  <img src="assets/img/piezas/pollo-guia.jpg" alt="Guía visual de cortes de pollo" loading="lazy" width="1198" height="1313">
-                </button>
-                <figcaption>Guía visual</figcaption>
-              </figure>
-              <figure class="piece">
-                <button type="button" class="piece__zoom" data-full="assets/img/piezas/pollo-precios.jpg" aria-label="Ver en grande: Lista de precios de pollo">
-                  <img src="assets/img/piezas/pollo-precios.jpg" alt="Lista de precios de pollo" loading="lazy" width="1024" height="1536">
-                </button>
-                <figcaption>Lista de precios</figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="panel" id="cortes-res" role="tabpanel" aria-labelledby="tab-res">
-            <h3 class="panel__title">Cortes de Res</h3>
-            <div class="pieces">
-              <figure class="piece">
-                <button type="button" class="piece__zoom" data-full="assets/img/piezas/res-guia.jpg" aria-label="Ver en grande: Guía visual de cortes de res">
-                  <img src="assets/img/piezas/res-guia.jpg" alt="Guía visual de cortes de res" loading="lazy" width="1122" height="1402">
-                </button>
-                <figcaption>Guía visual</figcaption>
-              </figure>
-              <figure class="piece">
-                <button type="button" class="piece__zoom" data-full="assets/img/piezas/res-precios.jpg" aria-label="Ver en grande: Lista de precios de res">
-                  <img src="assets/img/piezas/res-precios.jpg" alt="Lista de precios de res" loading="lazy" width="1122" height="1402">
-                </button>
-                <figcaption>Lista de precios</figcaption>
-              </figure>
-            </div>
-          </div>
-        <div class="cuts__cta">
-          <a class="btn btn--red js-wa" href="https://wa.me/573164320413">Hacer mi pedido por WhatsApp</a>
+        <div class="vfoot">
+          <button type="button" class="vfoot__img" data-zoom="assets/img/piezas/cerdo-precios.jpg">Ver la lista de precios en imagen</button>
+          <a class="btn btn--red js-wa" data-product="cerdo" href="https://wa.me/573164320413">Pedir cerdo por WhatsApp</a>
         </div>
       </div>
     </section>
 
-    <!-- Catálogo -->
-    <section class="catalog" id="productos">
+    <!-- Res: guía de cortes -->
+    <section class="guide" id="res">
+      <div class="container guide__inner">
+        <header class="guide__head">
+          <p class="eyebrow">Guía visual de cortes</p>
+          <h2>Cortes de Res</h2>
+          <p>Lomo fino, chata, punta de anca, muchacho, tetafulla y más. Toca la imagen para verla en grande.</p>
+        </header>
+        <button type="button" class="guide__zoom" data-zoom="assets/img/piezas/res-guia.jpg" aria-label="Ver en grande: Guía visual de cortes de res">
+          <img src="assets/img/piezas/res-guia.jpg" alt="Guía visual de cortes de res" loading="lazy" width="1122" height="1402">
+        </button>
+        <a class="guide__next" href="#res-vacio">Ver precios al vacío <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- Res: empacado al vacío -->
+    <section class="vacuum" id="res-vacio">
+      <div class="container">
+        <header class="vhead">
+          <div class="vhead__title">
+            <span class="vhead__pill">Lista de precios</span>
+            <h3>Res</h3>
+            <span class="vhead__pill">Empacado al vacío</span>
+          </div>
+          <p class="vhead__note">Todos los productos son empacados <b>al vacío</b> <span>Precio por libra (lb)</span></p>
+        </header>
+        <p class="vtag">Calidad en cada producto <b>•</b> Frescura siempre</p>
+        <div class="packs packs--4">
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/res-lomo-fino.jpg" alt="Lomo fino empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Lomo fino</h4>
+              <p class="pack__price">$37.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Lomo fino" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/res-punta-anca.jpg" alt="Punta de anca empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Punta de anca</h4>
+              <p class="pack__price">$34.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Punta de anca" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/res-chata.jpg" alt="Chata empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Chata</h4>
+              <p class="pack__price">$28.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Chata" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/res-muchacho.jpg" alt="Muchacho empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Muchacho</h4>
+              <p class="pack__price">$28.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Muchacho" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/res-tetafulla.jpg" alt="Tetafulla empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Tetafulla</h4>
+              <p class="pack__price">$24.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Tetafulla" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/res-desmechar.jpg" alt="Carne para desmechar empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Carne para desmechar</h4>
+              <p class="pack__price">$21.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Carne para desmechar" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/res-espaldilla.jpg" alt="Espaldilla empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Espaldilla</h4>
+              <p class="pack__price">$21.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Espaldilla" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/res-molida.jpg" alt="Molida especial empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Molida especial</h4>
+              <p class="pack__price">$14.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Carne molida especial" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+        </div>
+        <div class="vfoot">
+          <button type="button" class="vfoot__img" data-zoom="assets/img/piezas/res-precios.jpg">Ver la lista de precios en imagen</button>
+          <a class="btn btn--red js-wa" data-product="res" href="https://wa.me/573164320413">Pedir res por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pollo: guía de cortes -->
+    <section class="guide" id="pollo">
+      <div class="container guide__inner">
+        <header class="guide__head">
+          <p class="eyebrow">Guía visual de cortes</p>
+          <h2>Cortes de Pollo</h2>
+          <p>Pollo entero y todas sus partes. Toca la imagen para verla en grande.</p>
+        </header>
+        <button type="button" class="guide__zoom" data-zoom="assets/img/piezas/pollo-guia.jpg" aria-label="Ver en grande: Guía visual de cortes de pollo">
+          <img src="assets/img/piezas/pollo-guia.jpg" alt="Guía visual de cortes de pollo" loading="lazy" width="1198" height="1313">
+        </button>
+        <a class="guide__next" href="#pollo-vacio">Ver precios al vacío <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- Pollo: empacado al vacío -->
+    <section class="vacuum" id="pollo-vacio">
+      <div class="container">
+        <header class="vhead">
+          <div class="vhead__title">
+            <span class="vhead__pill">Lista de precios</span>
+            <h3>Pollo</h3>
+            <span class="vhead__pill">Empacado al vacío</span>
+          </div>
+          <p class="vhead__note">Todos los productos son empacados <b>al vacío</b> <span>Precio por libra (lb)</span></p>
+        </header>
+        <p class="vtag">Calidad en cada producto <b>•</b> Frescura siempre</p>
+        <div class="packs packs--4">
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-entero.jpg" alt="Pollo entero empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Pollo entero</h4>
+              <p class="pack__price">$9.500 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Pollo entero" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-pechuga-entera.jpg" alt="Pechuga entera empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Pechuga entera</h4>
+              <p class="pack__price">$14.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Pechuga entera" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-filete-pechuga.jpg" alt="Filete de pechuga empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Filete de pechuga</h4>
+              <p class="pack__price">$17.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Filete de pechuga" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-alas.jpg" alt="Alas de pollo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Alas de pollo</h4>
+              <p class="pack__price">$10.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Alas de pollo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-muslo.jpg" alt="Muslo de pollo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Muslo de pollo</h4>
+              <p class="pack__price">$9.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Muslo de pollo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-pierna-pernil.jpg" alt="Pierna pernil empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Pierna pernil<small>Muslo + contramuslo</small></h4>
+              <p class="pack__price">$9.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Pierna pernil" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-pernil-muslo.jpg" alt="Pernil / muslo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Pernil / muslo</h4>
+              <p class="pack__price">$9.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Pernil / muslo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-alitas-bufalo.jpg" alt="Alitas tipo búfalo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Alitas tipo búfalo<small>Naturales</small></h4>
+              <p class="pack__price">$10.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Alitas tipo búfalo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-alitas-bbq.jpg" alt="Alitas barbecue empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Alitas barbecue</h4>
+              <p class="pack__price">$6.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Alitas barbecue" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-corazon.jpg" alt="Corazón de pollo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Corazón de pollo</h4>
+              <p class="pack__price">$8.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Corazón de pollo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-higado.jpg" alt="Hígado de pollo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Hígado de pollo</h4>
+              <p class="pack__price">$6.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Hígado de pollo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-molleja.jpg" alt="Molleja de pollo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Molleja de pollo</h4>
+              <p class="pack__price">$8.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Molleja de pollo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-patas.jpg" alt="Patas de pollo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Patas de pollo</h4>
+              <p class="pack__price">$5.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Patas de pollo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-rabadilla.jpg" alt="Rabadilla de pollo empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Rabadilla de pollo</h4>
+              <p class="pack__price">$5.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Rabadilla de pollo" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-pechuga-sin-piel.jpg" alt="Pechuga sin piel empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Pechuga sin piel</h4>
+              <p class="pack__price">$16.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Pechuga sin piel" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+            <article class="pack">
+              <div class="pack__img"><img src="assets/img/vacio/pollo-pechuga-partida.jpg" alt="Pechuga partida empacado al vacío" loading="lazy" width="480" height="480"></div>
+              <h4 class="pack__name">Pechuga partida</h4>
+              <p class="pack__price">$14.000 <small>/LB</small></p>
+              <a class="pack__cta js-wa" data-product="Pechuga partida" href="https://wa.me/573164320413">Pedir</a>
+            </article>
+        </div>
+        <div class="vfoot">
+          <button type="button" class="vfoot__img" data-zoom="assets/img/piezas/pollo-precios.jpg">Ver la lista de precios en imagen</button>
+          <a class="btn btn--red js-wa" data-product="pollo" href="https://wa.me/573164320413">Pedir pollo por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Otros productos -->
+    <section class="catalog" id="otros">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Catálogo de productos</p>
-          <h2>Calidad en cada entrega</h2>
+          <p class="eyebrow">Más productos</p>
+          <h2>Lácteos, pasabocas y pescados</h2>
           <p>Precios al cliente final. Presentación por libra salvo indicación diferente.</p>
         </header>
-
-        <nav class="chips" aria-label="Categorías">
-          <a href="#cerdo">Cerdo</a>
-          <a href="#pollo">Pollo</a>
-          <a href="#res">Res</a>
-          <a href="#lacteos">Lácteos</a>
-          <a href="#pasabocas">Pasabocas</a>
-          <a href="#pescados">Pescados</a>
-        </nav>
-
-        <!-- Cerdo -->
-        <section class="category" id="cerdo">
-          <h3 class="category__title">Carnes de cerdo</h3>
-          <div class="grid">
-            <article class="card"><img src="assets/img/cerdo-lomo-tajado.jpg" alt="Lomo de cerdo tajado" loading="lazy" width="640" height="448"><h4>Lomo de cerdo tajado</h4><p class="price">$15.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Lomo de cerdo tajado" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cerdo-lomo-relajado.jpg" alt="Lomo de cerdo relajado" loading="lazy" width="640" height="448"><h4>Lomo de cerdo relajado</h4><p class="price">$15.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Lomo de cerdo relajado" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cerdo-costilla.jpg" alt="Costilla de cerdo carnuda" loading="lazy" width="640" height="448"><h4>Costilla de cerdo carnuda</h4><p class="price">$13.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Costilla de cerdo carnuda" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cerdo-chuletas.jpg" alt="Chuletas de cerdo" loading="lazy" width="640" height="448"><h4>Chuletas</h4><p class="price">$14.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Chuletas de cerdo" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cerdo-chicharron.jpg" alt="Chicharrón carnudo" loading="lazy" width="640" height="448"><h4>Chicharrón carnudo</h4><p class="price">$15.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Chicharrón carnudo" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cerdo-bondiola.jpg" alt="Bondiola de cerdo" loading="lazy" width="640" height="448"><h4>Bondiola de cerdo</h4><p class="price">$15.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Bondiola de cerdo" href="https://wa.me/573164320413">Pedir</a></article>
-          </div>
-        </section>
-
-        <!-- Pollo -->
-        <section class="category" id="pollo">
-          <h3 class="category__title">Pollo: todas sus partes</h3>
-          <div class="pollo">
-            <div class="pricelist">
-              <p class="pricelist__note">Todos los productos son empacados al vacío. Precio por libra.</p>
-              <ul>
-                <li><span>Pollo entero</span><b>$9.500</b></li>
-                <li><span>Pechuga entera</span><b>$14.000</b></li>
-                <li><span>Filete de pechuga</span><b>$17.000</b></li>
-                <li><span>Pechuga sin piel</span><b>$16.000</b></li>
-                <li><span>Pechuga partida</span><b>$14.000</b></li>
-                <li><span>Alas de pollo</span><b>$10.000</b></li>
-                <li><span>Alitas tipo búfalo (naturales)</span><b>$10.000</b></li>
-                <li><span>Alitas barbecue</span><b>$6.000</b></li>
-                <li><span>Muslo de pollo</span><b>$9.000</b></li>
-                <li><span>Pierna pernil (muslo + contramuslo)</span><b>$9.000</b></li>
-                <li><span>Pernil / muslo</span><b>$9.000</b></li>
-                <li><span>Corazón de pollo</span><b>$8.000</b></li>
-                <li><span>Molleja de pollo</span><b>$8.000</b></li>
-                <li><span>Hígado de pollo</span><b>$6.000</b></li>
-                <li><span>Patas de pollo</span><b>$5.000</b></li>
-                <li><span>Rabadilla de pollo</span><b>$5.000</b></li>
-              </ul>
-              <a class="btn btn--red js-wa" data-product="pollo" href="https://wa.me/573164320413">Pedir pollo por WhatsApp</a>
-              <a class="pricelist__more" href="#cortes-pollo">Ver la lista con fotos</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Res -->
-        <section class="category" id="res">
-          <h3 class="category__title">Carnes de res</h3>
-          <div class="grid">
-            <article class="card"><img src="assets/img/cortes/res-lomo-fino.jpg" alt="Lomo fino de res" loading="lazy" width="800" height="800"><h4>Lomo fino</h4><p class="price">$37.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Lomo fino" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cortes/res-punta-anca.jpg" alt="Punta de anca" loading="lazy" width="800" height="800"><h4>Punta de anca</h4><p class="price">$34.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Punta de anca" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cortes/res-chata.jpg" alt="Chata de res" loading="lazy" width="800" height="800"><h4>Chata</h4><p class="price">$28.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Chata" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cortes/res-muchacho.jpg" alt="Muchacho de res" loading="lazy" width="800" height="800"><h4>Muchacho</h4><p class="price">$28.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Muchacho" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cortes/res-tetafulla.jpg" alt="Tetafulla" loading="lazy" width="800" height="800"><h4>Tetafulla</h4><p class="price">$24.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Tetafulla" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cortes/res-desmechar.jpg" alt="Carne para desmechar" loading="lazy" width="800" height="800"><h4>Carne para desmechar</h4><p class="price">$21.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Carne para desmechar" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cortes/res-espaldilla.jpg" alt="Espaldilla de res" loading="lazy" width="800" height="800"><h4>Espaldilla</h4><p class="price">$21.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Espaldilla" href="https://wa.me/573164320413">Pedir</a></article>
-            <article class="card"><img src="assets/img/cortes/res-molida.jpg" alt="Carne molida especial" loading="lazy" width="800" height="800"><h4>Molida especial</h4><p class="price">$14.000 <small>la libra</small></p><a class="card__cta js-wa" data-product="Molida especial" href="https://wa.me/573164320413">Pedir</a></article>
-          </div>
-        </section>
-
         <!-- Lácteos -->
         <section class="category" id="lacteos">
           <h3 class="category__title">Lácteos y productos de cabra</h3>
@@ -336,33 +487,15 @@
     });
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Pestañas de cortes (cerdo, pollo, res)
-    var tabs = document.querySelectorAll('.tab');
-    function showTab(key) {
-      tabs.forEach(function (t) {
-        var on = t.getAttribute('data-tab') === key;
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-        document.getElementById('cortes-' + t.getAttribute('data-tab')).hidden = !on;
-      });
-    }
-    tabs.forEach(function (t) {
-      t.addEventListener('click', function () { showTab(t.getAttribute('data-tab')); });
-    });
-    function tabFromHash() {
-      var m = location.hash.match(/^#cortes-(cerdo|pollo|res)$/);
-      showTab(m ? m[1] : 'cerdo');
-      if (m) document.getElementById('cortes').scrollIntoView();
-    }
-    window.addEventListener('hashchange', tabFromHash);
-    tabFromHash();
 
     // Visor de imágenes en grande
     var box = document.getElementById('lightbox');
     var boxImg = box.querySelector('img');
-    document.querySelectorAll('.piece__zoom').forEach(function (b) {
+    document.querySelectorAll('[data-zoom]').forEach(function (b) {
       b.addEventListener('click', function () {
-        boxImg.src = b.getAttribute('data-full');
-        boxImg.alt = b.querySelector('img').alt;
+        boxImg.src = b.getAttribute('data-zoom');
+        var im = b.querySelector('img');
+        boxImg.alt = im ? im.alt : b.textContent;
         box.hidden = false;
         document.body.style.overflow = 'hidden';
         box.querySelector('.lightbox__close').focus();
