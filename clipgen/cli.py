@@ -50,6 +50,12 @@ def collect_videos(inputs):
     return videos
 
 
+def append_manifest(path, entries):
+    """Agrega al manifest existente para no perder clips de ejecuciones anteriores."""
+    existing = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    path.write_text(json.dumps(existing + entries, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def fmt_time(seconds):
     m, s = divmod(int(seconds), 60)
     h, m = divmod(m, 60)
@@ -137,6 +143,6 @@ def main(argv=None):
 
     if not args.dry_run:
         manifest_path = args.output / "manifest.json"
-        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        append_manifest(manifest_path, manifest)
         print(f"\nListo: {len(manifest)} clips en {args.output}/ (textos para publicar en {manifest_path.name})")
     return 0

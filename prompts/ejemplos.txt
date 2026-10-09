@@ -1,0 +1,7 @@
+# Un prompt por línea. Las líneas con # se ignoran.
+# Los modelos de video suelen entender mejor el inglés.
+High-speed police chase with a red sports car along a beach boulevard at sunset, helicopters overhead
+A couple robbing a convenience store at night, neon signs, handheld camera, tense atmosphere
+Speedboat jumping over waves near a luxury yacht, slow motion splash, golden hour
+Aerial drone shot over a swamp with airboats and alligators, morning fog
+Street racing through downtown at night, rain reflections, motion blur, low camera angle
