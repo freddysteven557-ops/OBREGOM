@@ -10,6 +10,7 @@ Ficha de referencia para preparar documentos y presentaciones de ObreGom por nic
 - **Propósito:** conectar productores con el mercado y llevar alimentos de calidad a cada mesa.
 - **Logo:** ObreGom en letra script roja dentro de un marco rojo de esquinas cortadas, sobre negro (`vitrina/marca/obregom-logo.png`, `referencias/logo-obregom-lema.jpg`). Versión pequeña: recuadro rojo con "ObreGom" en blanco.
 - **Línea complementaria:** DrQuesos, quesos artesanales ("Natural, sano y hecho con mucho amor"). Logo en script café quemado sobre queso (`vitrina/marca/drquesos-*`).
+- **Responsable:** Freddy Steven Gómez Obregón (Freddy con doble D y Y).
 - **Contacto:** WhatsApp 316 432 0413 · web obregom.vetrelle.com (por confirmar si es .vercel.app).
 - **Ciudad:** Barranquilla.
 
@@ -86,6 +87,6 @@ Orden de categorías que pide el cliente en propuestas a carnicerías: **cerdo, 
 ## Dónde está el trabajo
 
 - Documento escrito (carnicerías): https://claude.ai/code/artifact/3a1a35ce-cbed-4f5b-932e-83b95763359e
-- Presentación (carnicerías, 18 láminas en formato ObreGom): https://claude.ai/artifact/PcTDdRiSKLRdhVLFyWhzcr
-  Orden: portada · somos ObreGom · la idea · oportunidad · proceso en 6 pasos · vitrina · formatos · antes/después · catálogo · DrQuesos · por qué ObreGom · la alianza · precio · sondeo Barranquilla · estándar · piloto · crecemos juntos · cierre.
+- Presentación (carnicerías, 17 láminas en formato ObreGom): https://claude.ai/artifact/PcTDdRiSKLRdhVLFyWhzcr
+  Orden: portada · somos ObreGom · la idea · oportunidad · proceso en 6 pasos · vitrina (kiosco-isla ObreGom, `vitrina/kiosco.py`) · formatos · catálogo · DrQuesos · por qué ObreGom · la alianza · precio · sondeo Barranquilla · estándar · piloto · crecemos juntos · cierre.
 - Vitrina, vinilo y logos: `vitrina/`
