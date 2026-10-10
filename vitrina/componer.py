@@ -1,13 +1,13 @@
-"""Limpia la foto de la vitrina y le aplica el branding OBREGOM + DrQuesos.
+"""Limpia la foto de la vitrina y le aplica el branding ObreGom + DrQuesos.
 
-Uso: python3 vitrina/componer.py  ->  vitrina/salida/vitrina-obregon-doctor-queso.jpg
+Uso: python3 vitrina/componer.py  ->  vitrina/salida/vitrina-obregom-drquesos.jpg
 """
 from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
-from vinilo import AMARILLO, CAFE, CREMA_Q, ROJO, font, vinilo
+from vinilo import CREMA_Q, ROJO, font, logo, vinilo
 
 AQUI = Path(__file__).parent
 ORIGINAL = AQUI / "original" / "vitrina-original.jpg"
@@ -75,8 +75,8 @@ def etiqueta_queso(w):
     d = ImageDraw.Draw(im)
     d.rounded_rectangle((0, 0, W - 1, H - 1), radius=H // 4, fill=ROJO)
     d.rounded_rectangle((3 * s, 3 * s, W - 1 - 3 * s, H - 1 - 3 * s), radius=H // 5, fill=CREMA_Q)
-    d.text((W * 0.5, H * 0.46), "DrQuesos", font=font("Pacifico-Regular.ttf", int(H * 0.40)),
-           fill=CAFE, anchor="mm")
+    marca = logo("drquesos-logo.png", int(H * 0.72))
+    im.alpha_composite(marca, ((W - marca.width) // 2, (H - marca.height) // 2))
     return im.resize((w, H // s), Image.LANCZOS)
 
 
@@ -177,7 +177,7 @@ def componer():
 if __name__ == "__main__":
     SALIDA.mkdir(exist_ok=True)
     img = componer()
-    img.save(SALIDA / "vitrina-obregon-doctor-queso.jpg", quality=92)
+    img.save(SALIDA / "vitrina-obregom-drquesos.jpg", quality=92)
     # Antes / después
     antes = Image.open(ORIGINAL).convert("RGB").resize((1600, 1200), Image.LANCZOS)
     despues = img.resize((1600, 1200), Image.LANCZOS)
@@ -187,6 +187,6 @@ if __name__ == "__main__":
     d = ImageDraw.Draw(comp)
     f = font("BebasNeue-Regular.ttf", 64)
     d.text((800, 45), "ANTES", font=f, fill=(235, 235, 235), anchor="mm")
-    d.text((2420, 45), "DESPUÉS · OBREGOM + DRQUESOS", font=f, fill=AMARILLO, anchor="mm")
+    d.text((2420, 45), "DESPUÉS · OBREGOM + DRQUESOS", font=f, fill=ROJO, anchor="mm")
     comp.save(SALIDA / "antes-despues.jpg", quality=88)
     print("ok", img.size)
