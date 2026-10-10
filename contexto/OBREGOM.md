@@ -39,6 +39,24 @@ Ficha de referencia para preparar documentos y presentaciones de ObreGom por nic
 01 Recibimos (el productor entrega la materia prima) → 02 Recepción → 03 Procesamiento y porcionado → 04 Empaque al vacío → 05 Almacenamiento → 06 Distribución en diferentes presentaciones según el cliente.
 Garantías: **Trazabilidad total**, **100 % inocuidad** (cumplimiento y control sanitario), **Control digital** de la operación.
 
+## Valor estratégico: solución completa (referencias/solucion-completa-valor.jpg)
+
+"Solución completa para la cadena alimentaria: procesamos, almacenamos, empaquetamos y distribuimos." Modelo integral que se adapta a cada cliente, desde la materia prima hasta el consumidor final.
+
+- Modelo integrado en 6 pasos: 1 **Recibimos** (canales, cortes, pollo y otros, de pequeños y grandes productores o empresas) → 2 **Procesamos** (porcionado bajo estándares de calidad e inocuidad) → 3 **Almacenamos** (cámaras de frío con control de temperatura) → 4 **Empaquetamos** (al vacío y etiquetado según el cliente) → 5 **Distribuimos** (flota refrigerada propia, a distintos canales) → 6 **Llegamos** (pequeños negocios, grandes empresas, mayoristas, retail, food service y consumidor final).
+- **Servicio 360°:** lo que recibimos también lo gestionamos para el cliente: procesamos, almacenamos, empaquetamos y distribuimos su producto con la misma calidad y trazabilidad que si fuera nuestro.
+- **Aliado para productores y empresas:** llevar sus productos al mercado optimizando cada etapa de la cadena de frío.
+- Beneficios: productos de buena calidad · precios competitivos · gran variedad de catálogo · buena conservación y cadena de frío · listos para comercializar · **instalación para pequeños negocios** (soluciones accesibles para pequeños comercios: aquí entra la vitrina).
+
+## Visión y crecimiento (referencias/vision-y-crecimiento.jpg)
+
+- **Visión:** ser la distribuidora de alimentos más reconocida y confiable de la región, con crecimiento sostenible y excelencia operativa en toda la cadena de suministro.
+- **Hoja de ruta:** Presente: **distribuidora de venta** (comercialización y entrega directa). Futuro: **empresa agroindustrial organizada** (selección, almacenamiento, transformación y empaque integrados).
+- **Enfoque estratégico:** innovación, eficiencia y compromiso para transformar la forma de distribuir alimentos.
+- **Meta estratégica:** consolidarse como la distribuidora más reconocida y eficiente de la región.
+- Ejes: crecimiento sostenible (más mercado y cobertura) · excelencia operativa · alianzas estratégicas con proveedores y clientes · responsabilidad y compromiso.
+- Ojo: estas dos piezas dicen "**OBREGÓM** DISTRIBUIDORA" y "Obregóm" con tilde en encabezado, pie y texto; hay que corregirlo a ObreGom.
+
 ## Catálogo por categorías (referencias/catalogo-de-productos.jpg)
 
 Carnes y cortes de cerdo · Pollo y derivados · Quesos y leche · Embutidos (chorizos) · Procesados y empacados · Congelados · Otros (venta de alimentos al por mayor y al detal).
