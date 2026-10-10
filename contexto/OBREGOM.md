@@ -86,5 +86,6 @@ Orden de categorías que pide el cliente en propuestas a carnicerías: **cerdo, 
 ## Dónde está el trabajo
 
 - Documento escrito (carnicerías): https://claude.ai/code/artifact/3a1a35ce-cbed-4f5b-932e-83b95763359e
-- Presentación (carnicerías): https://claude.ai/artifact/PcTDdRiSKLRdhVLFyWhzcr
+- Presentación (carnicerías, 18 láminas en formato ObreGom): https://claude.ai/artifact/PcTDdRiSKLRdhVLFyWhzcr
+  Orden: portada · somos ObreGom · la idea · oportunidad · proceso en 6 pasos · vitrina · formatos · antes/después · catálogo · DrQuesos · por qué ObreGom · la alianza · precio · sondeo Barranquilla · estándar · piloto · crecemos juntos · cierre.
 - Vitrina, vinilo y logos: `vitrina/`
