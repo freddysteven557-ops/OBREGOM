@@ -1,4 +1,4 @@
-"""Arte plano del vinilo frontal: Obregón (carnes) + Doctor Queso (quesos al vacío)."""
+"""Arte plano del vinilo frontal: OBREGOM (carnes) + DrQuesos (quesos artesanales)."""
 import math
 from pathlib import Path
 
@@ -16,6 +16,9 @@ AMARILLO = (247, 190, 22)
 AMARILLO_OSC = (214, 142, 10)
 AZUL = (18, 52, 102)
 BLANCO = (255, 255, 255)
+ROJO = (210, 24, 32)
+CREMA_Q = (248, 238, 216)
+CAFE = (42, 24, 16)
 
 
 def font(name, size):
@@ -72,7 +75,7 @@ def cabeza_toro(d, cx, cy, s, fill, hueco):
 
 
 def insignia_obregon(W, H):
-    """Escudo de Obregón sobre transparente, tamaño W x H."""
+    """Escudo de OBREGOM sobre transparente, tamaño W x H."""
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     cx = W / 2
@@ -97,7 +100,7 @@ def insignia_obregon(W, H):
     cabeza_toro(d, cx, arc_cy - arc_r * 0.30, arc_r * 0.36, CREMA, NEGRO)
 
     # Nombre
-    text_c(d, (cx, H * 0.635), "OBREGÓN", font("AbrilFatface-Regular.ttf", int(H * 0.235)), CREMA)
+    text_c(d, (cx, H * 0.635), "OBREGOM", font("AbrilFatface-Regular.ttf", int(H * 0.235)), CREMA)
 
     # Cinta "CARNES SELECTAS"
     ry0, ry1 = H * 0.745, H * 0.855
@@ -114,50 +117,42 @@ def insignia_obregon(W, H):
     return im
 
 
-def cuña_queso(d, x, y, s):
+def cuña_queso(d, x, y, s, borde=AZUL):
     """Cuña de queso con agujeros; (x, y) esquina izquierda-abajo, s = ancho."""
     top = [(x, y - s * 0.38), (x + s * 0.62, y - s * 0.70), (x + s, y - s * 0.46), (x + s * 0.40, y - s * 0.16)]
     front = [(x, y - s * 0.38), (x + s * 0.40, y - s * 0.16), (x + s * 0.40, y + s * 0.14), (x, y - s * 0.06)]
     side = [(x + s * 0.40, y - s * 0.16), (x + s, y - s * 0.46), (x + s, y - s * 0.14), (x + s * 0.40, y + s * 0.14)]
-    d.polygon(side, fill=AMARILLO, outline=AZUL, width=8)
-    d.polygon(front, fill=AMARILLO_OSC, outline=AZUL, width=8)
-    d.polygon(top, fill=(255, 214, 80), outline=AZUL, width=8)
+    d.polygon(side, fill=AMARILLO, outline=borde, width=8)
+    d.polygon(front, fill=AMARILLO_OSC, outline=borde, width=8)
+    d.polygon(top, fill=(255, 214, 80), outline=borde, width=8)
     for hx, hy, hr in ((0.62, -0.18, 0.07), (0.82, -0.25, 0.05), (0.75, -0.02, 0.045),
                        (0.17, -0.12, 0.05), (0.27, 0.02, 0.035)):
         d.ellipse((x + s * (hx - hr), y + s * (hy - hr), x + s * (hx + hr), y + s * (hy + hr)),
                   fill=(196, 120, 6))
 
 
-def insignia_doctor_queso(W, H):
-    """Insignia de Doctor Queso sobre transparente, tamaño W x H."""
+def insignia_drquesos(W, H):
+    """Insignia de DrQuesos sobre transparente, tamaño W x H."""
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     box = (W * 0.03, H * 0.10, W * 0.97, H * 0.92)
     d.rounded_rectangle((box[0] - 14, box[1] - 14, box[2] + 14, box[3] + 14), radius=90, fill=BLANCO)
-    d.rounded_rectangle(box, radius=78, fill=AMARILLO)
-    d.rounded_rectangle((box[0] + 22, box[1] + 22, box[2] - 22, box[3] - 22), radius=60,
-                        outline=AZUL, width=6)
+    d.rounded_rectangle(box, radius=78, fill=ROJO)
+    d.rounded_rectangle((box[0] + 18, box[1] + 18, box[2] - 18, box[3] - 18), radius=62, fill=CREMA_Q)
 
-    # Medallón azul con la cuña y la cruz médica
+    # Medallón rojo con la cuña de queso
     mr = H * 0.30
     mcx, mcy = box[0] + mr + 60, (box[1] + box[3]) / 2
     d.ellipse((mcx - mr - 10, mcy - mr - 10, mcx + mr + 10, mcy + mr + 10), fill=BLANCO)
-    d.ellipse((mcx - mr, mcy - mr, mcx + mr, mcy + mr), fill=AZUL)
-    cuña_queso(d, mcx - mr * 0.72, mcy + mr * 0.42, mr * 1.45)
-    cr, cw = mr * 0.22, mr * 0.075
-    ccx, ccy = mcx + mr * 0.42, mcy - mr * 0.58
-    d.ellipse((ccx - cr * 1.25, ccy - cr * 1.25, ccx + cr * 1.25, ccy + cr * 1.25), fill=BLANCO)
-    d.rectangle((ccx - cw, ccy - cr, ccx + cw, ccy + cr), fill=(206, 32, 41))
-    d.rectangle((ccx - cr, ccy - cw, ccx + cr, ccy + cw), fill=(206, 32, 41))
+    d.ellipse((mcx - mr, mcy - mr, mcx + mr, mcy + mr), fill=ROJO)
+    cuña_queso(d, mcx - mr * 0.72, mcy + mr * 0.42, mr * 1.45, borde=CAFE)
 
     # Textos
     tx = (mcx + mr + box[2]) / 2 + 10
-    d.text((tx - W * 0.20, H * 0.30), "Doctor", font=font("Pacifico-Regular.ttf", int(H * 0.15)),
-           fill=(206, 32, 41), anchor="lm")
-    text_c(d, (tx + W * 0.03, H * 0.53), "QUESO", font("BebasNeue-Regular.ttf", int(H * 0.40)), AZUL)
-    pill = (tx - W * 0.25, H * 0.71, tx + W * 0.25, H * 0.83)
-    d.rounded_rectangle(pill, radius=30, fill=AZUL)
-    text_c(d, (tx, (pill[1] + pill[3]) / 2 + 2), "QUESOS EMPACADOS AL VACÍO",
+    text_c(d, (tx, H * 0.42), "DrQuesos", font("Pacifico-Regular.ttf", int(H * 0.25)), CAFE)
+    pill = (tx - W * 0.24, H * 0.68, tx + W * 0.24, H * 0.80)
+    d.rounded_rectangle(pill, radius=30, fill=ROJO)
+    text_c(d, (tx, (pill[1] + pill[3]) / 2 + 2), "QUESOS  ARTESANALES",
            font("BebasNeue-Regular.ttf", int(H * 0.09)), BLANCO)
     return im
 
@@ -179,7 +174,7 @@ def vinilo(W=7360, H=800):
 
     # Insignias (centros en coordenadas del vinilo)
     ob = insignia_obregon(1900, 760)
-    dq = insignia_doctor_queso(2050, 640)
+    dq = insignia_drquesos(2050, 640)
     sombra = Image.new("RGBA", im.size, (0, 0, 0, 0))
     for layer, (cx, cy) in ((ob, (1720, 410)), (dq, (5700, 420))):
         a = layer.split()[-1].point(lambda v: int(v * 0.7))
@@ -196,7 +191,7 @@ def vinilo(W=7360, H=800):
     d.line((cx - 640, 430, cx - 120, 430), fill=ORO, width=4)
     d.line((cx + 120, 430, cx + 640, 430), fill=ORO, width=4)
     estrella(d, cx, 430, 30, ORO)
-    text_c(d, (cx, 530), "RES  ·  CERDO  ·  POLLO  ·  CHORIZOS  ·  QUESOS",
+    text_c(d, (cx, 530), "CERDO  ·  RES  ·  POLLO  ·  EMBUTIDOS  ·  MARISCOS",
            font("BebasNeue-Regular.ttf", 92), ORO)
     text_c(d, (cx, 640), "TODOS LOS DÍAS", font("BebasNeue-Regular.ttf", 70), CREMA)
 
@@ -209,8 +204,8 @@ def vinilo(W=7360, H=800):
         estrella(d, x + dx, 520 - (8 if dx == 0 else 0), 18 if dx else 24, ORO)
     x = W - 330
     d.ellipse((x - 200, 210, x + 200, 610), fill=BLANCO)
-    d.ellipse((x - 185, 225, x + 185, 595), fill=AZUL)
-    cuña_queso(d, x - 140, 470, 280)
+    d.ellipse((x - 185, 225, x + 185, 595), fill=ROJO)
+    cuña_queso(d, x - 140, 470, 280, borde=CAFE)
     return im
 
 

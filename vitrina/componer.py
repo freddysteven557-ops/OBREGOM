@@ -1,4 +1,4 @@
-"""Limpia la foto de la vitrina y le aplica el branding Obregón + Doctor Queso.
+"""Limpia la foto de la vitrina y le aplica el branding OBREGOM + DrQuesos.
 
 Uso: python3 vitrina/componer.py  ->  vitrina/salida/vitrina-obregon-doctor-queso.jpg
 """
@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
-from vinilo import AMARILLO, AZUL, font, vinilo
+from vinilo import AMARILLO, CAFE, CREMA_Q, ROJO, font, vinilo
 
 AQUI = Path(__file__).parent
 ORIGINAL = AQUI / "original" / "vitrina-original.jpg"
@@ -62,7 +62,7 @@ def corregir_color(img):
     return out.filter(ImageFilter.UnsharpMask(radius=2.2, percent=70, threshold=2))
 
 
-# Etiquetas Doctor Queso sobre los bloques al vacío: (centro x, centro y, ancho, giro°)
+# Etiquetas DrQuesos sobre los bloques al vacío: (centro x, centro y, ancho, giro°)
 ETIQUETAS = [(2490, 1015, 140, -2), (2720, 1020, 135, 1), (2905, 995, 140, -3), (3140, 1015, 145, 2),
              (2450, 905, 115, -1), (2720, 890, 120, 2), (3090, 835, 110, -4)]
 
@@ -73,12 +73,10 @@ def etiqueta_queso(w):
     W, H = w * s, int(w * 0.42) * s
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((0, 0, W - 1, H - 1), radius=H // 4, fill=(245, 245, 240, 255))
-    d.rounded_rectangle((6 * s // 2, 6 * s // 2, W - 1 - 3 * s, H - 1 - 3 * s), radius=H // 5, fill=AMARILLO)
-    d.text((W * 0.5, H * 0.36), "Doctor", font=font("Pacifico-Regular.ttf", int(H * 0.30)),
-           fill=(206, 32, 41), anchor="mm")
-    d.text((W * 0.5, H * 0.70), "QUESO", font=font("BebasNeue-Regular.ttf", int(H * 0.42)),
-           fill=AZUL, anchor="mm")
+    d.rounded_rectangle((0, 0, W - 1, H - 1), radius=H // 4, fill=ROJO)
+    d.rounded_rectangle((3 * s, 3 * s, W - 1 - 3 * s, H - 1 - 3 * s), radius=H // 5, fill=CREMA_Q)
+    d.text((W * 0.5, H * 0.46), "DrQuesos", font=font("Pacifico-Regular.ttf", int(H * 0.40)),
+           fill=CAFE, anchor="mm")
     return im.resize((w, H // s), Image.LANCZOS)
 
 
@@ -189,6 +187,6 @@ if __name__ == "__main__":
     d = ImageDraw.Draw(comp)
     f = font("BebasNeue-Regular.ttf", 64)
     d.text((800, 45), "ANTES", font=f, fill=(235, 235, 235), anchor="mm")
-    d.text((2420, 45), "DESPUÉS · OBREGÓN + DOCTOR QUESO", font=f, fill=AMARILLO, anchor="mm")
+    d.text((2420, 45), "DESPUÉS · OBREGOM + DRQUESOS", font=f, fill=AMARILLO, anchor="mm")
     comp.save(SALIDA / "antes-despues.jpg", quality=88)
     print("ok", img.size)
