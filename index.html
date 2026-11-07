@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OBREGOM Distribuidora · Dr. Quesos</title>
+<meta name="description" content="Cerdo, res, pollo, lácteos Dr. Quesos, pasabocas y pescados. Frescos, empacados al vacío y a domicilio. Pedidos al 316 432 0413.">
+<meta property="og:title" content="OBREGOM Distribuidora · Dr. Quesos">
+<meta property="og:description" content="Calidad en cada entrega. Lista de precios y pedidos por WhatsApp al 316 432 0413.">
+<meta property="og:image" content="img/portada-queso.webp">
+<meta name="theme-color" content="#0d0d0e">
+<link rel="icon" href="img/drquesos.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Layout: black brand hero with the red slash from the catalog, a white price list in category bands, and a fixed order bar that sends the cart to WhatsApp. One committed brand look (no theme switch), like the printed catalog. */
+:root {
+  --black: #0d0d0e;
+  --coal: #19191b;
+  --red: #e1141c;
+  --red-deep: #b80d14;
+  --paper: #f3f3f1;
+  --white: #ffffff;
+  --ink: #141415;
+  --grey: #6b6b70;
+  --line: #e2e2df;
+  --green: #1fa855;
+  --f-display: "Anton", "Bebas Neue", "Impact", "Arial Narrow", sans-serif;
+  --f-label: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+
+/* Logo */
+.logo { display: inline-grid; line-height: 1; text-decoration: none; color: var(--white); }
+.logo b { font-family: var(--f-display); font-weight: 400; font-size: 1.9rem; letter-spacing: .02em; }
+.logo b i { font-style: normal; color: var(--red); }
+.logo small { font-family: var(--f-label); font-weight: 600; font-size: .62rem; letter-spacing: .55em; text-align: center; margin-top: 3px; color: #cfcfd2; }
+
+/* Top bar */
+.top { background: var(--black); color: var(--white); border-bottom: 1px solid #262629; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-block: 14px; }
+.top-left { display: flex; align-items: center; gap: 14px; }
+.top-left img { width: 46px; height: 46px; }
+.wa-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: var(--white); text-decoration: none; font-family: var(--f-label); font-weight: 700; font-size: 1.05rem; letter-spacing: .03em; padding: 9px 16px; border-radius: 999px; white-space: nowrap; }
+.wa-pill:hover { background: var(--red-deep); }
+.wa-pill svg { width: 18px; height: 18px; flex: none; }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; background: var(--black); color: var(--white); }
+.hero::before { content: ""; position: absolute; right: -12%; bottom: -40%; width: 60%; height: 120%; background: var(--red); transform: skewX(-24deg); opacity: .95; }
+.hero::after { content: ""; position: absolute; right: 34%; bottom: -30%; width: 6%; height: 90%; background: var(--red); transform: skewX(-24deg); opacity: .5; }
+.hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(28px, 5vw, 64px); align-items: center; padding-block: clamp(36px, 6vw, 80px); }
+.kicker { font-family: var(--f-label); font-weight: 600; text-transform: uppercase; letter-spacing: .32em; font-size: .82rem; color: #cfcfd2; }
+h1 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(3rem, 8.4vw, 6.4rem); line-height: .92; letter-spacing: .005em; margin: 14px 0 20px; text-wrap: balance; }
+h1 span { color: var(--red); display: block; }
+.lede { font-size: 1.15rem; color: #d9d9dc; max-width: 40ch; margin: 0 0 28px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--f-label); font-weight: 700; font-size: 1.15rem; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; border-radius: 999px; padding: 14px 24px; border: 0; cursor: pointer; }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.btn-red { background: var(--red); color: var(--white); }
+.btn-red:hover { background: var(--red-deep); }
+.btn-line { background: transparent; color: var(--white); box-shadow: inset 0 0 0 2px #f0f0f0; }
+.btn-line:hover { background: var(--white); color: var(--ink); }
+.btn-green { background: var(--green); color: var(--white); }
+.btn-green:hover { filter: brightness(1.08); }
+
+.cover { position: relative; justify-self: center; width: 100%; max-width: 430px; }
+.cover figure { position: relative; margin: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 3 / 4; max-width: 100%; border: 4px solid var(--white); box-shadow: 0 30px 60px -24px rgba(0,0,0,.8); background: var(--coal); }
+.cover .photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cover figcaption { position: absolute; left: 12px; top: 12px; background: var(--black); color: var(--white); font-family: var(--f-label); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: .82rem; padding: 6px 10px; border-radius: 6px; }
+.cover .badge { position: absolute; left: -26px; bottom: -20px; width: 30%; max-width: 128px; height: auto; aspect-ratio: 1 / 1; transform: rotate(-8deg); filter: drop-shadow(0 10px 18px rgba(0,0,0,.55)); z-index: 2; }
+
+/* Benefits */
+.perks { background: var(--coal); color: var(--white); }
+.perks ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.perks li { display: flex; align-items: center; gap: 12px; padding: 20px 16px; border-left: 1px solid #2c2c30; font-family: var(--f-label); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: .98rem; line-height: 1.15; }
+.perks li:first-child { border-left: 0; }
+.perks svg { width: 30px; height: 30px; flex: none; color: var(--red); }
+
+/* Catalog */
+.catalog { padding-block: 56px 40px; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: 18px; }
+.sec-head h2 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; margin: 0; }
+.sec-head h2 span { color: var(--red); }
+.sec-head p { margin: 0; color: var(--grey); max-width: 46ch; }
+.vac { display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--red); border-radius: 8px; padding: 6px 12px; font-family: var(--f-label); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; line-height: 1.05; font-size: .9rem; }
+.vac strong { color: var(--red); font-family: var(--f-display); font-weight: 400; font-size: 1.25rem; }
+
+.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); padding-block: 10px; margin-bottom: 8px; border-bottom: 1px solid var(--line); }
+.tabs-inner { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.tabs-inner::-webkit-scrollbar { display: none; }
+.tab { flex: none; font-family: var(--f-label); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 1rem; text-decoration: none; color: var(--ink); background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; }
+.tab:hover { border-color: var(--ink); }
+.tab.on { background: var(--black); color: var(--white); border-color: var(--black); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+
+.cat { padding-top: 34px; scroll-margin-top: 70px; }
+.cat-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.cat-head h3 { margin: 0; font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: 2rem; line-height: 1; background: var(--black); color: var(--white); padding: 8px 16px 6px; border-radius: 6px; }
+.cat-head h3 span { color: var(--red); }
+.cat-head p { margin: 0; font-family: var(--f-label); font-weight: 600; text-transform: uppercase; letter-spacing: .14em; font-size: .85rem; color: var(--grey); }
+.cat-head img { width: 54px; height: 54px; margin-left: auto; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 14px; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.card .ph { aspect-ratio: 1 / 1; max-width: 100%; background: var(--white); position: relative; }
+.card .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card .ph.none { background: var(--coal); display: grid; place-items: center; color: var(--white); font-family: var(--f-display); font-size: 1.5rem; text-transform: uppercase; text-align: center; padding: 16px; line-height: 1.05; }
+.card .ph.none small { display: block; font-family: var(--f-label); font-size: .8rem; letter-spacing: .2em; color: var(--red); margin-top: 6px; }
+.tagline { position: absolute; left: 8px; top: 8px; background: var(--black); color: var(--white); font-family: var(--f-label); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: .72rem; padding: 3px 8px; border-radius: 4px; }
+.card .body { padding: 12px 12px 14px; display: grid; gap: 8px; flex: 1; align-content: start; }
+.card h4 { margin: 0; font-family: var(--f-label); font-weight: 700; text-transform: uppercase; font-size: 1.08rem; line-height: 1.1; letter-spacing: .02em; }
+.card .note { font-size: .82rem; color: var(--grey); margin-top: -4px; }
+.price { display: inline-flex; align-items: baseline; gap: 4px; justify-self: start; background: var(--red); color: var(--white); border-radius: 6px; padding: 4px 10px 3px; }
+.price b { font-family: var(--f-display); font-weight: 400; font-size: 1.35rem; letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+.price small { font-family: var(--f-label); font-weight: 700; font-size: .78rem; text-transform: uppercase; }
+.qty { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.add { width: 100%; font-family: var(--f-label); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: 1rem; background: var(--black); color: var(--white); border: 0; border-radius: 8px; padding: 10px; cursor: pointer; }
+.add:hover { background: var(--red); }
+.step { display: flex; align-items: center; width: 100%; border: 2px solid var(--black); border-radius: 8px; overflow: hidden; }
+.step button { width: 42px; height: 38px; border: 0; background: var(--black); color: var(--white); font-size: 1.3rem; cursor: pointer; line-height: 1; }
+.step button:hover { background: var(--red); }
+.step output { flex: 1; text-align: center; font-family: var(--f-label); font-weight: 700; font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+
+.fine { font-size: .85rem; color: var(--grey); margin: 28px 0 0; }
+
+/* How to order */
+.how { background: var(--black); color: var(--white); padding-block: 56px; }
+.how h2 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2rem, 4.6vw, 3rem); margin: 0 0 28px; text-align: center; }
+.how ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; counter-reset: s; }
+.how li { counter-increment: s; display: grid; gap: 8px; justify-items: center; text-align: center; }
+.how li::before { content: counter(s); display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--red); font-family: var(--f-display); font-size: 1.4rem; }
+.how h3 { margin: 0; font-family: var(--f-label); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 1.2rem; }
+.how p { margin: 0; color: #c9c9cd; max-width: 30ch; }
+.how .cta-row { justify-content: center; margin-top: 36px; }
+
+footer { background: var(--black); color: #a9a9ae; border-top: 4px solid var(--red); padding-bottom: 90px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-block: 26px; font-size: .9rem; }
+footer .contact { display: grid; gap: 2px; text-align: right; }
+footer .contact b { color: var(--white); font-family: var(--f-display); font-weight: 400; font-size: 1.5rem; letter-spacing: .03em; }
+footer a { color: #e6e6e8; }
+
+/* Order bar + panel */
+.bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--black); color: var(--white); border-top: 3px solid var(--red); padding-bottom: env(safe-area-inset-bottom, 0px); transform: translateY(110%); transition: transform .25s ease; }
+.bar.show { transform: none; }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 12px; }
+.bar .sum { display: grid; line-height: 1.15; }
+.bar .sum small { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .1em; color: #bdbdc2; font-size: .8rem; }
+.bar .sum b { font-family: var(--f-display); font-weight: 400; font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+
+[hidden] { display: none !important; }
+.sheet { position: fixed; inset: 0; z-index: 30; display: grid; place-items: end center; background: rgba(0,0,0,.55); }
+.sheet .panel { width: min(560px, 100%); max-height: 88vh; overflow: auto; background: var(--white); border-radius: 16px 16px 0 0; padding: 22px max(18px, env(safe-area-inset-right, 0px)) calc(22px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); }
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.panel h2 { margin: 0; font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: 1.9rem; }
+.x { border: 0; background: var(--paper); width: 38px; height: 38px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; }
+.lines { list-style: none; margin: 0 0 14px; padding: 0; }
+.lines li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.lines .n { font-weight: 600; line-height: 1.2; }
+.lines .n small { display: block; font-weight: 400; color: var(--grey); }
+.lines .v { font-family: var(--f-label); font-weight: 700; font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.lines .rm { border: 0; background: none; color: var(--grey); cursor: pointer; font-size: .85rem; text-decoration: underline; }
+.total { display: flex; justify-content: space-between; align-items: baseline; margin: 6px 0 18px; }
+.total span { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .1em; color: var(--grey); }
+.total b { font-family: var(--f-display); font-weight: 400; font-size: 2rem; color: var(--red); font-variant-numeric: tabular-nums; }
+.form { display: grid; gap: 10px; margin-bottom: 16px; }
+.form label { font-size: .85rem; font-weight: 600; display: grid; gap: 4px; }
+.form input, .form textarea { font: inherit; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: var(--paper); color: var(--ink); width: 100%; }
+.form textarea { min-height: 64px; resize: vertical; }
+.panel .btn { width: 100%; }
+.panel .fine { margin-top: 10px; text-align: center; }
+.copy { border: 0; background: none; color: var(--ink); text-decoration: underline; cursor: pointer; font: inherit; font-size: .85rem; }
+
+@media (max-width: 880px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero::before { width: 90%; right: -45%; }
+  .cover { max-width: 380px; }
+  .cover .badge { left: -10px; bottom: -14px; }
+  .perks ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .perks li:nth-child(3) { border-left: 0; }
+  .perks li:nth-child(n+3) { border-top: 1px solid #2c2c30; }
+  .how ol { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .top-left img { width: 38px; height: 38px; }
+  .logo b { font-size: 1.55rem; }
+  .wa-pill span { display: none; }
+  .wa-pill { padding: 10px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .card h4 { font-size: .98rem; }
+  .price b { font-size: 1.15rem; }
+  .perks li { font-size: .86rem; padding: 16px 10px; gap: 8px; }
+  .perks svg { width: 24px; height: 24px; }
+  .cat-head h3 { font-size: 1.6rem; }
+  .bar .btn { padding: 12px 16px; font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { .bar { transition: none; } }
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="top-left">
+      <a class="logo" href="#inicio" aria-label="OBREGOM Distribuidora"><b>OBREGO<i>M</i></b><small>DISTRIBUIDORA</small></a>
+      <img src="img/drquesos.png" alt="Dr. Quesos">
+    </div>
+    <a class="wa-pill" href="https://wa.me/573164320413?text=Hola%20OBREGOM%2C%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al 316 432 0413">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>
+      <span>316 432 0413</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="kicker">Tu aliado en distribución de alimentos</div>
+        <h1>Calidad en <span>cada entrega</span></h1>
+        <p class="lede">Cerdo, res, pollo, lácteos Dr. Quesos, pasabocas y pescados. Frescos, empacados al vacío y a domicilio.</p>
+        <div class="cta-row">
+          <a class="btn btn-red" href="#catalogo">Ver precios</a>
+          <a class="btn btn-line" href="https://wa.me/573164320413?text=Hola%20OBREGOM%2C%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="cover">
+        <figure>
+          <img class="photo" src="img/portada-queso.webp" alt="Bloque de queso Dr. Quesos empacado al vacío sobre el mostrador de OBREGOM">
+          <figcaption>Queso Dr. Quesos · empacado al vacío</figcaption>
+        </figure>
+        <img class="badge" src="img/drquesos.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="perks" aria-label="Por qué OBREGOM">
+    <ul class="wrap">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>Productos de excelente calidad</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Entregas a tiempo</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg>Empacados al vacío</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="7" r="2.5"/><path d="M16 13a5 5 0 0 1 5.5 5"/></svg>Atención personalizada</li>
+    </ul>
+  </section>
+
+  <section class="catalog" id="catalogo">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Lista de <span>precios</span></h2>
+          <p>Precios al cliente final. Agrega lo que necesitas y envíanos el pedido por WhatsApp.</p>
+        </div>
+        <div class="vac"><span>Todos los productos son<br>empacados</span><strong>AL VACÍO</strong></div>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Categorías">
+      <div class="wrap tabs-inner" id="tabs"></div>
+    </nav>
+    <div class="wrap" id="cats"></div>
+    <div class="wrap">
+      <p class="fine">Precios al cliente final, sujetos a cambio y a disponibilidad de inventario. Presentación por libra salvo indicación diferente. Productos disponibles según zona.</p>
+    </div>
+  </section>
+
+  <section class="how" id="pedido">
+    <div class="wrap">
+      <h2>¿Cómo hacer tu pedido?</h2>
+      <ol>
+        <li><h3>Escoge tus productos</h3><p>Elige los cortes y las cantidades por libra en la lista de precios.</p></li>
+        <li><h3>Escríbenos por WhatsApp</h3><p>Envía tu pedido al 316 432 0413. Te confirmamos disponibilidad y valor.</p></li>
+        <li><h3>Recibe tu domicilio</h3><p>Entregamos a tiempo, con tus productos frescos y empacados al vacío.</p></li>
+      </ol>
+      <div class="cta-row">
+        <a class="btn btn-green" href="https://wa.me/573164320413?text=Hola%20OBREGOM%2C%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          316 432 0413
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="OBREGOM Distribuidora"><b>OBREGO<i>M</i></b><small>DISTRIBUIDORA</small></a>
+    <div class="contact">
+      <span>Pedidos y domicilios</span>
+      <b>316 432 0413</b>
+      <span>Instagram <a href="https://www.instagram.com/drquesos/" target="_blank" rel="noopener">@drquesos</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="bar" id="bar" aria-live="polite">
+  <div class="wrap">
+    <div class="sum"><small id="barCount">0 productos</small><b id="barTotal">$0</b></div>
+    <button class="btn btn-red" type="button" id="openSheet">Ver pedido</button>
+  </div>
+</div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="panel-head">
+      <h2 id="sheetTitle">Tu pedido</h2>
+      <button class="x" type="button" id="closeSheet" aria-label="Cerrar">×</button>
+    </div>
+    <ul class="lines" id="lines"></ul>
+    <div class="total"><span>Total estimado</span><b id="sheetTotal">$0</b></div>
+    <div class="form">
+      <label for="cNombre">Nombre<input id="cNombre" autocomplete="name" placeholder="¿A nombre de quién?"></label>
+      <label for="cDir">Dirección y barrio<input id="cDir" autocomplete="street-address" placeholder="Para el domicilio"></label>
+      <label for="cNota">Notas (opcional)<textarea id="cNota" placeholder="Ej. lomo en filetes delgados"></textarea></label>
+    </div>
+    <a class="btn btn-green" id="sendWa" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      Enviar pedido por WhatsApp
+    </a>
+    <p class="fine">Se abre WhatsApp con tu pedido listo para enviar al 316 432 0413. ¿No abre? <button class="copy" type="button" id="copyOrder">Copiar pedido</button></p>
+  </div>
+</div>
+
+<script>
+/* ===== CATÁLOGO: para actualizar precios o productos, cambia solo esta lista ===== */
+const CATALOGO = [
+  { id: "cerdo", nombre: "Cerdo", sub: "Todos sus cortes", items: [
+    ["Chuletas", 14000, "lb", "chuletas"],
+    ["Lomo de cerdo tajado", 15000, "lb", "lomo-tajado"],
+    ["Lomo de cerdo relajado", 15000, "lb", "lomo-relajado"],
+    ["Bondiola de cerdo", 15000, "lb", "bondiola"],
+    ["Costilla de cerdo carnuda", 13000, "lb", "costilla"],
+    ["Chicharrón carnudo", 15000, "lb", "chicharron"],
+  ]},
+  { id: "res", nombre: "Res", sub: "Todos sus cortes", items: [
+    ["Lomo fino", 37000, "lb", "lomo-fino"],
+    ["Punta de anca", 34000, "lb", "punta-anca-v2"],
+    ["Chata", 28000, "lb", "chata"],
+    ["Muchacho", 28000, "lb", "muchacho-v2"],
+    ["Tetafulla", 24000, "lb", "tetafulla"],
+    ["Carne para desmechar", 21000, "lb", "desmechar"],
+    ["Espaldilla", 21000, "lb", "espaldilla"],
+    ["Molida especial", 14000, "lb", "molida"],
+  ]},
+  { id: "pollo", nombre: "Pollo", sub: "Todos sus cortes", items: [
+    ["Pollo entero", 9500, "lb", "pollo-entero"],
+    ["Pechuga entera", 14000, "lb", "pechuga-entera"],
+    ["Filete de pechuga", 17000, "lb", "filete-pechuga"],
+    ["Pechuga sin piel", 16000, "lb", "pechuga-sin-piel"],
+    ["Pechuga partida", 14000, "lb", "pechuga-partida"],
+    ["Alas de pollo", 10000, "lb", "alas"],
+    ["Alitas tipo búfalo", 10000, "lb", "alitas-bufalo"],
+    ["Alitas barbecue", 6000, "lb", "alitas-bbq"],
+    ["Muslo de pollo", 9000, "lb", "muslo-v2"],
+    ["Pierna pernil", 9000, "lb", "pierna-pernil"],
+    ["Pernil / muslo", 9000, "lb", "pernil-muslo-v2", "Muslo + contramuslo"],
+    ["Corazón de pollo", 8000, "lb", "corazon"],
+    ["Hígado de pollo", 6000, "lb", "higado"],
+    ["Molleja de pollo", 8000, "lb", "molleja"],
+    ["Patas de pollo", 5000, "lb", "patas"],
+    ["Rabadilla de pollo", 5000, "lb", "rabadilla"],
+  ]},
+  { id: "lacteos", nombre: "Lácteos", sub: "Quesos Dr. Quesos y productos de cabra", logo: true, items: [
+    ["Queso costeño", 13000, "lb", "queso-costeno", "Dr. Quesos"],
+    ["Queso mozzarella", 15000, "lb", "mozzarella"],
+    ["Queso de cabra", 50000, "lb", "queso-cabra"],
+    ["Yogur de cabra", 25000, "litro", null, "Sujeto a inventario"],
+    ["Leche de cabra", 20000, "litro", null, "Sujeto a inventario"],
+  ]},
+  { id: "pasabocas", nombre: "Pasabocas", sub: "Pasabocas y embutidos", items: [
+    ["Deditos", 15000, "bandeja", "deditos-v2", "20 unidades"],
+    ["Empanadillas", 15000, "bandeja", "empanadillas"],
+    ["Chorizo de pollo y cerdo", 14000, "paquete", null, "6 unidades"],
+    ["Chorizo de cerdo", 12000, "paquete", null, "4 unidades"],
+    ["Salchicha Ranch", 15000, "paquete", null, "12 unidades"],
+  ]},
+  { id: "pescados", nombre: "Pescados", sub: "Pescados y mariscos", items: [
+    ["Filete de tilapia", 15000, "lb", "tilapia-v2"],
+    ["Camarón jumbo", 28000, "lb", "camaron-v2"],
+    ["Filete de salmón", 41000, "lb", "salmon"],
+  ]},
+];
+const WHATSAPP = "573164320413";
+/* ================================================================================ */
+
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => "$" + new Intl.NumberFormat("es-CO", { maximumFractionDigits: 0 }).format(n);
+  const unitShort = { lb: "/LB", litro: "/LITRO", bandeja: "/BANDEJA", paquete: "/PAQUETE" };
+  const unitQty = (q, u) => u === "lb" ? `${q} lb` : `${q} ${u}${q === 1 ? "" : (u === "litro" ? "s" : "s")}`;
+
+  const products = {};
+  CATALOGO.forEach((c) => c.items.forEach(([name, price, unit, img, note]) => {
+    const id = c.id + ":" + name;
+    products[id] = { id, name, price, unit, img, note, cat: c.nombre };
+  }));
+
+  let cart = {};
+  try { cart = JSON.parse(localStorage.getItem("obregom-cart") || "{}") || {}; } catch { cart = {}; }
+  Object.keys(cart).forEach((k) => { if (!products[k] || !(cart[k] > 0)) delete cart[k]; });
+  const save = () => { try { localStorage.setItem("obregom-cart", JSON.stringify(cart)); } catch {} };
+
+  // Tabs + sections
+  const tabs = $("tabs"), cats = $("cats");
+  CATALOGO.forEach((c, i) => {
+    const t = document.createElement("a");
+    t.className = "tab" + (i === 0 ? " on" : "");
+    t.href = "#" + c.id; t.textContent = c.nombre; t.dataset.cat = c.id;
+    tabs.appendChild(t);
+
+    const sec = document.createElement("section");
+    sec.className = "cat"; sec.id = c.id;
+    const head = document.createElement("div");
+    head.className = "cat-head";
+    head.innerHTML = `<h3>${c.nombre}</h3><p>${c.sub}</p>` + (c.logo ? `<img src="img/drquesos.png" alt="Dr. Quesos">` : "");
+    const grid = document.createElement("div");
+    grid.className = "grid";
+    c.items.forEach(([name]) => grid.appendChild(card(products[c.id + ":" + name])));
+    sec.append(head, grid);
+    cats.appendChild(sec);
+  });
+
+  function card(p) {
+    const el = document.createElement("article");
+    el.className = "card";
+    const ph = document.createElement("div");
+    if (p.img) {
+      ph.className = "ph";
+      const im = document.createElement("img");
+      im.src = "img/" + p.img + ".webp"; im.alt = p.name; im.loading = "lazy";
+      ph.appendChild(im);
+      if (p.note === "Dr. Quesos") { const t = document.createElement("span"); t.className = "tagline"; t.textContent = "Dr. Quesos"; ph.appendChild(t); }
+    } else {
+      ph.className = "ph none";
+      ph.innerHTML = `<div>${p.name}<small>${p.note || ""}</small></div>`;
+    }
+    const body = document.createElement("div");
+    body.className = "body";
+    const h = document.createElement("h4"); h.textContent = p.name;
+    body.appendChild(h);
+    if (p.note && p.img && p.note !== "Dr. Quesos") { const n = document.createElement("div"); n.className = "note"; n.textContent = p.note; body.appendChild(n); }
+    const pr = document.createElement("div"); pr.className = "price";
+    pr.innerHTML = `<b>${money(p.price)}</b><small>${unitShort[p.unit]}</small>`;
+    const q = document.createElement("div"); q.className = "qty"; q.dataset.id = p.id;
+    body.append(pr, q);
+    el.append(ph, body);
+    renderQty(q);
+    return el;
+  }
+
+  function renderQty(q) {
+    const p = products[q.dataset.id], n = cart[p.id] || 0;
+    q.textContent = "";
+    if (!n) {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "add"; b.textContent = "Agregar";
+      b.setAttribute("aria-label", "Agregar " + p.name);
+      b.addEventListener("click", () => setQty(p.id, 1));
+      q.appendChild(b);
+    } else {
+      const s = document.createElement("div"); s.className = "step";
+      const minus = document.createElement("button"); minus.type = "button"; minus.textContent = "−"; minus.setAttribute("aria-label", "Quitar uno de " + p.name);
+      const out = document.createElement("output"); out.textContent = unitQty(n, p.unit);
+      const plus = document.createElement("button"); plus.type = "button"; plus.textContent = "+"; plus.setAttribute("aria-label", "Agregar uno más de " + p.name);
+      minus.addEventListener("click", () => setQty(p.id, n - 1));
+      plus.addEventListener("click", () => setQty(p.id, n + 1));
+      s.append(minus, out, plus); q.appendChild(s);
+    }
+  }
+
+  function setQty(id, n) {
+    if (n <= 0) delete cart[id]; else cart[id] = Math.min(n, 99);
+    save();
+    document.querySelectorAll(`.qty[data-id="${CSS.escape(id)}"]`).forEach(renderQty);
+    renderCart();
+  }
+
+  function lines() { return Object.keys(cart).map((id) => ({ p: products[id], n: cart[id] })); }
+  function total() { return lines().reduce((s, l) => s + l.p.price * l.n, 0); }
+
+  function message() {
+    const ls = lines();
+    let m = "Hola OBREGOM, quiero hacer este pedido:\n\n";
+    ls.forEach(({ p, n }) => { m += `• ${unitQty(n, p.unit)} de ${p.name} — ${money(p.price * n)}\n`; });
+    m += `\nTotal estimado: ${money(total())}\n`;
+    const nom = $("cNombre").value.trim(), dir = $("cDir").value.trim(), nota = $("cNota").value.trim();
+    if (nom) m += `Nombre: ${nom}\n`;
+    if (dir) m += `Dirección: ${dir}\n`;
+    if (nota) m += `Notas: ${nota}\n`;
+    return m;
+  }
+  function updateLink() { $("sendWa").href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message())}`; }
+
+  function renderCart() {
+    const ls = lines();
+    const count = ls.length;
+    $("bar").classList.toggle("show", count > 0);
+    $("barCount").textContent = count === 1 ? "1 producto" : `${count} productos`;
+    $("barTotal").textContent = money(total());
+    $("sheetTotal").textContent = money(total());
+    const ul = $("lines"); ul.textContent = "";
+    ls.forEach(({ p, n }) => {
+      const li = document.createElement("li");
+      const nm = document.createElement("div"); nm.className = "n";
+      nm.textContent = p.name;
+      const sm = document.createElement("small"); sm.textContent = `${unitQty(n, p.unit)} × ${money(p.price)}`; nm.appendChild(sm);
+      const v = document.createElement("div"); v.className = "v"; v.textContent = money(p.price * n);
+      const rm = document.createElement("button"); rm.type = "button"; rm.className = "rm"; rm.textContent = "Quitar";
+      rm.addEventListener("click", () => { setQty(p.id, 0); if (!lines().length) closeSheet(); });
+      li.append(nm, v, rm); ul.appendChild(li);
+    });
+    updateLink();
+  }
+
+  function openSheet() { $("sheet").hidden = false; $("closeSheet").focus(); }
+  function closeSheet() { $("sheet").hidden = true; }
+  $("openSheet").addEventListener("click", openSheet);
+  $("closeSheet").addEventListener("click", closeSheet);
+  $("sheet").addEventListener("click", (e) => { if (e.target === $("sheet")) closeSheet(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeSheet(); });
+  ["cNombre", "cDir", "cNota"].forEach((id) => $(id).addEventListener("input", updateLink));
+  $("copyOrder").addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(message()); $("copyOrder").textContent = "Pedido copiado"; }
+    catch { $("copyOrder").textContent = "No se pudo copiar"; }
+  });
+
+  // Highlight the tab of the category in view
+  const tabEls = [...tabs.children];
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      tabEls.forEach((t) => t.classList.toggle("on", t.dataset.cat === en.target.id));
+      const on = tabEls.find((t) => t.dataset.cat === en.target.id);
+      if (on) tabs.scrollTo({ left: on.offsetLeft - 18, behavior: "smooth" });
+    });
+  }, { rootMargin: "-30% 0px -60% 0px" });
+  document.querySelectorAll(".cat").forEach((s) => io.observe(s));
+
+  renderCart();
+})();
+</script>
+
+</body>
+</html>
