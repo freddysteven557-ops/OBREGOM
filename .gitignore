@@ -1,0 +1,9 @@
+# Herramientas instaladas (pesadas, se reinstalan)
+.venv/
+.earshot/
+node_modules/
+# Archivos de prueba pesados
+pruebas/*.mp4
+pruebas/*.wav
+pruebas/cuadros/
+pruebas/whisper_salida/

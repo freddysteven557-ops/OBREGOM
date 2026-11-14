@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "historyId": "2687b88a-7c4a-412e-b029-2197d252101e",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/root/.cache/hyperframes/history/2687b88a-7c4a-412e-b029-2197d252101e/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "CLAUDE.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/root/.cache/hyperframes/history/2687b88a-7c4a-412e-b029-2197d252101e/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/root/.cache/hyperframes/history/2687b88a-7c4a-412e-b029-2197d252101e/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "461d959c336efd6b9fc70ca2921ca9304b1669a5a188becda8728bbb03f31dc9",
+      "content": "/root/.cache/hyperframes/history/2687b88a-7c4a-412e-b029-2197d252101e/blobs/46/461d959c336efd6b9fc70ca2921ca9304b1669a5a188becda8728bbb03f31dc9"
+    },
+    "meta.json": {
+      "hash": "39b6e18546ed06a9ba637650e1708cabe56d16bc27f0c38ba622e9dc40680776",
+      "content": "/root/.cache/hyperframes/history/2687b88a-7c4a-412e-b029-2197d252101e/blobs/39/39b6e18546ed06a9ba637650e1708cabe56d16bc27f0c38ba622e9dc40680776"
+    },
+    "package.json": {
+      "hash": "2cde2d8832694a13534e3880d299bbf4de58bc2c9c6ca9dc56c4cbd6bc4c45c5",
+      "content": "/root/.cache/hyperframes/history/2687b88a-7c4a-412e-b029-2197d252101e/blobs/2c/2cde2d8832694a13534e3880d299bbf4de58bc2c9c6ca9dc56c4cbd6bc4c45c5"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "8feb710e-4459-474e-a38e-580e2cdf6f9c",
+      "completedAt": 1794619612557,
+      "output": "/home/user/OBREGOM/pruebas/hyperframes_prueba.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

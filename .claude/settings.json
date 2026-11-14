@@ -1,0 +1,22 @@
+{
+  "extraKnownMarketplaces": {
+    "hyperframes": {
+      "source": {
+        "source": "github",
+        "repo": "heygen-com/hyperframes"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "hyperframes@hyperframes": true
+  },
+  "permissions": {
+    "deny": [
+      "mcp__earshot__llm_critique"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "blender",
+    "earshot"
+  ]
+}
