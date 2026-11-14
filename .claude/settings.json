@@ -12,11 +12,30 @@
   },
   "permissions": {
     "deny": [
-      "mcp__earshot__llm_critique"
+      "mcp__earshot__llm_critique",
+      "mcp__blender__search_assets",
+      "mcp__blender__import_asset",
+      "mcp__blender__generate_3d",
+      "mcp__blender__generate_gaussian_world",
+      "mcp__blender__record_trajectory_feedback",
+      "Bash(*hyperframes* publish*)",
+      "Bash(*hyperframes* share*)",
+      "Bash(*hyperframes* cloud*)",
+      "Bash(*hyperframes* auth*)",
+      "Bash(*hyperframes* lambda*)",
+      "Bash(*hyperframes* cloudrun*)",
+      "Bash(*hyperframes* feedback*)",
+      "Bash(*earshot* llm*)"
     ]
   },
   "enabledMcpjsonServers": [
     "blender",
     "earshot"
-  ]
+  ],
+  "env": {
+    "DO_NOT_TRACK": "1",
+    "HYPERFRAMES_NO_TELEMETRY": "1",
+    "DISABLE_TELEMETRY": "true",
+    "HF_HUB_DISABLE_TELEMETRY": "1"
+  }
 }

@@ -7,7 +7,8 @@
         "mcp-for-blender"
       ],
       "env": {
-        "DISABLE_TELEMETRY": "true"
+        "DISABLE_TELEMETRY": "true",
+        "BLENDER_MCP_DISABLE_TELEMETRY": "true"
       }
     },
     "earshot": {
@@ -22,7 +23,8 @@
         "EARSHOT_OFFLINE": "1",
         "HF_HUB_OFFLINE": "1",
         "TRANSFORMERS_OFFLINE": "1",
-        "MCP_TIMEOUT": "60000"
+        "MCP_TIMEOUT": "60000",
+        "HF_HUB_DISABLE_TELEMETRY": "1"
       }
     }
   }

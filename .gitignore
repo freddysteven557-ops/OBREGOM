@@ -7,3 +7,7 @@ pruebas/*.mp4
 pruebas/*.wav
 pruebas/cuadros/
 pruebas/whisper_salida/
+pruebas/*.jpg
+pruebas/*.png
+**/.hyperframes/artifacts/
+**/.hyperframes/cache/

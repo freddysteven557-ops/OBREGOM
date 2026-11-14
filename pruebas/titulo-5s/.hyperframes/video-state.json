@@ -1,0 +1,169 @@
+{
+  "version": 1,
+  "historyId": "da747f13-438d-4c2e-ae7a-75ccd45757ef",
+  "currentRevision": "092d2efe-5128-4f72-936f-23bd9bb0e665",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/root/.cache/hyperframes/history/da747f13-438d-4c2e-ae7a-75ccd45757ef/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "CLAUDE.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/root/.cache/hyperframes/history/da747f13-438d-4c2e-ae7a-75ccd45757ef/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/root/.cache/hyperframes/history/da747f13-438d-4c2e-ae7a-75ccd45757ef/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "fe425fb846ef5fa7480c971aa726ebbadd86c66d9226404b1dc700e6d1b1a36a",
+      "content": "/root/.cache/hyperframes/history/da747f13-438d-4c2e-ae7a-75ccd45757ef/blobs/fe/fe425fb846ef5fa7480c971aa726ebbadd86c66d9226404b1dc700e6d1b1a36a"
+    },
+    "meta.json": {
+      "hash": "a76f37f667d244cb1d19c6702b68c51dd40ae36767e89cff0ebae07f5963a1e5",
+      "content": "/root/.cache/hyperframes/history/da747f13-438d-4c2e-ae7a-75ccd45757ef/blobs/a7/a76f37f667d244cb1d19c6702b68c51dd40ae36767e89cff0ebae07f5963a1e5"
+    },
+    "package.json": {
+      "hash": "4916aaf84c3b3fccfff75dd321c279b8809378ce2afafee2b2041038e782bca4",
+      "content": "/root/.cache/hyperframes/history/da747f13-438d-4c2e-ae7a-75ccd45757ef/blobs/49/4916aaf84c3b3fccfff75dd321c279b8809378ce2afafee2b2041038e782bca4"
+    }
+  },
+  "revisions": {
+    "092d2efe-5128-4f72-936f-23bd9bb0e665": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794622519690,
+      "endedAt": 1794622519691,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/da747f13-438d-4c2e-ae7a-75ccd45757ef/blobs/80/8028eec915770e7675cff9dc940543b969caf71b506af0468dae1f585fea2f2d",
+          "after": "/root/.cache/hyperframes/history/da747f13-438d-4c2e-ae7a-75ccd45757ef/blobs/fe/fe425fb846ef5fa7480c971aa726ebbadd86c66d9226404b1dc700e6d1b1a36a"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "092d2efe-5128-4f72-936f-23bd9bb0e665",
+      "id": "006454ab-cf3d-4daf-b855-3a4d81974b7f"
+    },
+    "revisions": {
+      "092d2efe-5128-4f72-936f-23bd9bb0e665": [
+        {
+          "id": "006454ab-cf3d-4daf-b855-3a4d81974b7f",
+          "scope": "project",
+          "report": "/home/user/OBREGOM/pruebas/titulo-5s/.hyperframes/artifacts/checks/006454ab-cf3d-4daf-b855-3a4d81974b7f.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794622520856,
+          "contentHash": "3d81714ab973973f99ef9a1ffb41072d197eb10c491a599b377e423f204ffa3c",
+          "revision": "092d2efe-5128-4f72-936f-23bd9bb0e665",
+          "inputFingerprint": "732d641ab31bd3d731ad46f8c1f48dc7cdd72bc11c7bc6c477e69a079ead2a79",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "2310906f-7700-4316-b5ea-40a1560e430d",
+        "scope": "project",
+        "report": "/home/user/OBREGOM/pruebas/titulo-5s/.hyperframes/artifacts/checks/2310906f-7700-4316-b5ea-40a1560e430d.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794622500219,
+        "contentHash": "b7b8f9eb1fa155987a62344e95c075830e6e17d67b47cc463bbdff4f75e95133",
+        "revision": null,
+        "inputFingerprint": "421b3ae63c7d6e0726279e900b9ff5ff9e5212b9b5b7a7f74fc4decb2cd62440",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "14363c4a-7b1d-4afc-9316-4c99bd9715a8",
+        "scope": "project",
+        "report": "/home/user/OBREGOM/pruebas/titulo-5s/.hyperframes/artifacts/checks/14363c4a-7b1d-4afc-9316-4c99bd9715a8.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794622505672,
+        "contentHash": "b7b8f9eb1fa155987a62344e95c075830e6e17d67b47cc463bbdff4f75e95133",
+        "revision": null,
+        "inputFingerprint": "421b3ae63c7d6e0726279e900b9ff5ff9e5212b9b5b7a7f74fc4decb2cd62440",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "af0ba288-1227-4be7-bf59-b05b1401c27c",
+      "completedAt": 1794622535076,
+      "output": "/home/user/OBREGOM/pruebas/titulo_5s.mp4",
+      "status": "completed",
+      "revision": "092d2efe-5128-4f72-936f-23bd9bb0e665"
+    },
+    "retainedRevisions": [
+      "092d2efe-5128-4f72-936f-23bd9bb0e665"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}
