@@ -57,7 +57,7 @@ button { font: inherit; color: inherit; }
 .paw { width: 1em; height: 1em; fill: currentColor; flex: none; }
 
 /* Header */
-.top { position: sticky; top: 0; z-index: 20; background: rgba(244, 236, 229, .88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(244, 236, 229, .88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 10px; }
 .nav { display: flex; gap: 26px; font-size: .92rem; letter-spacing: .04em; }
 .nav a { text-decoration: none; color: var(--ink-soft); }
