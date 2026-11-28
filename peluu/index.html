@@ -1,0 +1,1194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PĒLU · Tu mascota en una camiseta</title>
+<meta name="description" content="Convertimos a tu mascota en una ilustración sobre una camiseta 100% algodón, con su nombre en la letra que elijas y un código QR secreto con su video. Un recuerdo para siempre.">
+<meta property="og:title" content="PĒLU · Tu mascota en una camiseta">
+<meta property="og:description" content="Envíanos una foto de tu mascota y la convertimos en una camiseta: ilustración, nombre y QR con su video.">
+<meta property="og:image" content="img/hero-camisetas.webp">
+<meta name="theme-color" content="#f4ece5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23f6efe6'/%3E%3Cg fill='%23b9946f'%3E%3Cellipse cx='32' cy='40' rx='11' ry='9'/%3E%3Ccircle cx='19' cy='27' r='5'/%3E%3Ccircle cx='27' cy='19' r='5'/%3E%3Ccircle cx='37' cy='19' r='5'/%3E%3Ccircle cx='45' cy='27' r='5'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&family=Mrs+Saint+Delafield&family=Dancing+Script:wght@600&family=Great+Vibes&family=Sacramento&family=Caveat:wght@600&family=Pacifico&family=Amatic+SC:wght@700&family=Fredoka:wght@500&display=swap">
+<style>
+/* Layout: warm linen page like the brand's Instagram (cream, kraft, peach brush strokes, serif + handwritten accents).
+   Sections: hero with the real product photo, 5 steps, the 5 base colors, a live designer (color, photo, name, font, size,
+   front/back with the QR), the shirt details, the business angle, and an order message sent to WhatsApp or Instagram. */
+:root {
+  --linen: #f4ece5;
+  --paper: #fbf8f3;
+  --sand: #ece1d6;
+  --ink: #45372d;
+  --ink-soft: #7b6a5c;
+  --kraft: #b48d66;
+  --kraft-deep: #8f6a47;
+  --peach: #ecc9ae;
+  --rose: #bf8790;
+  --line: #e2d4c6;
+  --white: #ffffff;
+  --f-display: "Cormorant Garamond", "Georgia", serif;
+  --f-body: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-hand: "Mrs Saint Delafield", "Brush Script MT", cursive;
+  --shadow: 0 22px 50px -28px rgba(69, 55, 45, .45);
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--linen); color: var(--ink);
+  font-family: var(--f-body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(rgba(180,141,102,.07) 1px, transparent 1px);
+  background-size: 5px 5px;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--kraft-deep); outline-offset: 3px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Brand */
+.logo { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; line-height: 1; color: var(--kraft-deep); }
+.logo b { font-family: var(--f-display); font-weight: 600; font-size: 1.85rem; letter-spacing: .14em; padding-left: .14em; }
+.logo small { white-space: nowrap; font-size: .58rem; letter-spacing: .38em; text-transform: uppercase; color: var(--ink-soft); margin-top: 2px; padding-left: .38em; }
+.paw { width: 1em; height: 1em; fill: currentColor; flex: none; }
+
+/* Header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(244, 236, 229, .88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 10px; }
+.nav { display: flex; gap: 26px; font-size: .92rem; letter-spacing: .04em; }
+.nav a { text-decoration: none; color: var(--ink-soft); }
+.nav a:hover { color: var(--ink); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; cursor: pointer; text-decoration: none; border-radius: 999px; padding: 14px 26px; font-weight: 500; letter-spacing: .05em; font-size: 1rem; transition: background .2s, color .2s, box-shadow .2s, transform .2s; }
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 19px; height: 19px; flex: none; }
+.btn-ink { background: var(--ink); color: var(--paper); }
+.btn-ink:hover { background: #2f251e; }
+.btn-line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.btn-line:hover { background: var(--ink); color: var(--paper); }
+.btn-sm { padding: 10px 18px; font-size: .92rem; }
+
+/* Type */
+.eyebrow { display: inline-block; position: relative; font-family: var(--f-display); font-weight: 600; text-transform: uppercase; letter-spacing: .16em; font-size: .95rem; color: var(--ink); padding: 6px 20px 4px; z-index: 0; }
+.eyebrow::before { content: ""; position: absolute; inset: 0 -6px; background: var(--peach); opacity: .75; z-index: -1; border-radius: 3px 14px 4px 16px / 12px 4px 14px 5px; transform: rotate(-1.2deg); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 600; line-height: 1.08; margin: 0; color: var(--ink); text-wrap: balance; }
+h1 { font-size: clamp(2.7rem, 6.4vw, 4.9rem); letter-spacing: -.005em; }
+h2 { font-size: clamp(2.1rem, 4.4vw, 3.3rem); }
+h3 { font-size: 1.5rem; }
+.hand { font-family: var(--f-hand); font-weight: 400; color: var(--kraft-deep); font-size: 1.5em; line-height: 1; letter-spacing: 0; }
+.rose { color: var(--rose); }
+.lede { font-size: 1.15rem; color: var(--ink-soft); max-width: 46ch; }
+.head { text-align: center; max-width: 760px; margin: 0 auto 46px; }
+.head p { color: var(--ink-soft); margin: 14px auto 0; max-width: 56ch; }
+.head h2 { margin-top: 16px; }
+section { padding-block: clamp(64px, 9vw, 112px); }
+.divider { display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--kraft); margin-top: 14px; }
+.divider::before, .divider::after { content: ""; width: 70px; height: 1px; background: var(--kraft); opacity: .6; }
+.divider svg { width: 16px; height: 16px; }
+
+/* Hero */
+.hero { padding-top: clamp(36px, 6vw, 72px); overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.hero h1 { margin: 22px 0 6px; }
+.hero h1 em { font-style: italic; font-weight: 500; }
+.hero .sub { font-family: var(--f-display); font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin: 0 0 18px; }
+.hero .sub svg { width: 1em; height: 1em; vertical-align: -.12em; fill: #e8c35a; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.trust { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 30px 0 0; padding: 0; list-style: none; font-size: .92rem; color: var(--ink-soft); }
+.trust li { display: flex; align-items: center; gap: 8px; }
+.trust svg { width: 16px; height: 16px; color: var(--kraft); }
+
+.hero-art { position: relative; }
+.hero-art .photo { border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 905 / 536; background: var(--sand); }
+.hero-art .photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-art .note { position: absolute; background: var(--paper); box-shadow: 0 10px 30px -14px rgba(69,55,45,.45); border-radius: 4px; padding: 10px 16px; font-size: .9rem; line-height: 1.35; }
+.hero-art .note b { display: block; font-family: var(--f-display); font-size: 1.15rem; }
+.hero-art .note-a { left: -14px; bottom: -22px; transform: rotate(-2deg); }
+.hero-art .note-b { right: -10px; top: -22px; transform: rotate(2.5deg); }
+.hero-art .note::before { content: ""; position: absolute; top: -8px; left: 50%; width: 46px; height: 16px; margin-left: -23px; background: rgba(214, 190, 160, .75); transform: rotate(-3deg); }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.step { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px 16px 20px; display: flex; flex-direction: column; gap: 10px; counter-increment: s; position: relative; }
+.step .pic { aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: var(--sand); display: grid; place-items: center; }
+.step .pic img { width: 100%; height: 100%; object-fit: cover; }
+.step .pic svg { width: 46%; height: 46%; color: var(--kraft-deep); }
+.step .num { font-family: var(--f-display); font-size: .95rem; letter-spacing: .14em; text-transform: uppercase; color: var(--kraft-deep); }
+.step .num::before { content: "Paso " counter(s); }
+.step h3 { font-size: 1.32rem; }
+.step p { margin: 0; font-size: .93rem; color: var(--ink-soft); line-height: 1.5; }
+.step .fontpic { font-family: "Dancing Script", cursive; font-size: 2.6rem; color: var(--ink); }
+
+/* Colors */
+.colors { background: var(--paper); border-block: 1px solid var(--line); }
+.swatches { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+.swatch { all: unset; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 12px; border-radius: 18px; padding: 18px 10px 16px; transition: background .2s, transform .2s; }
+.swatch:hover { background: var(--linen); transform: translateY(-3px); }
+.swatch:focus-visible { outline: 2px solid var(--kraft-deep); outline-offset: 2px; }
+.swatch svg { width: 100%; max-width: 190px; height: auto; filter: drop-shadow(0 14px 18px rgba(69,55,45,.16)); }
+.swatch span { font-family: var(--f-display); font-size: 1.4rem; font-weight: 600; }
+.swatch small { display: block; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); margin-top: -10px; }
+
+/* Designer */
+.designer .wrap { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+.stage { position: sticky; top: 86px; background: var(--paper); border: 1px solid var(--line); border-radius: 26px; padding: 18px; box-shadow: var(--shadow); }
+.stage-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.toggle { display: inline-flex; background: var(--linen); border-radius: 999px; padding: 4px; }
+.toggle button { border: 0; background: transparent; cursor: pointer; border-radius: 999px; padding: 8px 18px; font-size: .92rem; letter-spacing: .04em; color: var(--ink-soft); }
+.toggle button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.stage-label { font-size: .85rem; color: var(--ink-soft); }
+.canvas { position: relative; margin-top: 10px; aspect-ratio: 400 / 430; background: radial-gradient(circle at 50% 42%, #fff 0, var(--linen) 72%); border-radius: 18px; overflow: hidden; }
+.canvas svg.shirt { position: absolute; inset: 4% 3% 2%; width: 94%; height: 94%; }
+.shirt-shape { transition: fill .35s ease; }
+.stage-note { margin: 12px 4px 0; font-size: .86rem; color: var(--ink-soft); line-height: 1.45; }
+
+.panel { display: flex; flex-direction: column; gap: 28px; }
+.field { border: 0; padding: 0; margin: 0; min-width: 0; }
+.field legend, .field > label.lbl { display: flex; align-items: baseline; gap: 10px; font-family: var(--f-display); font-size: 1.45rem; font-weight: 600; margin-bottom: 12px; padding: 0; }
+.field legend i, .field > label.lbl i { font-style: normal; font-family: var(--f-body); font-size: .8rem; letter-spacing: .14em; color: var(--kraft-deep); }
+.field .help { font-size: .88rem; color: var(--ink-soft); margin: -4px 0 12px; }
+
+.dots { display: flex; flex-wrap: wrap; gap: 12px; }
+.dot { all: unset; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: .8rem; color: var(--ink-soft); width: 64px; }
+.dot i { width: 46px; height: 46px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(69,55,45,.22); transition: box-shadow .2s; }
+.dot[aria-checked="true"] i { box-shadow: inset 0 0 0 1px rgba(69,55,45,.22), 0 0 0 3px var(--paper), 0 0 0 5px var(--ink); }
+.dot[aria-checked="true"] { color: var(--ink); font-weight: 500; }
+.dot:focus-visible i { outline: 2px solid var(--kraft-deep); outline-offset: 6px; }
+
+.drop { display: flex; align-items: center; gap: 16px; border: 1.5px dashed var(--kraft); border-radius: 16px; padding: 14px 16px; background: var(--paper); cursor: pointer; transition: background .2s; }
+.drop:hover, .drop.over { background: #fff; }
+.drop .thumb { width: 64px; height: 64px; border-radius: 12px; background: var(--sand); flex: none; overflow: hidden; display: grid; place-items: center; color: var(--kraft-deep); }
+.drop .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.drop .thumb svg { width: 28px; height: 28px; }
+.drop b { display: block; font-weight: 500; }
+.drop span { font-size: .86rem; color: var(--ink-soft); }
+.drop input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+
+.text-in { width: 100%; border: 1px solid var(--line); background: var(--paper); border-radius: 14px; padding: 14px 16px; font: inherit; font-size: 1.05rem; color: var(--ink); }
+.text-in:focus { outline: 2px solid var(--kraft); outline-offset: 0; border-color: transparent; }
+.count { font-size: .8rem; color: var(--ink-soft); text-align: right; margin-top: 6px; }
+
+.fonts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.font-opt { all: unset; cursor: pointer; border: 1px solid var(--line); background: var(--paper); border-radius: 14px; padding: 10px 14px 9px; display: flex; flex-direction: column; gap: 2px; min-width: 0; transition: border-color .2s, background .2s; }
+.font-opt:hover { background: #fff; }
+.font-opt[aria-checked="true"] { border-color: var(--ink); background: #fff; box-shadow: inset 0 0 0 1px var(--ink); }
+.font-opt:focus-visible { outline: 2px solid var(--kraft-deep); outline-offset: 2px; }
+.font-opt .sample { font-size: 1.75rem; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink); }
+.font-opt small { font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+
+.sizes { display: flex; flex-wrap: wrap; gap: 8px; }
+.size { all: unset; cursor: pointer; min-width: 52px; text-align: center; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--paper); font-weight: 500; }
+.size[aria-checked="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.size:focus-visible { outline: 2px solid var(--kraft-deep); outline-offset: 2px; }
+
+.summary { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 20px; }
+.summary h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.summary dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; margin: 0 0 18px; font-size: .95rem; }
+.summary dt { color: var(--ink-soft); }
+.summary dd { margin: 0; font-weight: 500; text-align: right; overflow-wrap: anywhere; }
+.summary .btn { width: 100%; }
+.summary p { font-size: .84rem; color: var(--ink-soft); margin: 12px 0 0; text-align: center; }
+
+/* Details */
+.details-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1fr); gap: 26px; align-items: center; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 20px 22px; position: relative; }
+.card + .card { margin-top: 22px; }
+.card h3 { display: flex; align-items: center; gap: 10px; font-size: 1.45rem; margin-bottom: 8px; }
+.card h3 svg { width: 22px; height: 22px; color: var(--kraft-deep); flex: none; }
+.card ul { margin: 0; padding-left: 1.1em; color: var(--ink-soft); font-size: .96rem; }
+.card ul li::marker { color: var(--kraft); }
+.card::before { content: ""; position: absolute; top: -9px; right: 26px; width: 52px; height: 18px; background: rgba(214, 190, 160, .7); transform: rotate(4deg); }
+.back-art { position: relative; aspect-ratio: 400 / 430; }
+.back-art svg { width: 100%; height: 100%; filter: drop-shadow(0 24px 30px rgba(69,55,45,.2)); }
+
+.special { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 54px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 10px; }
+.special div { text-align: center; padding: 16px 10px; display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: .98rem; }
+.special div + div { border-left: 1px solid var(--line); }
+.special svg { width: 34px; height: 34px; color: var(--kraft-deep); }
+.special-foot { text-align: center; font-family: var(--f-display); font-size: 1.45rem; margin: 26px 0 0; }
+
+/* Business */
+.biz .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(26px, 5vw, 64px); align-items: center; }
+.biz-box { background: var(--ink); color: var(--paper); border-radius: 28px; padding: clamp(28px, 4vw, 48px); position: relative; overflow: hidden; }
+.biz-box h2 { color: var(--paper); }
+.biz-box p { color: #e3d6c8; }
+.biz-box .eyebrow { color: var(--ink); }
+.biz-box ul { list-style: none; padding: 0; margin: 22px 0 28px; display: grid; gap: 12px; }
+.biz-box li { display: flex; gap: 12px; align-items: flex-start; color: #efe4d8; }
+.biz-box li svg { width: 20px; height: 20px; flex: none; margin-top: 3px; color: var(--peach); }
+.biz-box .btn-light { background: var(--paper); color: var(--ink); }
+.biz-box .btn-light:hover { background: var(--peach); }
+.biz-box .bg-paw { position: absolute; right: -40px; bottom: -40px; width: 220px; height: 220px; fill: rgba(236, 201, 174, .08); }
+.biz-art { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.biz-art figure { margin: 0; background: var(--paper); padding: 10px 10px 14px; border-radius: 6px; box-shadow: var(--shadow); }
+.biz-art figure:nth-child(1) { transform: rotate(-2.5deg); }
+.biz-art figure:nth-child(2) { transform: rotate(2deg) translateY(28px); }
+.biz-art img { aspect-ratio: 1; object-fit: cover; border-radius: 3px; width: 100%; }
+.biz-art figcaption { font-family: var(--f-hand); font-size: 2rem; text-align: center; line-height: 1.1; margin-top: 6px; }
+
+/* Final */
+.final { text-align: center; }
+.final .hand { font-size: clamp(2.6rem, 6vw, 4rem); display: block; margin-bottom: 6px; }
+.final .cta-row { justify-content: center; }
+
+footer { border-top: 1px solid var(--line); padding: 30px 0 calc(30px + env(safe-area-inset-bottom, 0px)); font-size: .9rem; color: var(--ink-soft); }
+footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+footer a { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+footer a:hover { color: var(--ink); }
+footer svg { width: 18px; height: 18px; }
+
+.toast { visibility: hidden; position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%); background: var(--ink); color: var(--paper); padding: 12px 20px; border-radius: 999px; font-size: .92rem; box-shadow: var(--shadow); transition: transform .35s ease; z-index: 40; max-width: calc(100% - 32px); text-align: center; }
+.toast.show { visibility: visible; transform: translate(-50%, 0); }
+
+/* Barra de aviso + encabezado de tienda */
+.announce { background: var(--ink); color: var(--paper); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; }
+.announce .wrap { padding-block: 9px; display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 26px; }
+.announce b { color: var(--peach); font-weight: 500; }
+.top-left, .top-right { display: flex; align-items: center; gap: 6px; }
+.top-right { gap: 8px; }
+.icon-btn { position: relative; display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; color: var(--ink); text-decoration: none; background: transparent; border: 0; cursor: pointer; flex: none; }
+.icon-btn:hover { background: var(--sand); }
+.icon-btn svg { width: 22px; height: 22px; }
+.badge { position: absolute; top: 1px; right: -1px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--kraft-deep); color: var(--paper); font-size: .68rem; font-weight: 600; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
+.badge[hidden] { display: none; }
+.menu-btn { display: none; }
+.top .btn-sm { gap: 0; }
+.hide-sm { margin-left: .3em; }
+
+/* WhatsApp flotante */
+.wa-float { position: fixed; right: calc(18px + env(safe-area-inset-right, 0px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 30; width: 56px; height: 56px; border-radius: 50%; background: var(--ink); color: var(--paper); display: grid; place-items: center; box-shadow: 0 14px 30px -12px rgba(69, 55, 45, .6); text-decoration: none; transition: transform .2s; }
+.wa-float:hover { transform: scale(1.06); }
+.wa-float svg { width: 28px; height: 28px; }
+
+@media (max-width: 860px) {
+  .menu-btn { display: inline-grid; }
+  .nav.open { display: flex; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 6px max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px)); box-shadow: 0 18px 30px -20px rgba(69, 55, 45, .45); }
+  .nav.open a { padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 1rem; color: var(--ink); }
+  .nav.open a:last-child { border-bottom: 0; }
+}
+@media (max-width: 620px) {
+  .announce { font-size: .66rem; letter-spacing: .1em; }
+  .logo b { font-size: 1.55rem; }
+}
+
+/* Cuidado PĒLU: add-on veterinario, mismo lenguaje visual que el resto */
+.care-head { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: end; margin-bottom: 36px; }
+.care-head h2 { margin-top: 16px; }
+.care-head p { color: var(--ink-soft); margin: 14px 0 0; max-width: 52ch; }
+.vet-badge { display: flex; flex-direction: column; gap: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+.vet-badge .who { display: flex; gap: 14px; align-items: center; }
+.vet-badge .seal { width: 56px; height: 56px; border-radius: 50%; background: var(--sand); display: grid; place-items: center; color: var(--kraft-deep); flex: none; }
+.vet-badge .seal svg { width: 28px; height: 28px; }
+.vet-badge b { display: block; font-family: var(--f-display); font-size: 1.3rem; line-height: 1.2; }
+.vet-badge span { font-size: .88rem; color: var(--ink-soft); }
+.vet-badge .btn { align-self: flex-start; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.chip { all: unset; cursor: pointer; padding: 7px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font-size: .9rem; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.chip:focus-visible, .add:focus-visible, .tip-nav button:focus-visible { outline: 2px solid var(--kraft-deep); outline-offset: 2px; }
+.products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.product { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 14px 14px 18px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.product[hidden] { display: none; }
+.product .art { aspect-ratio: 2 / 1; max-width: 100%; border-radius: 12px; background: var(--sand); display: grid; place-items: center; color: var(--kraft-deep); }
+.product .art svg { width: 30%; height: 70%; }
+.product .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.product .tag { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--kraft-deep); background: var(--linen); border-radius: 999px; padding: 3px 10px; }
+.product h3 { font-size: 1.35rem; }
+.product p { margin: 0; font-size: .92rem; color: var(--ink-soft); line-height: 1.5; flex: 1; }
+.add { all: unset; cursor: pointer; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--ink); font-size: .9rem; font-weight: 500; letter-spacing: .03em; transition: background .2s, color .2s; }
+.add:hover { background: var(--linen); }
+.add[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.add svg { width: 16px; height: 16px; }
+.cart-bar { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; background: var(--ink); color: var(--paper); border-radius: 16px; padding: 10px 10px 10px 20px; }
+.cart-bar .btn { background: var(--paper); color: var(--ink); }
+.cart-bar .btn:hover { background: var(--peach); }
+.services { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 40px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 8px; }
+.service { padding: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.service + .service { border-left: 1px solid var(--line); }
+.service .srow { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 28px; }
+.service svg { width: 28px; height: 28px; color: var(--kraft-deep); }
+.service b { font-family: var(--f-display); font-size: 1.25rem; line-height: 1.2; }
+.service span { font-size: .9rem; color: var(--ink-soft); line-height: 1.45; }
+.soon { font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; background: var(--peach); color: var(--ink); border-radius: 999px; padding: 2px 9px; }
+.tip { margin-top: 20px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 20px; align-items: center; background: var(--paper); border: 1.5px dashed var(--kraft); border-radius: 18px; padding: 16px 20px; }
+.tip .hand { font-size: 2.1rem; }
+.tip p { margin: 0; color: var(--ink); }
+.tip-nav { display: flex; align-items: center; gap: 8px; font-size: .82rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.tip-nav button { all: unset; cursor: pointer; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; background: var(--linen); }
+.tip-nav button:hover { background: #fff; }
+.tip-nav svg { width: 14px; height: 14px; }
+.cart-bar[hidden] { display: none; }
+.care-note { font-size: .86rem; color: var(--ink-soft); text-align: center; margin: 22px auto 0; max-width: 70ch; }
+
+@media (max-width: 1020px) {
+  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service:nth-child(3) { border-left: 0; }
+  .service:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .care-head { grid-template-columns: minmax(0, 1fr); align-items: start; }
+}
+@media (max-width: 620px) {
+  .products { grid-template-columns: minmax(0, 1fr); }
+  .product .art { aspect-ratio: 3 / 1; }
+  .product .art svg { width: 20%; }
+  .tip { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}
+
+@media (max-width: 1020px) {
+  .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .details-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .back-art { grid-column: 1 / -1; order: -1; max-width: 420px; margin: 0 auto; width: 100%; }
+}
+@media (max-width: 860px) {
+  .nav { display: none; }
+  .hero .wrap, .designer .wrap, .biz .wrap { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { margin: 10px 8px 30px; }
+  .stage { position: relative; top: 0; }
+  .swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .biz-art { max-width: 460px; margin: 0 auto 30px; }
+}
+@media (max-width: 620px) {
+  body { font-size: 16px; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .step:last-child { grid-column: 1 / -1; }
+  .step:last-child .pic { aspect-ratio: 2.4; }
+  .top .btn-sm { white-space: nowrap; }
+  .hide-sm { display: none; }
+  .logo small { letter-spacing: .24em; font-size: .52rem; }
+  .details-grid { grid-template-columns: minmax(0, 1fr); }
+  .special { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .special div:nth-child(3) { border-left: 0; }
+  .special div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .swatch:last-child { grid-column: 1 / -1; }
+  .swatch:last-child svg { max-width: 160px; }
+  .hero-art .note { font-size: .8rem; padding: 8px 12px; }
+  .hero-art .note b { font-size: 1rem; }
+  .hero-art .note-a { left: -6px; }
+  .hero-art .note-b { right: -4px; }
+  .stage { padding: 12px; border-radius: 20px; }
+  .top .btn-sm { padding: 9px 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16.2" rx="5.2" ry="4.3"/><ellipse cx="5.3" cy="10.6" rx="2.2" ry="2.7"/><ellipse cx="9.2" cy="6.4" rx="2.2" ry="2.8"/><ellipse cx="14.8" cy="6.4" rx="2.2" ry="2.8"/><ellipse cx="18.7" cy="10.6" rx="2.2" ry="2.7"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.2 4.2L19 7"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 8h3.2l1.6-2.4h6.4L16.8 8H20v11H4Z"/><circle cx="12" cy="13.2" r="3.6"/></g></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1"/><rect x="14" y="3.5" width="6.5" height="6.5" rx="1"/><rect x="3.5" y="14" width="6.5" height="6.5" rx="1"/></g><g fill="currentColor"><rect x="14" y="14" width="2.6" height="2.6"/><rect x="17.9" y="17.9" width="2.6" height="2.6"/><rect x="14" y="17.9" width="2.6" height="2.6"/><rect x="17.9" y="14" width="2.6" height="2.6"/><rect x="5.6" y="5.6" width="2.3" height="2.3"/><rect x="16.1" y="5.6" width="2.3" height="2.3"/><rect x="5.6" y="16.1" width="2.3" height="2.3"/></g></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5V20h14v-7.5M12 8.5V20M12 8.5C10.5 5 7 4.4 7 6.6S10 8.5 12 8.5Zm0 0c1.5-3.5 5-4.1 5-1.9S14 8.5 12 8.5Z"/></g></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16Z"/><path d="m13.5 6.5 4 4"/></g></symbol>
+    <symbol id="i-hands" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10.5s-3-1.9-3-4a1.7 1.7 0 0 1 3-1.1 1.7 1.7 0 0 1 3 1.1c0 2.1-3 4-3 4Z"/><path d="M3 12l3.5 5.5c1 1.5 2.6 2.5 4.5 2.5H12M21 12l-3.5 5.5c-1 1.5-2.6 2.5-4.5 2.5H12"/><path d="M6.5 14.5 8 13.4a1.4 1.4 0 0 1 2 .3L12 16.5l2-2.8a1.4 1.4 0 0 1 2-.3l1.5 1.1"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3.5s6 6.5 6 10.6a6 6 0 0 1-12 0C6 10 12 3.5 12 3.5Z"/><path d="M9.2 14.4a2.8 2.8 0 0 0 2.8 2.8"/></g></symbol>
+    <symbol id="i-cotton" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 13c-2.5 0-4.5-1.6-4.5-3.6A2.8 2.8 0 0 1 12 7.2a2.8 2.8 0 0 1 4.5 2.2c0 2-2 3.6-4.5 3.6Z"/><path d="M7.6 9.6A3 3 0 0 0 4.5 12.3c0 1.9 1.9 3.2 4 3M16.4 9.6a3 3 0 0 1 3.1 2.7c0 1.9-1.9 3.2-4 3M12 13v8"/></g></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2a9.7 9.7 0 0 0-8.4 14.6L2.3 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3a8 8 0 1 1 6.9 3.8Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.5-.3Z"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-stetho" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3H4v6a5 5 0 0 0 10 0V3h-1"/><path d="M9 14v1.5a5 5 0 0 0 10 0V13"/><circle cx="19" cy="10.5" r="2.3"/></g></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 11 12 4l8 7v9H4Z"/><path d="M10 20v-5h4v5"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15Z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></g></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h14l-1 12H6Z"/><path d="M9 10V7a3 3 0 0 1 6 0v3" stroke-linecap="round"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m14.5 6-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9.5 6 6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<div class="announce" role="note">
+  <div class="wrap"><span>Envíos a todo Colombia</span><span id="announceXmas">Pedidos de Navidad hasta el <b>12 de diciembre</b></span></div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="top-left">
+      <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <a class="logo" href="#inicio" aria-label="PĒLU, inicio"><b>PĒLU</b><small>tu mascota · tu camiseta</small></a>
+    </div>
+    <nav class="nav" id="nav" aria-label="Secciones">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#colores">Colores</a>
+      <a href="#disena">Diseña la tuya</a>
+      <a href="#detalles">Detalles</a>
+      <a href="#cuidado">Cuidado</a>
+    </nav>
+    <div class="top-right">
+      <a class="btn btn-ink btn-sm" href="#disena">Diseñar<span class="hide-sm">mi camiseta</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Un recuerdo para siempre</span>
+      <h1>Convertimos tu mascota en <em>una camiseta</em></h1>
+      <p class="sub"><span class="hand">Más que una camiseta,</span> un recuerdo que cobra vida <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20Z"/></svg></p>
+      <p class="lede">Envíanos una foto de tu mascota: la convertimos en ilustración, le ponemos su nombre en la letra que elijas y, en la espalda, un <span class="rose">código QR secreto</span> que abre su video.</p>
+      <div class="cta-row">
+        <a class="btn btn-ink" href="#disena"><svg aria-hidden="true"><use href="#i-pencil"/></svg>Diseñar la mía</a>
+        <a class="btn btn-line" href="#como-funciona">Cómo funciona</a>
+      </div>
+      <ul class="trust">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>100% algodón</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Estampado DTF</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>QR con video</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Empaque especial</li>
+      </ul>
+    </div>
+    <div class="hero-art">
+      <div class="photo"><img src="img/hero-camisetas.webp" width="905" height="536" alt="Foto de dos perritos al lado de dos camisetas PĒLU con su ilustración y sus nombres, Cony y Petee"></div>
+      <div class="note note-b"><b>De su foto…</b>a una ilustración única</div>
+      <div class="note note-a"><b>…con su nombre</b>en la letra que tú elijas</div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>De una foto a un recuerdo que puedes llevar puesto</h2>
+      <p>Cada camiseta PĒLU se hace a mano, una por una, a partir de la foto de tu mascota.</p>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <div class="pic"><img src="img/foto-original.webp" alt="Foto original de dos perritos" loading="lazy"></div>
+        <span class="num"></span>
+        <h3>Envía su foto</h3>
+        <p>Una foto clara de frente, con buena luz. Si son varias mascotas, también se puede.</p>
+      </li>
+      <li class="step">
+        <div class="pic"><img src="img/ilustracion-cony.webp" alt="Ilustración de Cony estampada en una camiseta" loading="lazy"></div>
+        <span class="num"></span>
+        <h3>La ilustramos</h3>
+        <p>Convertimos la foto en un dibujo que conserva sus colores, sus manchas y su carita.</p>
+      </li>
+      <li class="step">
+        <div class="pic"><span class="fontpic" aria-hidden="true">Cony</span></div>
+        <span class="num"></span>
+        <h3>Elige nombre y letra</h3>
+        <p>Escribe su nombre y escoge entre nuestras tipografías la que va con su personalidad.</p>
+      </li>
+      <li class="step">
+        <div class="pic"><svg aria-hidden="true"><use href="#i-qr"/></svg></div>
+        <span class="num"></span>
+        <h3>Su video en un QR</h3>
+        <p>Mándanos un video. Lo ponemos en un QR de 3 × 3 cm en la espalda, bajo el cuello.</p>
+      </li>
+      <li class="step">
+        <div class="pic"><svg aria-hidden="true"><use href="#i-gift"/></svg></div>
+        <span class="num"></span>
+        <h3>La estampamos</h3>
+        <p>Estampado DTF sobre algodón y entrega en empaque especial, lista para regalar.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="colors" id="colores">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Colores disponibles</span>
+      <h2>Cinco tonos base, pensados para que su ilustración resalte</h2>
+      <p>Toca un color para verlo en el diseñador.</p>
+    </div>
+    <div class="swatches" id="swatches"></div>
+  </div>
+</section>
+
+<section class="designer" id="disena">
+  <div class="wrap">
+    <div class="head" style="grid-column:1/-1;margin-bottom:10px">
+      <span class="eyebrow">Diseña la tuya</span>
+      <h2>Arma tu camiseta y mírala antes de pedirla</h2>
+      <p>Una vista previa aproximada. Nuestro equipo convierte la foto en ilustración y te envía el diseño final para aprobarlo antes de estampar.</p>
+    </div>
+
+    <div class="stage" aria-label="Vista previa de la camiseta">
+      <div class="stage-bar">
+        <div class="toggle" role="group" aria-label="Lado de la camiseta">
+          <button type="button" data-view="front" aria-pressed="true">Frente</button>
+          <button type="button" data-view="back" aria-pressed="false">Espalda</button>
+        </div>
+        <span class="stage-label" id="stageLabel">Marfil · Cursiva clásica</span>
+      </div>
+      <div class="canvas" id="canvas"></div>
+      <p class="stage-note" id="stageNote">Ejemplo con la ilustración de Cony. Sube la foto de tu mascota para verla en la camiseta.</p>
+    </div>
+
+    <div class="panel">
+      <fieldset class="field">
+        <legend><i>01</i>Color de la camiseta</legend>
+        <div class="dots" id="dots" role="radiogroup" aria-label="Color"></div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend><i>02</i>¿Cuántas mascotas?</legend>
+        <div class="sizes" id="pets" role="radiogroup" aria-label="Cantidad de mascotas"></div>
+      </fieldset>
+
+      <div class="field">
+        <label class="lbl" for="photo"><i>03</i><span id="photoLbl">Foto de tu mascota</span></label>
+        <p class="help">Se queda en tu dispositivo: solo sirve para la vista previa. La foto final nos la envías al hacer el pedido.</p>
+        <label class="drop" id="drop">
+          <span class="thumb" id="thumb"><svg aria-hidden="true"><use href="#i-camera"/></svg></span>
+          <span><b id="dropTitle">Subir foto</b><span id="dropSub">JPG o PNG · toca o arrástrala aquí</span></span>
+          <input id="photo" type="file" accept="image/*">
+        </label>
+        <label class="drop" id="drop2" hidden style="margin-top:10px">
+          <span class="thumb" id="thumb2"><svg aria-hidden="true"><use href="#i-camera"/></svg></span>
+          <span><b id="dropTitle2">Foto de la segunda mascota</b><span id="dropSub2">JPG o PNG · toca o arrástrala aquí</span></span>
+          <input id="photo2" type="file" accept="image/*" aria-label="Foto de la segunda mascota">
+        </label>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="petName"><i>04</i><span id="nameLbl">Su nombre</span></label>
+        <input class="text-in" id="petName" type="text" maxlength="14" value="Cony" autocomplete="off" placeholder="Ej. Lola, Max, Petee">
+        <input class="text-in" id="petName2" type="text" maxlength="14" value="Petee" autocomplete="off" placeholder="Nombre de la segunda mascota" aria-label="Nombre de la segunda mascota" hidden style="margin-top:10px">
+        <div class="count"><span id="count">4</span>/14</div>
+      </div>
+
+      <fieldset class="field">
+        <legend><i>05</i>Tipografía</legend>
+        <div class="fonts" id="fonts" role="radiogroup" aria-label="Tipografía"></div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend><i>06</i>Talla unisex</legend>
+        <div class="sizes" id="sizes" role="radiogroup" aria-label="Talla"></div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend><i>07</i>¿La quieres en kit?</legend>
+        <p class="help">Solo en Barranquilla: la camiseta llega en una caja con snacks para tu mascota.</p>
+        <div class="sizes" id="kit" role="radiogroup" aria-label="Kit de snacks"></div>
+      </fieldset>
+
+      <div class="summary" id="resumen" aria-live="polite">
+        <h3>Tu camiseta PĒLU</h3>
+        <dl>
+          <dt>Color</dt><dd id="sColor"></dd>
+          <dt>Mascotas</dt><dd id="sPets"></dd>
+          <dt>Nombre</dt><dd id="sName"></dd>
+          <dt>Tipografía</dt><dd id="sFont"></dd>
+          <dt>Talla</dt><dd id="sSize"></dd>
+          <dt>Espalda</dt><dd>QR 3 × 3 cm con su video</dd>
+          <dt>Kit de snacks</dt><dd id="sKit"></dd>
+          <dt id="sProdT" hidden>Cuidado PĒLU</dt><dd id="sProd" hidden></dd>
+        </dl>
+        <a class="btn btn-ink" id="orderBtn" href="#" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><span id="orderLabel">Hacer mi pedido</span></a>
+        <p id="orderHelp">Te escribimos con el precio y el tiempo de entrega. Ahí nos envías su foto y su video.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="colors" id="detalles">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Los detalles de tu camiseta PĒLU</span>
+      <h2><span class="hand">Más que una camiseta,</span><br>es un recuerdo que cobra vida</h2>
+      <div class="divider" aria-hidden="true"><svg><use href="#i-heart"/></svg></div>
+    </div>
+    <div class="details-grid">
+      <div>
+        <div class="card">
+          <h3><svg aria-hidden="true"><use href="#i-pin"/></svg>Ubicación del QR</h3>
+          <ul><li>Parte trasera</li><li>A 3 cm del cuello</li><li>Tamaño de 3 × 3 cm</li></ul>
+        </div>
+        <div class="card">
+          <h3><svg aria-hidden="true"><use href="#i-drop"/></svg>Estampado DTF</h3>
+          <ul><li>Colores vivos</li><li>Alta durabilidad</li><li>Acabado suave al tacto</li></ul>
+        </div>
+      </div>
+      <div class="back-art" id="backArt"></div>
+      <div>
+        <div class="card">
+          <h3><svg aria-hidden="true"><use href="#i-qr"/></svg>Código QR secreto</h3>
+          <ul><li>Escanéalo con la cámara del celular</li><li>Revive un video único de tu mascota</li><li>Una sorpresa para quien lo descubra</li></ul>
+        </div>
+        <div class="card">
+          <h3><svg aria-hidden="true"><use href="#i-cotton"/></svg>Tela premium</h3>
+          <ul><li>100% algodón</li><li>Suave y cómoda</li><li>Calidad unisex</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="special-foot" style="margin-top:56px">¿Qué hace especial a esta camiseta?</h3>
+    <div class="special" style="margin-top:18px">
+      <div><svg aria-hidden="true"><use href="#i-pencil"/></svg>Personalizada</div>
+      <div><svg aria-hidden="true"><use href="#i-hands"/></svg>Hecha con amor</div>
+      <div><svg aria-hidden="true"><use href="#i-qr"/></svg>QR con video</div>
+      <div><svg aria-hidden="true"><use href="#i-gift"/></svg>Empaque especial</div>
+    </div>
+    <p class="special-foot">Perfecta para regalar o inmortalizar a tu mejor amigo <svg class="paw" style="color:var(--kraft);vertical-align:-.1em" aria-hidden="true"><use href="#i-paw"/></svg></p>
+  </div>
+</section>
+
+<section class="care" id="cuidado">
+  <div class="wrap">
+    <div class="care-head">
+      <div>
+        <span class="eyebrow">Cuidado PĒLU · Barranquilla</span>
+        <h2>Además de recordarlo, <span class="hand">lo cuidamos</span></h2>
+        <p>Snacks, comida y cuidado diario elegidos por un médico veterinario, para pedir junto con tu camiseta o cuando los necesites.</p>
+      </div>
+      <div class="vet-badge">
+        <div class="who">
+          <span class="seal"><svg aria-hidden="true"><use href="#i-stetho"/></svg></span>
+          <div><b>Con respaldo de un médico veterinario</b><span>Te orientamos sobre qué darle según su edad, tamaño y salud.</span></div>
+        </div>
+        <a class="btn btn-line btn-sm" id="vetBtn" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Hablar con el veterinario</a>
+      </div>
+    </div>
+
+    <div class="chips" role="group" aria-label="Filtrar productos">
+      <button type="button" class="chip" data-filter="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="chip" data-filter="perro" aria-pressed="false">Perro</button>
+      <button type="button" class="chip" data-filter="gato" aria-pressed="false">Gato</button>
+    </div>
+
+    <div class="products" id="products">
+      <article class="product" data-pets="perro" data-name="Galletas horneadas">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="1.8"/><g transform="translate(15 15) scale(.75)" fill="currentColor"><use href="#i-paw" width="24" height="24"/></g><circle cx="13" cy="20" r="1.1" fill="currentColor"/><circle cx="34" cy="31" r="1.1" fill="currentColor"/><circle cx="31" cy="14" r="1.1" fill="currentColor"/></svg></div>
+        <div class="tags"><span class="tag">Perro</span><span class="tag">Snack</span></div>
+        <h3>Galletas horneadas</h3>
+        <p>Premios crocantes en porciones pequeñas, para entrenar y consentir sin pasarse.</p>
+        <button type="button" class="add" aria-pressed="false"><svg aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span></button>
+      </article>
+      <article class="product" data-pets="perro" data-name="Huesitos dentales">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="currentColor"><circle cx="12" cy="19" r="5"/><circle cx="12" cy="29" r="5"/><circle cx="36" cy="19" r="5"/><circle cx="36" cy="29" r="5"/><rect x="12" y="19.5" width="24" height="9" rx="2"/></g></svg></div>
+        <div class="tags"><span class="tag">Perro</span><span class="tag">Higiene</span></div>
+        <h3>Huesitos dentales</h3>
+        <p>Ayudan a reducir el sarro mientras muerde. Complementan el cepillado, no lo reemplazan.</p>
+        <button type="button" class="add" aria-pressed="false"><svg aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span></button>
+      </article>
+      <article class="product" data-pets="gato" data-name="Snack cremoso para gato">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 13l3-3 3 3 3-3 3 3 3-3 3 3 3-3 3 3v26H14Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M18 27c4-5 9-5 12 0-3 5-8 5-12 0Z M30 27l4-3v6Z" fill="currentColor"/></svg></div>
+        <div class="tags"><span class="tag">Gato</span><span class="tag">Snack</span></div>
+        <h3>Snack cremoso</h3>
+        <p>Premio húmedo en sobre. Sirve para darle pastillas y suma agua en los días de calor.</p>
+        <button type="button" class="add" aria-pressed="false"><svg aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span></button>
+      </article>
+      <article class="product" data-pets="perro gato" data-name="Alimento seco (asesorado)">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M15 15h18l3 25H12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 15l2-5h14l2 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><g transform="translate(17.5 21) scale(.55)" fill="currentColor"><use href="#i-paw" width="24" height="24"/></g></svg></div>
+        <div class="tags"><span class="tag">Perro y gato</span><span class="tag">Comida</span></div>
+        <h3>Alimento seco</h3>
+        <p>Te ayudamos a elegir el concentrado según su edad, tamaño y peso, y te lo llevamos.</p>
+        <button type="button" class="add" aria-pressed="false"><svg aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span></button>
+      </article>
+      <article class="product" data-pets="perro gato" data-name="Shampoo suave">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M17 20h14v18a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M21 15h6v5h-6Z M24 15V9h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="36" cy="16" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="39" cy="23" r="1.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M21 30h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="tags"><span class="tag">Perro y gato</span><span class="tag">Baño</span></div>
+        <h3>Shampoo suave</h3>
+        <p>Para piel sensible: lo bañas sin resecarle la piel ni irritarle los ojos.</p>
+        <button type="button" class="add" aria-pressed="false"><svg aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span></button>
+      </article>
+      <article class="product" data-pets="perro" data-name="Juguete mordedor">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 17c6 3 6 11 0 14 M36 17c-6 3-6 11 0 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="tags"><span class="tag">Perro</span><span class="tag">Juego</span></div>
+        <h3>Juguete mordedor</h3>
+        <p>Resistente, para morder y jugar. Ayuda a que pase mejor las horas solo en casa.</p>
+        <button type="button" class="add" aria-pressed="false"><svg aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span></button>
+      </article>
+    </div>
+
+    <div class="cart-bar" id="cartBar" hidden>
+      <span id="cartText">1 producto agregado a tu pedido</span>
+      <a class="btn btn-sm" href="#disena">Ver mi pedido</a>
+    </div>
+
+    <div class="services">
+      <div class="service"><div class="srow"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></div><b>Orientación por WhatsApp</b><span>Dudas sobre alimentación, cuidado y síntomas leves.</span></div>
+      <div class="service"><div class="srow"><svg aria-hidden="true"><use href="#i-home"/></svg></div><b>Visita a domicilio</b><span>Consulta en casa, en Barranquilla. Agéndala por chat.</span></div>
+      <div class="service"><div class="srow"><svg aria-hidden="true"><use href="#i-bell"/></svg><span class="soon">Pronto</span></div><b>Recordatorios de salud</b><span>Te avisamos cuándo toca vacuna, desparasitación o control.</span></div>
+      <div class="service"><div class="srow"><svg aria-hidden="true"><use href="#i-qr"/></svg><span class="soon">Pronto</span></div><b>Ficha de salud en el QR</b><span>Su QR guardará también sus vacunas, alergias y tu contacto.</span></div>
+    </div>
+
+    <div class="tip" aria-live="polite">
+      <span class="hand">Consejo del veterinario</span>
+      <p id="tipText">En el calor de Barranquilla, cámbiale el agua varias veces al día y evita los paseos del mediodía: el pavimento le quema las almohadillas.</p>
+      <div class="tip-nav">
+        <button type="button" id="tipPrev" aria-label="Consejo anterior"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+        <span id="tipCount">1 / 3</span>
+        <button type="button" id="tipNext" aria-label="Consejo siguiente"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+
+    <p class="care-note">Productos y servicios veterinarios disponibles solo en Barranquilla; las camisetas se envían a todo Colombia. Te confirmamos precios y disponibilidad al hacer tu pedido.</p>
+  </div>
+</section>
+
+<section class="biz" id="negocios">
+  <div class="wrap">
+    <div class="biz-art" aria-hidden="true">
+      <figure><img src="img/ilustracion-cony.webp" alt=""><figcaption>Cony</figcaption></figure>
+      <figure><img src="img/ilustracion-petee.webp" alt=""><figcaption>Petee</figcaption></figure>
+    </div>
+    <div class="biz-box">
+      <svg class="bg-paw" aria-hidden="true"><use href="#i-paw"/></svg>
+      <span class="eyebrow">Para veterinarias y negocios</span>
+      <h2 style="margin-top:16px">Un detalle que tus clientes no van a olvidar</h2>
+      <p>Las camisetas PĒLU funcionan como recuerdo y como publicidad: cada vez que alguien la usa, la historia de su mascota sale a pasear contigo.</p>
+      <ul>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Regalos para clientes de veterinarias, peluquerías caninas y tiendas de mascotas.</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>El QR de la espalda puede llevar a un video de la mascota que comparta tu negocio.</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pedidos por volumen con el mismo cuidado que una camiseta individual.</li>
+      </ul>
+      <a class="btn btn-light" id="bizBtn" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Quiero una propuesta</a>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <span class="hand">Imagina a tu mascota aquí</span>
+    <h2>Llévala contigo, siempre</h2>
+    <div class="cta-row">
+      <a class="btn btn-ink" href="#disena"><svg aria-hidden="true"><use href="#i-pencil"/></svg>Diseñar mi camiseta</a>
+      <a class="btn btn-line" href="https://www.instagram.com/peluu.co/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Ver más en Instagram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="PĒLU, volver arriba"><b>PĒLU</b><small>tu mascota · tu camiseta</small></a>
+    <span>Camisetas personalizadas con la ilustración de tu mascota · Colombia</span>
+    <a href="https://www.instagram.com/peluu.co/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>@peluu.co</a>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escríbenos"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/qrcode.js"></script>
+<script>
+/* ===== Configuración: cambia estos datos cuando estén listos ===== */
+const CONFIG = {
+  // Número de WhatsApp con indicativo y sin espacios, ej. "573001234567".
+  // Mientras esté vacío, los pedidos se envían por mensaje directo de Instagram.
+  whatsapp: "",
+  instagram: "peluu.co",
+  // Enlace de ejemplo para el QR de la vista previa. En cada pedido va el video de la mascota.
+  qrDemo: "https://www.instagram.com/peluu.co/",
+  // Último día para pedir y recibir antes de Navidad (AAAA-MM-DD).
+  navidad: "2026-12-12",
+  // Precios en pesos, ej. 95000. Mientras estén vacíos se muestra "Pregunta el precio".
+  precios: { una: null, dos: null, kit: null }
+};
+
+const COLORS = [
+  { id: "blanco",  name: "Blanco",      hex: "#fbfaf7", note: "Limpio y luminoso",  light: true },
+  { id: "marfil",  name: "Marfil",      hex: "#f2ebdf", note: "Cálido y suave",     light: true },
+  { id: "arena",   name: "Arena medio", hex: "#e6e3cb", note: "Natural",            light: true },
+  { id: "vainilla",name: "Vainilla",    hex: "#f5ebcf", note: "Cremoso",            light: true },
+  { id: "cafe",    name: "Café",        hex: "#6b4a34", note: "Profundo",           light: false }
+];
+const FONTS = [
+  { id: "dancing",   name: "Cursiva clásica", family: "'Dancing Script', cursive",   weight: 600, scale: 1 },
+  { id: "vibes",     name: "Elegante",        family: "'Great Vibes', cursive",       weight: 400, scale: 1.12 },
+  { id: "sacramento",name: "Fina",            family: "'Sacramento', cursive",        weight: 400, scale: 1.2 },
+  { id: "caveat",    name: "Escrita a mano",  family: "'Caveat', cursive",            weight: 600, scale: 1.08 },
+  { id: "pacifico",  name: "Divertida",       family: "'Pacifico', cursive",          weight: 400, scale: .82 },
+  { id: "cormorant", name: "Clásica serif",   family: "'Cormorant Garamond', serif",  weight: 600, scale: .98, italic: true },
+  { id: "amatic",    name: "Rústica",         family: "'Amatic SC', cursive",         weight: 700, scale: 1.12 },
+  { id: "fredoka",   name: "Redondita",       family: "'Fredoka', sans-serif",        weight: 500, scale: .8 }
+];
+const SIZES = ["S", "M", "L", "XL", "XXL"];
+const PETS = [{ id: "1", label: "1 mascota" }, { id: "2", label: "2 mascotas" }];
+const KIT = [{ id: "no", label: "Solo la camiseta" }, { id: "si", label: "Camiseta + kit de snacks" }];
+const TIPS = [
+  "En el calor de Barranquilla, cámbiale el agua varias veces al día y evita los paseos del mediodía: el pavimento le quema las almohadillas.",
+  "Los huesitos dentales ayudan con el sarro, pero no reemplazan el cepillado. Empieza poco a poco, dos o tres veces por semana.",
+  "Lleva su carné de vacunas al día. Si no recuerdas cuándo le toca la próxima, escríbenos y lo revisamos contigo."
+];
+
+const state = { color: "marfil", font: "dancing", size: "M", name: "Cony", name2: "Petee", pets: "1", photo: null, photo2: null, view: "front", kit: "no", products: [], tip: 0 };
+const DEFAULT_ART = "img/arte-cony.webp";
+const DEFAULT_ART2 = "img/arte-petee.webp";
+const NS = "http://www.w3.org/2000/svg";
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const color = () => COLORS.find((c) => c.id === state.color);
+const font = () => FONTS.find((f) => f.id === state.font);
+
+/* ----- Camiseta en SVG (viewBox 400 x 430) ----- */
+const SHIRT = "M128 34 C150 50 176 58 200 58 C224 58 250 50 272 34 L344 60 C366 92 384 122 396 150 L340 176 L324 158 L324 414 C262 426 138 426 76 414 L76 158 L60 176 L4 150 C16 122 34 92 56 60 Z";
+const NECK_FRONT = "M128 34 C150 50 176 58 200 58 C224 58 250 50 272 34";
+const NECK_BACK = "M128 34 C152 42 176 45 200 45 C224 45 248 42 272 34";
+
+function shirtSVG(side, opts = {}) {
+  const c = opts.color || color();
+  const uid = (opts.uid || "s") + side;
+  const ink = c.light ? "rgba(69,55,45,.16)" : "rgba(0,0,0,.28)";
+  const neck = side === "front" ? NECK_FRONT : NECK_BACK;
+  return `
+  <defs>
+    <linearGradient id="${uid}sh" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="${c.light ? .55 : .12}"/>
+      <stop offset=".55" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="${c.light ? .07 : .22}"/>
+    </linearGradient>
+    <radialGradient id="${uid}fade" cx=".5" cy=".5" r=".5">
+      <stop offset=".62" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <mask id="${uid}mask"><rect x="0" y="0" width="400" height="430" fill="url(#${uid}fade)"/></mask>
+    <clipPath id="${uid}clip"><path d="${SHIRT}"/></clipPath>
+  </defs>
+  <path class="shirt-shape" d="${SHIRT}" fill="${c.hex}" stroke="${ink}" stroke-width="1.4" stroke-linejoin="round"/>
+  <g clip-path="url(#${uid}clip)">
+    <path d="${SHIRT}" fill="url(#${uid}sh)"/>
+    <path d="M76 158 C80 230 78 330 80 412 M324 158 C320 230 322 330 320 412" stroke="${ink}" stroke-width="1" fill="none" opacity=".55"/>
+    <path d="M60 176 L76 158 M340 176 L324 158" stroke="${ink}" stroke-width="1.2" fill="none"/>
+    <path d="M118 130 C150 160 140 240 160 300 M290 120 C270 190 280 250 256 330" stroke="${ink}" stroke-width="1" fill="none" opacity=".35"/>
+  </g>
+  <path d="${neck}" fill="none" stroke="${ink}" stroke-width="9" stroke-linecap="round" opacity=".55"/>
+  <path d="${neck}" fill="none" stroke="${c.hex}" stroke-width="6" stroke-linecap="round"/>
+  <path d="${neck}" fill="none" stroke="${ink}" stroke-width="1" stroke-dasharray="1.2 2.4" transform="translate(0 2)"/>`;
+}
+
+function petNames() {
+  const a = state.name.trim(), b = state.name2.trim();
+  return state.pets === "2" ? [a, b].filter(Boolean).join(" y ") : a;
+}
+
+function artImage(src, isPhoto, x, y, w, maskId, light) {
+  const masked = isPhoto || !light;
+  return `<image href="${esc(src)}" x="${x}" y="${y}" width="${w}" height="${w}" preserveAspectRatio="xMidYMid ${isPhoto ? "slice" : "meet"}"
+    ${masked ? `mask="url(#${maskId})"` : ""} style="mix-blend-mode:${light ? "multiply" : "normal"}"/>`;
+}
+
+function frontArt(uid, opts = {}) {
+  const c = opts.color || color(), f = opts.font || font();
+  const two = (opts.pets || state.pets) === "2";
+  const p1 = opts.demo ? null : state.photo, p2 = opts.demo ? null : state.photo2;
+  const name = opts.name !== undefined ? opts.name : petNames();
+  const base = 40 * f.scale;
+  const lim = two ? 9 : 7;
+  const size = name.length > lim ? base * Math.max(.45, lim / name.length) : base;
+  const fill = c.light ? "#3a2d25" : "#f6ecdd";
+  const art = two
+    ? artImage(p1 || DEFAULT_ART, !!p1, 92, 118, 116, `${uid}m1`, c.light) + artImage(p2 || DEFAULT_ART2, !!p2, 192, 118, 116, `${uid}m2`, c.light)
+    : artImage(p1 || DEFAULT_ART, !!p1, 118, 98, 164, `${uid}m1`, c.light);
+  return `
+  <defs>
+    <radialGradient id="${uid}soft" cx=".5" cy=".5" r=".5"><stop offset=".62" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+    <mask id="${uid}m1">${two ? `<rect x="92" y="118" width="116" height="116" fill="url(#${uid}soft)"/>` : `<rect x="118" y="98" width="164" height="164" fill="url(#${uid}soft)"/>`}</mask>
+    <mask id="${uid}m2"><rect x="192" y="118" width="116" height="116" fill="url(#${uid}soft)"/></mask>
+  </defs>
+  ${art}
+  ${name ? `<text x="${two ? 200 : 232}" y="${292 + size * .28}" text-anchor="middle" font-family="${esc(f.family)}" font-weight="${f.weight}"
+         ${f.italic ? 'font-style="italic"' : ""} font-size="${size.toFixed(1)}" fill="${fill}">${esc(name)}</text>` : ""}`;
+}
+
+function qrModules(text) {
+  if (typeof window.qrcode !== "function") return null;
+  try { const q = qrcode(0, "M"); q.addData(text); q.make(); return q; } catch (e) { return null; }
+}
+function qrGroup(x, y, size, opts = {}) {
+  const q = qrModules(CONFIG.qrDemo);
+  let rects = "";
+  let n;
+  if (q) {
+    n = q.getModuleCount();
+    for (let r = 0; r < n; r++) for (let col = 0; col < n; col++) if (q.isDark(r, col)) rects += `M${col} ${r}h1v1h-1z`;
+  } else {
+    // Sin librería: patrón decorativo con los tres ojos del QR.
+    n = 25; let seed = 7;
+    const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    const eye = (ex, ey) => { for (let r = 0; r < 7; r++) for (let col = 0; col < 7; col++) { const e = r === 0 || r === 6 || col === 0 || col === 6 || (r > 1 && r < 5 && col > 1 && col < 5); if (e) rects += `M${ex + col} ${ey + r}h1v1h-1z`; } };
+    eye(0, 0); eye(n - 7, 0); eye(0, n - 7);
+    for (let r = 0; r < n; r++) for (let col = 0; col < n; col++) { const inEye = (r < 8 && col < 8) || (r < 8 && col > n - 9) || (r > n - 9 && col < 8); if (!inEye && rnd() > .52) rects += `M${col} ${r}h1v1h-1z`; }
+  }
+  const pad = size * .09;
+  const s = (size - pad * 2) / n;
+  return `<g ${opts.cls ? `class="${opts.cls}"` : ""}>
+    <rect x="${x}" y="${y}" width="${size}" height="${size}" rx="${size * .04}" fill="#fff"/>
+    <path transform="translate(${x + pad} ${y + pad}) scale(${s})" d="${rects}" fill="#1d1714" shape-rendering="crispEdges"/>
+  </g>`;
+}
+
+function backArt(c, big) {
+  const ink = c.light ? "#6b5646" : "#efe2d1";
+  const qx = 176, qy = 58, qs = 48;
+  return `
+  ${qrGroup(qx, qy, qs)}
+  <g stroke="${ink}" stroke-width="1" fill="none" opacity=".9">
+    <path d="M${qx} ${qy + qs + 9} H${qx + qs}"/><path d="M${qx} ${qy + qs + 5} v8 M${qx + qs} ${qy + qs + 5} v8"/>
+    <path d="M${qx - 9} ${qy} V${qy + qs}"/><path d="M${qx - 13} ${qy} h8 M${qx - 13} ${qy + qs} h8"/>
+    <path d="M${qx + qs + 10} ${qy - 13} V${qy}" stroke-dasharray="2 2"/>
+  </g>
+  <g font-family="Jost, sans-serif" font-size="${big ? 10 : 11}" fill="${ink}">
+    <text x="${qx + qs / 2}" y="${qy + qs + 23}" text-anchor="middle">3 cm</text>
+    <text x="${qx - 16}" y="${qy + qs / 2 + 4}" text-anchor="end">3 cm</text>
+    <text x="${qx + qs + 16}" y="${qy - 2}">a 3 cm del cuello</text>
+  </g>`;
+}
+
+function renderStage() {
+  const c = color(), f = font();
+  const uid = "st";
+  const svg = `<svg class="shirt" viewBox="0 0 400 430" role="img" aria-label="${state.view === "front" ? "Frente" : "Espalda"} de la camiseta ${esc(c.name)}">
+    ${shirtSVG(state.view, { uid })}
+    ${state.view === "front" ? frontArt(uid) : backArt(c)}
+  </svg>`;
+  $("#canvas").innerHTML = svg;
+  $("#stageLabel").textContent = `${c.name} · ${f.name}`;
+  let note;
+  if (state.view === "back") {
+    note = "En tu camiseta, el QR abrirá el video de tu mascota. El de esta vista previa abre nuestro Instagram: pruébalo con tu cámara.";
+  } else if (!state.photo) {
+    note = state.pets === "2" ? "Ejemplo con Cony y Petee. Sube las fotos de tus mascotas para verlas en la camiseta." : "Ejemplo con la ilustración de Cony. Sube la foto de tu mascota para verla en la camiseta.";
+  } else {
+    note = "Así se ubica tu mascota. En la camiseta final irá convertida en ilustración, como la de Cony.";
+  }
+  if (state.view === "front" && !c.light && !state.photo) note += " Sobre Café, la ilustración se adapta al fondo oscuro.";
+  $("#stageNote").textContent = note;
+}
+
+function renderSummary() {
+  const name = state.name.trim();
+  $("#sColor").textContent = color().name;
+  $("#sName").textContent = petNames() || "Sin nombre";
+  $("#sPets").textContent = state.pets === "2" ? "2" : "1";
+  $("#sFont").textContent = font().name;
+  $("#sSize").textContent = state.size;
+  $("#sKit").textContent = state.kit === "si" ? "Sí" : "No";
+  $("#sProd").textContent = state.products.join(", ");
+  $("#sProd").hidden = $("#sProdT").hidden = state.products.length === 0;
+  $("#count").textContent = state.name.length;
+  const fontsEls = document.querySelectorAll(".font-opt .sample");
+  fontsEls.forEach((el) => (el.textContent = name || "Tu mascota"));
+  const msg = orderMessage();
+  const btn = $("#orderBtn");
+  if (CONFIG.whatsapp) {
+    btn.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+    $("#orderLabel").textContent = "Pedir por WhatsApp";
+  } else {
+    btn.href = `https://ig.me/m/${CONFIG.instagram}`;
+    $("#orderLabel").textContent = "Pedir por Instagram";
+    $("#orderHelp").textContent = "Copiamos tu pedido para que lo pegues en el chat. Ahí nos envías su foto y su video.";
+  }
+  const biz = $("#bizBtn");
+  const bizMsg = "Hola PĒLU 🐾 Tengo un negocio de mascotas y quiero una propuesta de camisetas personalizadas para mis clientes.";
+  biz.href = CONFIG.whatsapp ? `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(bizMsg)}` : `https://ig.me/m/${CONFIG.instagram}`;
+  biz.dataset.msg = bizMsg;
+  const fl = $("#waFloat");
+  fl.href = CONFIG.whatsapp ? `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Hola PĒLU 🐾")}` : `https://ig.me/m/${CONFIG.instagram}`;
+  if (!CONFIG.whatsapp) fl.querySelector("use").setAttribute("href", "#i-insta");
+  const vet = $("#vetBtn");
+  const vetMsg = "Hola PĒLU 🐾 Quiero hablar con el veterinario sobre mi mascota.";
+  vet.href = CONFIG.whatsapp ? `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(vetMsg)}` : `https://ig.me/m/${CONFIG.instagram}`;
+  vet.dataset.msg = vetMsg;
+}
+
+function orderMessage() {
+  const name = state.name.trim() || "(por definir)";
+  return [
+    "Hola PĒLU 🐾 Quiero mi camiseta personalizada:",
+    `• Color: ${color().name}`,
+    `• Talla: ${state.size}`,
+    `• Mascotas: ${state.pets}`,
+    `• Nombre${state.pets === "2" ? "s" : ""}: ${petNames() || name}`,
+    `• Tipografía: ${font().name}`,
+    `• Foto${state.pets === "2" ? "s de mis mascotas" : " de mi mascota"}: te la${state.pets === "2" ? "s" : ""} envío por aquí`,
+    "• Video para el QR: te lo envío por aquí",
+    `• Kit de snacks: ${state.kit === "si" ? "sí (Barranquilla)" : "no"}`,
+    ...(state.products.length ? [`• Cuidado PĒLU: ${state.products.join(", ")} (entrega en Barranquilla)`] : [])
+  ].join("\n");
+}
+
+/* ----- Controles ----- */
+function radioGroup(container, items, key, build) {
+  container.innerHTML = "";
+  items.forEach((it) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "radio");
+    b.dataset.value = it.id || it;
+    build(b, it);
+    b.addEventListener("click", () => select(key, b.dataset.value));
+    container.appendChild(b);
+  });
+  container.addEventListener("keydown", (e) => {
+    if (!["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"].includes(e.key)) return;
+    const btns = [...container.children];
+    const i = btns.findIndex((b) => b.dataset.value === state[key]);
+    const d = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : -1;
+    const next = btns[(i + d + btns.length) % btns.length];
+    select(key, next.dataset.value); next.focus(); e.preventDefault();
+  });
+}
+function syncRadios() {
+  [["#dots", "color"], ["#pets", "pets"], ["#fonts", "font"], ["#sizes", "size"], ["#kit", "kit"]].forEach(([sel, key]) => {
+    [...$(sel).children].forEach((b) => {
+      const on = b.dataset.value === state[key];
+      b.setAttribute("aria-checked", on); b.tabIndex = on ? 0 : -1;
+    });
+  });
+}
+function select(key, value) {
+  state[key] = value;
+  syncRadios(); renderStage(); renderSummary();
+  if (key === "color") renderBackArt();
+  if (key === "pets") syncPets();
+}
+function syncPets() {
+  const two = state.pets === "2";
+  $("#drop2").hidden = $("#petName2").hidden = !two;
+  $("#photoLbl").textContent = two ? "Fotos de tus mascotas" : "Foto de tu mascota";
+  $("#nameLbl").textContent = two ? "Sus nombres" : "Su nombre";
+}
+
+radioGroup($("#dots"), COLORS, "color", (b, c) => { b.className = "dot"; b.innerHTML = `<i style="background:${c.hex}"></i>${c.name}`; });
+radioGroup($("#fonts"), FONTS, "font", (b, f) => {
+  b.className = "font-opt";
+  b.innerHTML = `<span class="sample" style="font-family:${f.family};font-weight:${f.weight};${f.italic ? "font-style:italic;" : ""}font-size:${(1.75 * f.scale).toFixed(2)}rem"></span><small>${f.name}</small>`;
+});
+radioGroup($("#sizes"), SIZES, "size", (b, s) => { b.className = "size"; b.textContent = s; });
+radioGroup($("#pets"), PETS, "pets", (b, k) => { b.className = "size"; b.textContent = k.label; });
+radioGroup($("#kit"), KIT, "kit", (b, k) => { b.className = "size"; b.textContent = k.label; });
+
+// Cuidado PĒLU: filtros, productos agregados al pedido y consejos
+document.querySelectorAll(".chip").forEach((chip) => chip.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c === chip));
+  const f = chip.dataset.filter;
+  document.querySelectorAll(".product").forEach((p) => { p.hidden = f !== "todos" && !p.dataset.pets.split(" ").includes(f); });
+}));
+document.querySelectorAll(".product .add").forEach((btn) => btn.addEventListener("click", () => {
+  const name = btn.closest(".product").dataset.name;
+  const on = !state.products.includes(name);
+  state.products = on ? [...state.products, name] : state.products.filter((n) => n !== name);
+  btn.setAttribute("aria-pressed", on);
+  btn.querySelector("span").textContent = on ? "Agregado" : "Agregar";
+  btn.querySelector("use").setAttribute("href", on ? "#i-check" : "#i-plus");
+  const n = state.products.length;
+  $("#cartBar").hidden = n === 0;
+  $("#cartText").textContent = `${n} ${n === 1 ? "producto agregado" : "productos agregados"} a tu pedido`;
+  renderSummary();
+}));
+function showTip(d) {
+  state.tip = (state.tip + d + TIPS.length) % TIPS.length;
+  $("#tipText").textContent = TIPS.at(state.tip);
+  $("#tipCount").textContent = `${state.tip + 1} / ${TIPS.length}`;
+}
+$("#tipPrev").addEventListener("click", () => showTip(-1));
+$("#tipNext").addEventListener("click", () => showTip(1));
+
+// Muestrario de colores
+const sw = $("#swatches");
+COLORS.forEach((c) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "swatch";
+  b.innerHTML = `<svg viewBox="0 0 400 430" aria-hidden="true">${shirtSVG("front", { color: c, uid: "sw" + c.id })}</svg><span>${c.name}</span><small>${c.note}</small>`;
+  b.setAttribute("aria-label", `Ver ${c.name} en el diseñador`);
+  b.addEventListener("click", () => { select("color", c.id); document.getElementById("disena").scrollIntoView(); });
+  sw.appendChild(b);
+});
+
+function renderBackArt() {
+  const c = COLORS.find((x) => x.id === "arena");
+  const cc = { ...c, hex: "#d9c6ad" };
+  $("#backArt").innerHTML = `<svg viewBox="0 0 400 430" role="img" aria-label="Espalda de la camiseta con el código QR de 3 por 3 centímetros, a 3 centímetros del cuello">${shirtSVG("back", { color: cc, uid: "ba" })}${backArt(cc, true)}</svg>`;
+}
+
+// Frente / espalda
+document.querySelectorAll(".toggle button").forEach((b) => b.addEventListener("click", () => {
+  state.view = b.dataset.view;
+  document.querySelectorAll(".toggle button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+  renderStage();
+}));
+
+// Nombre
+$("#petName").addEventListener("input", (e) => { state.name = e.target.value; renderStage(); renderSummary(); });
+
+// Foto
+function loadPhoto(file, which = 1) {
+  if (!file || !file.type.startsWith("image/")) { toast("Elige una imagen (JPG o PNG)."); return; }
+  const r = new FileReader();
+  const sfx = which === 2 ? "2" : "";
+  r.onload = () => {
+    state["photo" + sfx] = r.result;
+    $("#thumb" + sfx).innerHTML = `<img src="${r.result}" alt="">`;
+    $("#dropTitle" + sfx).textContent = "Foto cargada";
+    $("#dropSub" + sfx).textContent = "Toca para cambiarla";
+    if (state.view !== "front") document.querySelector('.toggle [data-view="front"]').click(); else renderStage();
+  };
+  r.readAsDataURL(file);
+}
+[["#photo", "#drop", 1], ["#photo2", "#drop2", 2]].forEach(([inp, zone, which]) => {
+  $(inp).addEventListener("change", (e) => loadPhoto(e.target.files[0], which));
+  const d = $(zone);
+  ["dragenter", "dragover"].forEach((t) => d.addEventListener(t, (e) => { e.preventDefault(); d.classList.add("over"); }));
+  ["dragleave", "drop"].forEach((t) => d.addEventListener(t, (e) => { e.preventDefault(); d.classList.remove("over"); }));
+  d.addEventListener("drop", (e) => loadPhoto(e.dataTransfer.files[0], which));
+});
+$("#petName2").addEventListener("input", (e) => { state.name2 = e.target.value; renderStage(); renderSummary(); });
+
+// Pedido
+function toast(t) {
+  const el = $("#toast"); el.textContent = t; el.classList.add("show");
+  clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("show"), 4200);
+}
+async function copy(text) {
+  try { await navigator.clipboard.writeText(text); return true; } catch (e) { return false; }
+}
+$("#orderBtn").addEventListener("click", async () => {
+  if (CONFIG.whatsapp) return;
+  const ok = await copy(orderMessage());
+  toast(ok ? "Pedido copiado: pégalo en el chat de Instagram 🐾" : "Escríbenos por Instagram con el color, la talla, el nombre y la tipografía.");
+});
+$("#vetBtn").addEventListener("click", async (e) => {
+  if (CONFIG.whatsapp) return;
+  const ok = await copy(e.currentTarget.dataset.msg);
+  if (ok) toast("Mensaje copiado: pégalo en el chat de Instagram");
+});
+$("#bizBtn").addEventListener("click", async (e) => {
+  if (CONFIG.whatsapp) return;
+  const ok = await copy(e.currentTarget.dataset.msg);
+  if (ok) toast("Mensaje copiado: pégalo en el chat de Instagram");
+});
+
+// Menú en celular
+const nav = $("#nav"), menuBtn = $("#menuBtn");
+menuBtn.addEventListener("click", () => {
+  const open = !nav.classList.contains("open");
+  nav.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", open);
+  menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+});
+nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); }));
+
+// Aviso de Navidad: se oculta solo cuando pasa la fecha
+(function xmas() {
+  const end = Date.parse(CONFIG.navidad + "T23:59:59-05:00");
+  if (!(end > Date.now())) $("#announceXmas").hidden = true;
+})();
+
+// Inicio
+syncRadios(); syncPets(); renderStage(); renderSummary(); renderBackArt();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => renderStage());
+</script>
+</body>
+</html>
