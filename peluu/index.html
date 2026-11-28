@@ -245,6 +245,105 @@ footer svg { width: 18px; height: 18px; }
 .toast { visibility: hidden; position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%); background: var(--ink); color: var(--paper); padding: 12px 20px; border-radius: 999px; font-size: .92rem; box-shadow: var(--shadow); transition: transform .35s ease; z-index: 40; max-width: calc(100% - 32px); text-align: center; }
 .toast.show { visibility: visible; transform: translate(-50%, 0); }
 
+/* Barra de aviso + encabezado de tienda */
+.announce { background: var(--ink); color: var(--paper); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; }
+.announce .wrap { padding-block: 9px; display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 26px; }
+.announce b { color: var(--peach); font-weight: 500; }
+.top-left, .top-right { display: flex; align-items: center; gap: 6px; }
+.top-right { gap: 8px; }
+.icon-btn { position: relative; display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; color: var(--ink); text-decoration: none; background: transparent; border: 0; cursor: pointer; flex: none; }
+.icon-btn:hover { background: var(--sand); }
+.icon-btn svg { width: 22px; height: 22px; }
+.badge { position: absolute; top: 1px; right: -1px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--kraft-deep); color: var(--paper); font-size: .68rem; font-weight: 600; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
+.badge[hidden] { display: none; }
+.menu-btn { display: none; }
+.top .btn-sm { gap: 0; }
+.hide-sm { margin-left: .3em; }
+
+/* Antes y después */
+.ba .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.ba h2 { margin-top: 16px; }
+.ba .lede { margin: 14px 0 0; }
+.ba ul { list-style: none; padding: 0; margin: 22px 0 28px; display: grid; gap: 10px; }
+.ba li { display: flex; gap: 10px; align-items: center; }
+.ba li svg { width: 18px; height: 18px; color: var(--kraft-deep); flex: none; }
+.ba-pair { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 12px; padding: 18px 4px; }
+.ba-card { margin: 0; background: var(--paper); padding: 12px 12px 14px; border-radius: 6px; box-shadow: var(--shadow); position: relative; min-width: 0; }
+.ba-card.before { transform: rotate(-2.5deg); }
+.ba-card.after { transform: rotate(2deg); }
+.ba-card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 3px; }
+.ba-card figcaption { font-family: var(--f-hand); font-size: 2rem; text-align: center; line-height: 1.1; margin-top: 6px; color: var(--ink); }
+.pill { position: absolute; top: -12px; left: 14px; background: var(--peach); color: var(--ink); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; font-weight: 500; z-index: 1; }
+.pill.qr { left: auto; right: 14px; top: auto; bottom: -12px; background: var(--ink); color: var(--paper); display: inline-flex; gap: 6px; align-items: center; }
+.pill.qr svg { width: 14px; height: 14px; }
+.ba-arrow { width: 54px; height: 54px; color: var(--kraft-deep); }
+
+/* Navidad */
+.xmas { padding-block: 0 clamp(20px, 3vw, 32px); }
+.xmas-box { background: var(--ink); color: var(--paper); border-radius: 28px; padding: clamp(24px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: center; position: relative; overflow: hidden; }
+.xmas-box[hidden] { display: none; }
+.xmas-box .eyebrow { color: var(--ink); }
+.xmas-box h2 { color: var(--paper); font-size: clamp(1.9rem, 3.6vw, 2.8rem); margin-top: 14px; }
+.xmas-box p { color: #e3d6c8; margin: 10px 0 0; max-width: 56ch; }
+.xmas-box .cta-row { margin-top: 22px; }
+.xmas-box .btn-light { background: var(--paper); color: var(--ink); }
+.xmas-box .btn-light:hover { background: var(--peach); }
+.countdown { text-align: center; border: 1px solid rgba(236, 201, 174, .35); border-radius: 20px; padding: 18px 26px; position: relative; z-index: 1; }
+.countdown b { display: block; font-family: var(--f-display); font-size: 3.6rem; line-height: 1; color: var(--peach); font-variant-numeric: lining-nums tabular-nums; }
+.countdown span { font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: #e3d6c8; }
+.xmas-box .bg-paw { position: absolute; right: 18%; bottom: -60px; width: 200px; height: 200px; fill: rgba(236, 201, 174, .07); }
+
+/* Tienda */
+.shop-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.shop-card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.shop-card .shot { position: relative; aspect-ratio: 1; max-width: 100%; background: radial-gradient(circle at 50% 42%, #fff 0, var(--sand) 78%); }
+.shop-card .shot svg { position: absolute; inset: 7% 6% 3%; width: 88%; height: 90%; }
+.shop-card .pill { top: 14px; }
+.shop-card .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.shop-card h3 { font-size: 1.5rem; }
+.shop-card p { margin: 0; color: var(--ink-soft); font-size: .94rem; line-height: 1.5; flex: 1; }
+.price { font-family: var(--f-display); font-size: 1.4rem; font-weight: 600; }
+.price.ask { font-family: var(--f-body); font-size: .9rem; font-weight: 500; color: var(--kraft-deep); letter-spacing: .02em; }
+.shop-card .btn { margin-top: 6px; align-self: flex-start; }
+.care-banner { margin-top: 18px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: center; background: var(--sand); border-radius: 20px; padding: 18px 22px; text-decoration: none; color: var(--ink); transition: background .2s; }
+.care-banner:hover { background: #e6d8ca; }
+.care-banner .seal { width: 52px; height: 52px; border-radius: 50%; background: var(--paper); display: grid; place-items: center; color: var(--kraft-deep); }
+.care-banner .seal svg { width: 26px; height: 26px; }
+.care-banner b { display: block; font-family: var(--f-display); font-size: 1.35rem; line-height: 1.2; }
+.care-banner span { font-size: .92rem; color: var(--ink-soft); }
+.care-banner .go { width: 22px; height: 22px; }
+.drop[hidden], .text-in[hidden] { display: none; }
+
+/* WhatsApp flotante */
+.wa-float { position: fixed; right: calc(18px + env(safe-area-inset-right, 0px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 30; width: 56px; height: 56px; border-radius: 50%; background: var(--ink); color: var(--paper); display: grid; place-items: center; box-shadow: 0 14px 30px -12px rgba(69, 55, 45, .6); text-decoration: none; transition: transform .2s; }
+.wa-float:hover { transform: scale(1.06); }
+.wa-float svg { width: 28px; height: 28px; }
+
+@media (max-width: 1020px) {
+  .shop-grid { grid-template-columns: minmax(0, 1fr); max-width: 560px; margin: 0 auto; }
+  .shop-card { display: grid; grid-template-columns: 42% minmax(0, 1fr); }
+  .shop-card .shot { aspect-ratio: auto; min-height: 220px; }
+}
+@media (max-width: 860px) {
+  .menu-btn { display: inline-grid; }
+  .nav.open { display: flex; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 6px max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px)); box-shadow: 0 18px 30px -20px rgba(69, 55, 45, .45); }
+  .nav.open a { padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 1rem; color: var(--ink); }
+  .nav.open a:last-child { border-bottom: 0; }
+  .ba .wrap, .xmas-box { grid-template-columns: minmax(0, 1fr); }
+  .countdown { justify-self: start; }
+}
+@media (max-width: 620px) {
+  .shop-card { grid-template-columns: minmax(0, 1fr); }
+  .shop-card .shot { aspect-ratio: 4 / 3; min-height: 0; }
+  .ba-arrow { width: 30px; height: 30px; }
+  .ba-card figcaption { font-size: 1.5rem; }
+  .ba-pair { gap: 6px; }
+  .pill { font-size: .62rem; padding: 3px 9px; left: 8px; }
+  .pill.qr { right: 8px; }
+  .announce { font-size: .66rem; letter-spacing: .1em; }
+  .logo b { font-size: 1.55rem; }
+}
+
 /* Cuidado PĒLU: add-on veterinario, mismo lenguaje visual que el resto */
 .care-head { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: end; margin-bottom: 36px; }
 .care-head h2 { margin-top: 16px; }
@@ -369,23 +468,36 @@ footer svg { width: 18px; height: 18px; }
     <symbol id="i-stetho" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3H4v6a5 5 0 0 0 10 0V3h-1"/><path d="M9 14v1.5a5 5 0 0 0 10 0V13"/><circle cx="19" cy="10.5" r="2.3"/></g></symbol>
     <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 11 12 4l8 7v9H4Z"/><path d="M10 20v-5h4v5"/></g></symbol>
     <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15Z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></g></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h14l-1 12H6Z"/><path d="M9 10V7a3 3 0 0 1 6 0v3" stroke-linecap="round"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m14.5 6-6 6 6 6"/></symbol>
     <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9.5 6 6 6-6 6"/></symbol>
   </defs>
 </svg>
 
+<div class="announce" role="note">
+  <div class="wrap"><span>Envíos a todo Colombia</span><span id="announceXmas">Pedidos de Navidad hasta el <b>12 de diciembre</b></span></div>
+</div>
+
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#inicio" aria-label="PĒLU, inicio"><b>PĒLU</b><small>tu mascota · tu camiseta</small></a>
-    <nav class="nav" aria-label="Secciones">
+    <div class="top-left">
+      <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <a class="logo" href="#inicio" aria-label="PĒLU, inicio"><b>PĒLU</b><small>tu mascota · tu camiseta</small></a>
+    </div>
+    <nav class="nav" id="nav" aria-label="Secciones">
+      <a href="#tienda">Tienda</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#colores">Colores</a>
       <a href="#disena">Diseña la tuya</a>
       <a href="#detalles">Detalles</a>
       <a href="#cuidado">Cuidado</a>
     </nav>
-    <a class="btn btn-ink btn-sm" href="#disena">Diseñar<span class="hide-sm">mi camiseta</span></a>
+    <div class="top-right">
+      <a class="icon-btn" href="#resumen" aria-label="Ver mi pedido"><svg aria-hidden="true"><use href="#i-bag"/></svg><span class="badge" id="bagCount" hidden>0</span></a>
+      <a class="btn btn-ink btn-sm" href="#disena">Diseñar<span class="hide-sm">mi camiseta</span></a>
+    </div>
   </div>
 </header>
 
@@ -414,6 +526,58 @@ footer svg { width: 18px; height: 18px; }
       <div class="note note-b"><b>De su foto…</b>a una ilustración única</div>
       <div class="note note-a"><b>…con su nombre</b>en la letra que tú elijas</div>
     </div>
+  </div>
+</section>
+
+<section class="ba" id="su-foto">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Hecha a partir de su foto</span>
+      <h2>Su foto, convertida en <span class="hand">ilustración</span></h2>
+      <p class="lede">No es una foto impresa: dibujamos a tu mascota a mano, con su carita, sus manchas y sus colores.</p>
+      <ul>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Conserva sus rasgos y su expresión</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Su nombre en la letra que elijas</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>En la espalda, un QR con su video</li>
+      </ul>
+      <a class="btn btn-ink" href="#tienda"><svg aria-hidden="true"><use href="#i-pencil"/></svg>Quiero la de mi mascota</a>
+    </div>
+    <div class="ba-pair">
+      <figure class="ba-card before"><span class="pill">Su foto</span><img src="img/foto-original.webp" alt="Foto original de los perritos de una clienta"><figcaption>la foto</figcaption></figure>
+      <svg class="ba-arrow" viewBox="0 0 54 54" aria-hidden="true"><path d="M6 34c10-16 26-20 40-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M38 18l9 6-8 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <figure class="ba-card after"><span class="pill">Su ilustración</span><img src="img/ilustracion-cony.webp" alt="La ilustración de Cony estampada en una camiseta PĒLU"><figcaption>Cony</figcaption><span class="pill qr"><svg aria-hidden="true"><use href="#i-qr"/></svg>+ QR con video</span></figure>
+    </div>
+  </div>
+</section>
+
+<section class="xmas" aria-label="Navidad PĒLU">
+  <div class="wrap">
+    <div class="xmas-box" id="xmasBox">
+      <svg class="bg-paw" aria-hidden="true"><use href="#i-paw"/></svg>
+      <div>
+        <span class="eyebrow">Navidad PĒLU</span>
+        <h2>Este diciembre, regala a su mascota en una camiseta</h2>
+        <p>Cada camiseta se ilustra a mano, así que los cupos son limitados. Haz tu pedido hasta el 12 de diciembre para que llegue antes de Navidad.</p>
+        <div class="cta-row"><a class="btn btn-light" href="#tienda"><svg aria-hidden="true"><use href="#i-gift"/></svg>Elegir su regalo</a></div>
+      </div>
+      <div class="countdown" aria-live="polite"><b id="xmasDays">14</b><span id="xmasLabel">días para pedir</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="tienda">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Tienda</span>
+      <h2>Elige tu camiseta PĒLU</h2>
+      <p>Todas son 100% algodón, con estampado DTF y un QR con su video en la espalda.</p>
+    </div>
+    <div class="shop-grid" id="shopGrid"></div>
+    <a class="care-banner" href="#cuidado">
+      <span class="seal"><svg aria-hidden="true"><use href="#i-stetho"/></svg></span>
+      <span><b>Cuidado PĒLU</b><span>Snacks, comida y orientación de un médico veterinario. Solo en Barranquilla.</span></span>
+      <svg class="go" aria-hidden="true"><use href="#i-right"/></svg>
+    </a>
   </div>
 </section>
 
@@ -496,42 +660,54 @@ footer svg { width: 18px; height: 18px; }
         <div class="dots" id="dots" role="radiogroup" aria-label="Color"></div>
       </fieldset>
 
+      <fieldset class="field">
+        <legend><i>02</i>¿Cuántas mascotas?</legend>
+        <div class="sizes" id="pets" role="radiogroup" aria-label="Cantidad de mascotas"></div>
+      </fieldset>
+
       <div class="field">
-        <label class="lbl" for="photo"><i>02</i>Foto de tu mascota</label>
+        <label class="lbl" for="photo"><i>03</i><span id="photoLbl">Foto de tu mascota</span></label>
         <p class="help">Se queda en tu dispositivo: solo sirve para la vista previa. La foto final nos la envías al hacer el pedido.</p>
         <label class="drop" id="drop">
           <span class="thumb" id="thumb"><svg aria-hidden="true"><use href="#i-camera"/></svg></span>
           <span><b id="dropTitle">Subir foto</b><span id="dropSub">JPG o PNG · toca o arrástrala aquí</span></span>
           <input id="photo" type="file" accept="image/*">
         </label>
+        <label class="drop" id="drop2" hidden style="margin-top:10px">
+          <span class="thumb" id="thumb2"><svg aria-hidden="true"><use href="#i-camera"/></svg></span>
+          <span><b id="dropTitle2">Foto de la segunda mascota</b><span id="dropSub2">JPG o PNG · toca o arrástrala aquí</span></span>
+          <input id="photo2" type="file" accept="image/*" aria-label="Foto de la segunda mascota">
+        </label>
       </div>
 
       <div class="field">
-        <label class="lbl" for="petName"><i>03</i>Su nombre</label>
+        <label class="lbl" for="petName"><i>04</i><span id="nameLbl">Su nombre</span></label>
         <input class="text-in" id="petName" type="text" maxlength="14" value="Cony" autocomplete="off" placeholder="Ej. Lola, Max, Petee">
+        <input class="text-in" id="petName2" type="text" maxlength="14" value="Petee" autocomplete="off" placeholder="Nombre de la segunda mascota" aria-label="Nombre de la segunda mascota" hidden style="margin-top:10px">
         <div class="count"><span id="count">4</span>/14</div>
       </div>
 
       <fieldset class="field">
-        <legend><i>04</i>Tipografía</legend>
+        <legend><i>05</i>Tipografía</legend>
         <div class="fonts" id="fonts" role="radiogroup" aria-label="Tipografía"></div>
       </fieldset>
 
       <fieldset class="field">
-        <legend><i>05</i>Talla unisex</legend>
+        <legend><i>06</i>Talla unisex</legend>
         <div class="sizes" id="sizes" role="radiogroup" aria-label="Talla"></div>
       </fieldset>
 
       <fieldset class="field">
-        <legend><i>06</i>¿La quieres en kit?</legend>
+        <legend><i>07</i>¿La quieres en kit?</legend>
         <p class="help">Solo en Barranquilla: la camiseta llega en una caja con snacks para tu mascota.</p>
         <div class="sizes" id="kit" role="radiogroup" aria-label="Kit de snacks"></div>
       </fieldset>
 
-      <div class="summary" aria-live="polite">
+      <div class="summary" id="resumen" aria-live="polite">
         <h3>Tu camiseta PĒLU</h3>
         <dl>
           <dt>Color</dt><dd id="sColor"></dd>
+          <dt>Mascotas</dt><dd id="sPets"></dd>
           <dt>Nombre</dt><dd id="sName"></dd>
           <dt>Tipografía</dt><dd id="sFont"></dd>
           <dt>Talla</dt><dd id="sSize"></dd>
@@ -724,6 +900,8 @@ footer svg { width: 18px; height: 18px; }
   </div>
 </footer>
 
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escríbenos"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="js/qrcode.js"></script>
@@ -735,7 +913,11 @@ const CONFIG = {
   whatsapp: "",
   instagram: "peluu.co",
   // Enlace de ejemplo para el QR de la vista previa. En cada pedido va el video de la mascota.
-  qrDemo: "https://www.instagram.com/peluu.co/"
+  qrDemo: "https://www.instagram.com/peluu.co/",
+  // Último día para pedir y recibir antes de Navidad (AAAA-MM-DD).
+  navidad: "2026-12-12",
+  // Precios en pesos, ej. 95000. Mientras estén vacíos se muestra "Pregunta el precio".
+  precios: { una: null, dos: null, kit: null }
 };
 
 const COLORS = [
@@ -756,6 +938,7 @@ const FONTS = [
   { id: "fredoka",   name: "Redondita",       family: "'Fredoka', sans-serif",        weight: 500, scale: .8 }
 ];
 const SIZES = ["S", "M", "L", "XL", "XXL"];
+const PETS = [{ id: "1", label: "1 mascota" }, { id: "2", label: "2 mascotas" }];
 const KIT = [{ id: "no", label: "Solo la camiseta" }, { id: "si", label: "Camiseta + kit de snacks" }];
 const TIPS = [
   "En el calor de Barranquilla, cámbiale el agua varias veces al día y evita los paseos del mediodía: el pavimento le quema las almohadillas.",
@@ -763,8 +946,9 @@ const TIPS = [
   "Lleva su carné de vacunas al día. Si no recuerdas cuándo le toca la próxima, escríbenos y lo revisamos contigo."
 ];
 
-const state = { color: "marfil", font: "dancing", size: "M", name: "Cony", photo: null, view: "front", kit: "no", products: [], tip: 0 };
+const state = { color: "marfil", font: "dancing", size: "M", name: "Cony", name2: "Petee", pets: "1", photo: null, photo2: null, view: "front", kit: "no", products: [], tip: 0 };
 const DEFAULT_ART = "img/arte-cony.webp";
+const DEFAULT_ART2 = "img/arte-petee.webp";
 const NS = "http://www.w3.org/2000/svg";
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -806,18 +990,37 @@ function shirtSVG(side, opts = {}) {
   <path d="${neck}" fill="none" stroke="${ink}" stroke-width="1" stroke-dasharray="1.2 2.4" transform="translate(0 2)"/>`;
 }
 
-function frontArt(uid) {
-  const c = color(), f = font();
-  const src = state.photo || DEFAULT_ART;
-  const blend = c.light ? "multiply" : "normal";
-  const name = state.name.trim();
+function petNames() {
+  const a = state.name.trim(), b = state.name2.trim();
+  return state.pets === "2" ? [a, b].filter(Boolean).join(" y ") : a;
+}
+
+function artImage(src, isPhoto, x, y, w, maskId, light) {
+  const masked = isPhoto || !light;
+  return `<image href="${esc(src)}" x="${x}" y="${y}" width="${w}" height="${w}" preserveAspectRatio="xMidYMid ${isPhoto ? "slice" : "meet"}"
+    ${masked ? `mask="url(#${maskId})"` : ""} style="mix-blend-mode:${light ? "multiply" : "normal"}"/>`;
+}
+
+function frontArt(uid, opts = {}) {
+  const c = opts.color || color(), f = opts.font || font();
+  const two = (opts.pets || state.pets) === "2";
+  const p1 = opts.demo ? null : state.photo, p2 = opts.demo ? null : state.photo2;
+  const name = opts.name !== undefined ? opts.name : petNames();
   const base = 40 * f.scale;
-  const size = name.length > 7 ? base * Math.max(.5, 7 / name.length) : base;
+  const lim = two ? 9 : 7;
+  const size = name.length > lim ? base * Math.max(.45, lim / name.length) : base;
   const fill = c.light ? "#3a2d25" : "#f6ecdd";
+  const art = two
+    ? artImage(p1 || DEFAULT_ART, !!p1, 92, 118, 116, `${uid}m1`, c.light) + artImage(p2 || DEFAULT_ART2, !!p2, 192, 118, 116, `${uid}m2`, c.light)
+    : artImage(p1 || DEFAULT_ART, !!p1, 118, 98, 164, `${uid}m1`, c.light);
   return `
-  <image href="${esc(src)}" x="118" y="98" width="164" height="164" preserveAspectRatio="xMidYMid ${state.photo ? "slice" : "meet"}"
-         ${state.photo || !c.light ? `mask="url(#${uid}artmask)"` : ""} style="mix-blend-mode:${blend}"/>
-  ${name ? `<text x="232" y="${292 + size * .28}" text-anchor="middle" font-family="${esc(f.family)}" font-weight="${f.weight}"
+  <defs>
+    <radialGradient id="${uid}soft" cx=".5" cy=".5" r=".5"><stop offset=".62" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+    <mask id="${uid}m1">${two ? `<rect x="92" y="118" width="116" height="116" fill="url(#${uid}soft)"/>` : `<rect x="118" y="98" width="164" height="164" fill="url(#${uid}soft)"/>`}</mask>
+    <mask id="${uid}m2"><rect x="192" y="118" width="116" height="116" fill="url(#${uid}soft)"/></mask>
+  </defs>
+  ${art}
+  ${name ? `<text x="${two ? 200 : 232}" y="${292 + size * .28}" text-anchor="middle" font-family="${esc(f.family)}" font-weight="${f.weight}"
          ${f.italic ? 'font-style="italic"' : ""} font-size="${size.toFixed(1)}" fill="${fill}">${esc(name)}</text>` : ""}`;
 }
 
@@ -870,7 +1073,6 @@ function renderStage() {
   const uid = "st";
   const svg = `<svg class="shirt" viewBox="0 0 400 430" role="img" aria-label="${state.view === "front" ? "Frente" : "Espalda"} de la camiseta ${esc(c.name)}">
     ${shirtSVG(state.view, { uid })}
-    <defs><mask id="${uid}artmask"><rect x="118" y="98" width="164" height="164" fill="url(#${uid}${state.view}fade)"/></mask></defs>
     ${state.view === "front" ? frontArt(uid) : backArt(c)}
   </svg>`;
   $("#canvas").innerHTML = svg;
@@ -879,7 +1081,7 @@ function renderStage() {
   if (state.view === "back") {
     note = "En tu camiseta, el QR abrirá el video de tu mascota. El de esta vista previa abre nuestro Instagram: pruébalo con tu cámara.";
   } else if (!state.photo) {
-    note = "Ejemplo con la ilustración de Cony. Sube la foto de tu mascota para verla en la camiseta.";
+    note = state.pets === "2" ? "Ejemplo con Cony y Petee. Sube las fotos de tus mascotas para verlas en la camiseta." : "Ejemplo con la ilustración de Cony. Sube la foto de tu mascota para verla en la camiseta.";
   } else {
     note = "Así se ubica tu mascota. En la camiseta final irá convertida en ilustración, como la de Cony.";
   }
@@ -890,7 +1092,8 @@ function renderStage() {
 function renderSummary() {
   const name = state.name.trim();
   $("#sColor").textContent = color().name;
-  $("#sName").textContent = name || "Sin nombre";
+  $("#sName").textContent = petNames() || "Sin nombre";
+  $("#sPets").textContent = state.pets === "2" ? "2" : "1";
   $("#sFont").textContent = font().name;
   $("#sSize").textContent = state.size;
   $("#sKit").textContent = state.kit === "si" ? "Sí" : "No";
@@ -913,6 +1116,12 @@ function renderSummary() {
   const bizMsg = "Hola PĒLU 🐾 Tengo un negocio de mascotas y quiero una propuesta de camisetas personalizadas para mis clientes.";
   biz.href = CONFIG.whatsapp ? `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(bizMsg)}` : `https://ig.me/m/${CONFIG.instagram}`;
   biz.dataset.msg = bizMsg;
+  const extras = state.products.length + (state.kit === "si" ? 1 : 0);
+  $("#bagCount").textContent = 1 + extras;
+  $("#bagCount").hidden = extras === 0 && !state.photo;
+  const fl = $("#waFloat");
+  fl.href = CONFIG.whatsapp ? `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Hola PĒLU 🐾")}` : `https://ig.me/m/${CONFIG.instagram}`;
+  if (!CONFIG.whatsapp) fl.querySelector("use").setAttribute("href", "#i-insta");
   const vet = $("#vetBtn");
   const vetMsg = "Hola PĒLU 🐾 Quiero hablar con el veterinario sobre mi mascota.";
   vet.href = CONFIG.whatsapp ? `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(vetMsg)}` : `https://ig.me/m/${CONFIG.instagram}`;
@@ -925,9 +1134,10 @@ function orderMessage() {
     "Hola PĒLU 🐾 Quiero mi camiseta personalizada:",
     `• Color: ${color().name}`,
     `• Talla: ${state.size}`,
-    `• Nombre: ${name}`,
+    `• Mascotas: ${state.pets}`,
+    `• Nombre${state.pets === "2" ? "s" : ""}: ${petNames() || name}`,
     `• Tipografía: ${font().name}`,
-    "• Foto de mi mascota: te la envío por aquí",
+    `• Foto${state.pets === "2" ? "s de mis mascotas" : " de mi mascota"}: te la${state.pets === "2" ? "s" : ""} envío por aquí`,
     "• Video para el QR: te lo envío por aquí",
     `• Kit de snacks: ${state.kit === "si" ? "sí (Barranquilla)" : "no"}`,
     ...(state.products.length ? [`• Cuidado PĒLU: ${state.products.join(", ")} (entrega en Barranquilla)`] : [])
@@ -956,7 +1166,7 @@ function radioGroup(container, items, key, build) {
   });
 }
 function syncRadios() {
-  [["#dots", "color"], ["#fonts", "font"], ["#sizes", "size"], ["#kit", "kit"]].forEach(([sel, key]) => {
+  [["#dots", "color"], ["#pets", "pets"], ["#fonts", "font"], ["#sizes", "size"], ["#kit", "kit"]].forEach(([sel, key]) => {
     [...$(sel).children].forEach((b) => {
       const on = b.dataset.value === state[key];
       b.setAttribute("aria-checked", on); b.tabIndex = on ? 0 : -1;
@@ -967,6 +1177,13 @@ function select(key, value) {
   state[key] = value;
   syncRadios(); renderStage(); renderSummary();
   if (key === "color") renderBackArt();
+  if (key === "pets") syncPets();
+}
+function syncPets() {
+  const two = state.pets === "2";
+  $("#drop2").hidden = $("#petName2").hidden = !two;
+  $("#photoLbl").textContent = two ? "Fotos de tus mascotas" : "Foto de tu mascota";
+  $("#nameLbl").textContent = two ? "Sus nombres" : "Su nombre";
 }
 
 radioGroup($("#dots"), COLORS, "color", (b, c) => { b.className = "dot"; b.innerHTML = `<i style="background:${c.hex}"></i>${c.name}`; });
@@ -975,6 +1192,7 @@ radioGroup($("#fonts"), FONTS, "font", (b, f) => {
   b.innerHTML = `<span class="sample" style="font-family:${f.family};font-weight:${f.weight};${f.italic ? "font-style:italic;" : ""}font-size:${(1.75 * f.scale).toFixed(2)}rem"></span><small>${f.name}</small>`;
 });
 radioGroup($("#sizes"), SIZES, "size", (b, s) => { b.className = "size"; b.textContent = s; });
+radioGroup($("#pets"), PETS, "pets", (b, k) => { b.className = "size"; b.textContent = k.label; });
 radioGroup($("#kit"), KIT, "kit", (b, k) => { b.className = "size"; b.textContent = k.label; });
 
 // Cuidado PĒLU: filtros, productos agregados al pedido y consejos
@@ -1031,23 +1249,27 @@ document.querySelectorAll(".toggle button").forEach((b) => b.addEventListener("c
 $("#petName").addEventListener("input", (e) => { state.name = e.target.value; renderStage(); renderSummary(); });
 
 // Foto
-function loadPhoto(file) {
+function loadPhoto(file, which = 1) {
   if (!file || !file.type.startsWith("image/")) { toast("Elige una imagen (JPG o PNG)."); return; }
   const r = new FileReader();
+  const sfx = which === 2 ? "2" : "";
   r.onload = () => {
-    state.photo = r.result;
-    $("#thumb").innerHTML = `<img src="${r.result}" alt="">`;
-    $("#dropTitle").textContent = "Foto cargada";
-    $("#dropSub").textContent = "Toca para cambiarla";
+    state["photo" + sfx] = r.result;
+    $("#thumb" + sfx).innerHTML = `<img src="${r.result}" alt="">`;
+    $("#dropTitle" + sfx).textContent = "Foto cargada";
+    $("#dropSub" + sfx).textContent = "Toca para cambiarla";
     if (state.view !== "front") document.querySelector('.toggle [data-view="front"]').click(); else renderStage();
   };
   r.readAsDataURL(file);
 }
-$("#photo").addEventListener("change", (e) => loadPhoto(e.target.files[0]));
-const drop = $("#drop");
-["dragenter", "dragover"].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.add("over"); }));
-["dragleave", "drop"].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.remove("over"); }));
-drop.addEventListener("drop", (e) => loadPhoto(e.dataTransfer.files[0]));
+[["#photo", "#drop", 1], ["#photo2", "#drop2", 2]].forEach(([inp, zone, which]) => {
+  $(inp).addEventListener("change", (e) => loadPhoto(e.target.files[0], which));
+  const d = $(zone);
+  ["dragenter", "dragover"].forEach((t) => d.addEventListener(t, (e) => { e.preventDefault(); d.classList.add("over"); }));
+  ["dragleave", "drop"].forEach((t) => d.addEventListener(t, (e) => { e.preventDefault(); d.classList.remove("over"); }));
+  d.addEventListener("drop", (e) => loadPhoto(e.dataTransfer.files[0], which));
+});
+$("#petName2").addEventListener("input", (e) => { state.name2 = e.target.value; renderStage(); renderSummary(); });
 
 // Pedido
 function toast(t) {
@@ -1073,8 +1295,57 @@ $("#bizBtn").addEventListener("click", async (e) => {
   if (ok) toast("Mensaje copiado: pégalo en el chat de Instagram");
 });
 
+// Tienda
+const SHOP = [
+  { id: "una", name: "Camiseta con 1 mascota", desc: "Su ilustración y su nombre al frente, y el QR con su video en la espalda.", color: "marfil", pets: "1", kit: "no", names: "Cony" },
+  { id: "dos", name: "Camiseta con 2 mascotas", desc: "Los dos juntos en la misma ilustración, con sus nombres. Ideal para hermanitos.", color: "vainilla", pets: "2", kit: "no", names: "Cony y Petee", tag: "Nuevo" },
+  { id: "kit", name: "Camiseta + kit de snacks", desc: "Tu camiseta llega en una caja con snacks para tu mascota. Solo en Barranquilla.", color: "arena", pets: "1", kit: "si", names: "Cony", tag: "Para regalar" }
+];
+const money = (n) => "$" + n.toLocaleString("es-CO");
+$("#shopGrid").innerHTML = SHOP.map((it) => {
+  const c = COLORS.find((x) => x.id === it.color);
+  const f = FONTS.at(0);
+  const price = CONFIG.precios[it.id];
+  return `<article class="shop-card">
+    <div class="shot">${it.tag ? `<span class="pill">${it.tag}</span>` : ""}
+      <svg viewBox="0 0 400 430" role="img" aria-label="${esc(it.name)}">${shirtSVG("front", { color: c, uid: "sh" + it.id })}${frontArt("sh" + it.id, { color: c, font: f, pets: it.pets, demo: true, name: it.names })}</svg>
+      ${it.kit === "si" ? `<svg viewBox="0 0 80 64" aria-hidden="true" style="inset:auto 8% 8% auto;width:26%;height:auto"><path d="M6 22h68v36H6Z" fill="#c9a37c"/><path d="M2 12h76v12H2Z" fill="#b48d66"/><path d="M36 12h8v46h-8Z" fill="#ecc9ae"/><g fill="#8f6a47"><circle cx="22" cy="40" r="3"/><circle cx="58" cy="40" r="3"/></g></svg>` : ""}
+    </div>
+    <div class="body">
+      <h3>${it.name}</h3>
+      <p>${it.desc}</p>
+      ${price ? `<span class="price">${money(price)}</span>` : `<span class="price ask">Pregunta el precio por chat</span>`}
+      <a class="btn btn-ink btn-sm" href="#disena" data-shop="${it.id}"><svg aria-hidden="true"><use href="#i-pencil"/></svg>Personalizar</a>
+    </div>
+  </article>`;
+}).join("");
+document.querySelectorAll("[data-shop]").forEach((a) => a.addEventListener("click", () => {
+  const it = SHOP.find((x) => x.id === a.dataset.shop);
+  state.color = it.color; state.pets = it.pets; state.kit = it.kit;
+  syncRadios(); syncPets(); renderStage(); renderSummary(); renderBackArt();
+}));
+
+// Menú en celular
+const nav = $("#nav"), menuBtn = $("#menuBtn");
+menuBtn.addEventListener("click", () => {
+  const open = !nav.classList.contains("open");
+  nav.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", open);
+  menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+});
+nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); }));
+
+// Cuenta regresiva de Navidad (hora de Colombia)
+(function xmas() {
+  const end = Date.parse(CONFIG.navidad + "T23:59:59-05:00");
+  const days = Math.ceil((end - Date.now()) / 864e5);
+  if (!(days > 0)) { $("#xmasBox").hidden = true; $("#announceXmas").hidden = true; return; }
+  $("#xmasDays").textContent = days;
+  $("#xmasLabel").textContent = days === 1 ? "día para pedir" : "días para pedir";
+})();
+
 // Inicio
-syncRadios(); renderStage(); renderSummary(); renderBackArt();
+syncRadios(); syncPets(); renderStage(); renderSummary(); renderBackArt();
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => renderStage());
 </script>
 </body>
